@@ -4,6 +4,8 @@ body{
 }
 header{
 	font-family:'Lobster';
+	margin:0px auto;
+
 }
 
 #wrapper{
@@ -13,4 +15,6 @@ header{
 }
 #logo{
 	margin: 0px auto;
+	display:block;
+	text-align:center;
 }
