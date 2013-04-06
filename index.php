@@ -70,9 +70,10 @@ function testAPI() {
         <h1>clapp</h1>
       </div>
       <div id="nav">
-        <a href="#classes">classes<a>
-        <a href"#friends">friends<a>
+        <a href="#classes">classes</a>
+        <a href"#friends">friends</a>
         <a href="#about">about</a>
+        <a href="#other">other</a>
       </div>
     </header>
     <h1>
