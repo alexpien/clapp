@@ -36,7 +36,7 @@ require_once('sdk/src/facebook.php');
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),
   'secret' => AppInfo::appSecret(),
-  //'sharedSession' => true,
+  'sharedSession' => true,
   'trustForwarded' => true,
 ));
 
@@ -208,9 +208,9 @@ $app_name = idx($app_info, 'name', '');
           // We want to reload the page now so PHP can read the cookie that the
           // Javascript SDK sat. But we don't want to use
           // window.location.reload() because if this is in a canvas there was a
-          // post made to this page and a reload will tri/'''''''''''''''''''/'gger a message to the
+          // post made to this page and a reload will trigger a message to the
           // user asking if they want to send data again.
-          window.location = window.location;
+          window.location = window.location.reload();
         });
 
         FB.Canvas.setAutoGrow();
@@ -273,7 +273,7 @@ $app_name = idx($app_info, 'name', '');
     ?>
 
     <section id="samples" class="clearfix">
-      <h1>Examples of the Facebook Graph API</h1>
+      <h1>Classes you are enrolled in</h1>
 
       <div class="list">
         <h3>A few of your friends</h3>
