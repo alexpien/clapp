@@ -1,7 +1,7 @@
 <?php
 require_once('AppInfo.php');
 require_once('utils.php');
-
+/*
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),
   'secret' => AppInfo::appSecret(),
@@ -11,6 +11,7 @@ $facebook = new Facebook(array(
 $user_id = $facebook->getUser();
   $likes = idx($facebook->api('/me/likes'), 'data', array());
   $friends = idx($facebook->api('/me/friends'), 'data', array());
+  */
   ?>
 
 <!DOCTYPE html>
