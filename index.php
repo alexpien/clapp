@@ -13,6 +13,30 @@
 
 <div id="fb-root"></div>
 <script>
+
+  // Additional JS functions here
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '334873059942972', // App ID
+      channelUrl : '//blooming-reef-3850.herokuapp.com/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to accdess the session
+      xfbml      : true  // parse XFBML
+    });
+    //additional init code
+    FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    // connected
+  } else if (response.status === 'not_authorized') {
+    // not_authorized
+      login();
+  } else {
+    // not_logged_in
+      login();
+  }
+ });
+    
+
 function login() {
     FB.login(function(response) {
         if (response.authResponse) {
@@ -29,30 +53,6 @@ function testAPI() {
     FB.api('/me', function(response) {
         console.log('Good to see you, ' + response.name + '.');
     });
-}
-
-  // Additional JS functions here
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '334873059942972', // App ID
-      channelUrl : '//blooming-reef-3850.herokuapp.com/channel.html', // Channel File
-      status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to accdess the session
-      xfbml      : true  // parse XFBML
-    });
-
-    FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    // connected
-  } else if (response.status === 'not_authorized') {
-    // not_authorized
-      login();
-  } else {
-    // not_logged_in
-      login();
-  }
- });
-
   };
 
   // Load the SDK Asynchronously
@@ -63,7 +63,9 @@ function testAPI() {
      js.src = "//connect.facebook.net/en_US/all.js";
      ref.parentNode.insertBefore(js, ref);
    }(document));
+
 </script>
+
   <div id="wrapper">
     <header>
       <div id="logo">
