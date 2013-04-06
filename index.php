@@ -13,6 +13,7 @@
 
 <div id="fb-root"></div>
 <script>
+
 function login() {
     FB.login(function(response) {
         if (response.authResponse) {
@@ -29,8 +30,8 @@ function testAPI() {
     FB.api('/me', function(response) {
         console.log('Good to see you, ' + response.name + '.');
     });
-}
-
+  };
+  
   // Additional JS functions here
   window.fbAsyncInit = function() {
     FB.init({
@@ -40,7 +41,7 @@ function testAPI() {
       cookie     : true, // enable cookies to allow the server to accdess the session
       xfbml      : true  // parse XFBML
     });
-
+    //additional init code
     FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     // connected
@@ -53,7 +54,6 @@ function testAPI() {
   }
  });
 
-  };
 
   // Load the SDK Asynchronously
   (function(d){
@@ -63,7 +63,9 @@ function testAPI() {
      js.src = "//connect.facebook.net/en_US/all.js";
      ref.parentNode.insertBefore(js, ref);
    }(document));
+
 </script>
+
   <div id="wrapper">
     <header>
       <div id="logo">
