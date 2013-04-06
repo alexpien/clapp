@@ -266,10 +266,7 @@ $app_name = idx($app_info, 'name', '');
       <?php } ?>
     </header>
 
-    <section id="get-started">
-      <p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
-      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
-    </section>
+    
 
     <?php
       if ($user_id) {
