@@ -23,8 +23,7 @@ a{
 }
 #nav{
 	display:inline-block;
-	margin-left:auto;
-	margin-right:auto;
+	margin:0px auto;
 	height:50px;
 }
 
