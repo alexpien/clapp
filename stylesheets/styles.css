@@ -17,6 +17,7 @@ a{
 	
 }
 #logo{
+	display:inline-block;
 	margin: 0px auto;
 	text-align:center;
 	font-size:44px;
@@ -26,7 +27,7 @@ a{
 	display:inline-block;
 	margin:0px auto;
 	height:50px;
-	width:640px;
+	width:700px;
 }
 
 #nav a{	
