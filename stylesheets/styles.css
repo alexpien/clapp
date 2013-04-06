@@ -22,17 +22,15 @@ a{
 	font-size:44px;
 }
 #nav{
-	display:;
-	margin-left:auto;
-	margin-right:auto;
+	display:inline-block;
+	margin:0px auto;
 	height:50px;
-	width:800px;
 }
 
 #nav a{	
-	float:left;
+	display:inline-block;
 	width:160px;
-	margin:0px auto;
+	margin:0px 0px;
 	border-left:1px solid black;
 	border-right:1px solid black;
 
