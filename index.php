@@ -68,7 +68,7 @@ function testAPI() {
     <header>
       <div id="logo">
 <<<<<<< HEAD
-        clapp
+        clapp test
 =======
         <h1>clapp</h1>
 >>>>>>> fea15d77c4dbfd40d2eba91a1454a1c7a8cdcaf3
