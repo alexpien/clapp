@@ -14,21 +14,9 @@
 <div id="fb-root"></div>
 <script>
 
-function login() {
-    FB.login(function(response) {
-        if (response.authResponse) {
-            // connected
-              testAPI();
-        } else {
-            // cancelled
-        }
-    });
-}
-
 function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-        console.log('Good to see you, ' + response.name + '.');
+        alert('Good to see you, ' + response.name + '.');
     });
   }
 
@@ -42,18 +30,6 @@ function testAPI() {
       xfbml      : true  // parse XFBML
     });
 
-    //additional init code
-
-    FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    // connected
-  } else if (response.status === 'not_authorized') {
-    // not_authorized
-      login();
-  } else {
-    // not_logged_in
-      login();
-  }
  });
 };
 
@@ -67,6 +43,8 @@ function testAPI() {
    }(document));
 
 </script>
+<button type="button" onclick="testAPI()">Test API</button>
+
 <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1">Login with Facebook</div>
      
   <div id="wrapper">
