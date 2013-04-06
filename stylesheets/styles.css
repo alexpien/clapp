@@ -4,10 +4,12 @@ body{
 }
 header{
 	font-family:'Lobster';
-	margin:0px auto;
-
+	margin:20px auto;
+	border-bottom: 1px solid black;
 }
-
+a{
+	text-decoration: none;
+}
 #wrapper{
 	width:960px;
 	margin:0px auto;
@@ -19,9 +21,21 @@ header{
 	text-align:center;
 	font-size:44px;
 }
+#nav{
+	display:;
+	margin-left:auto;
+	margin-right:auto;
+	height:50px;
+	width:800px;
+}
 
 #nav a{	
-	display: inline-block;
-	width:20px;
-	margin:0px 50px;
+	float:left;
+	width:160px;
+	margin:0px auto;
+	border-left:1px solid black;
+	border-right:1px solid black;
+
+	text-align:center;
+	font-size: 24px;
 }

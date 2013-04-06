@@ -6,13 +6,14 @@
   </title>
   <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
   <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 
 <div id="fb-root"></div>
 <script>
+
 function login() {
     FB.login(function(response) {
         if (response.authResponse) {
@@ -29,7 +30,7 @@ function testAPI() {
     FB.api('/me', function(response) {
         console.log('Good to see you, ' + response.name + '.');
     });
-}
+  }
 
   // Additional JS functions here
   window.fbAsyncInit = function() {
@@ -40,6 +41,8 @@ function testAPI() {
       cookie     : true, // enable cookies to allow the server to accdess the session
       xfbml      : true  // parse XFBML
     });
+
+    //additional init code
 
     FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
@@ -52,8 +55,7 @@ function testAPI() {
       login();
   }
  });
-
-  };
+};
 
   // Load the SDK Asynchronously
   (function(d){
@@ -63,7 +65,10 @@ function testAPI() {
      js.src = "//connect.facebook.net/en_US/all.js";
      ref.parentNode.insertBefore(js, ref);
    }(document));
+
 </script>
+<div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1">Login with Facebook</div>
+     
   <div id="wrapper">
     <header>
       <div id="logo">
@@ -75,7 +80,7 @@ function testAPI() {
       </div>
       <div id="nav">
         <a href="#classes">classes</a>
-        <a href"#friends">friends</a>
+        <a href="#friends">friends</a>
         <a href="#about">about</a>
         <a href="#other">other</a>
       </div>
