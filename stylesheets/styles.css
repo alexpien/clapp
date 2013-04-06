@@ -20,7 +20,7 @@ header{
 	font-size:44px;
 }
 #nav{
-	padding:auto auto;
+	padding:auto auto !important;
 }
 
 #nav a{	
