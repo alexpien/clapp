@@ -32,6 +32,7 @@ $user_id = $facebook->getUser();
 
 </head>
 <body>
+  <div id = "wrapper">
 
   <header>
   Welcome to this shit yo
@@ -39,7 +40,6 @@ $user_id = $facebook->getUser();
   <h1>
     hello
   </h1>
-  <div id = "wrapper">
   <div class="list">
         <h3>A few of your friends</h3>
         <ul class="friends">
