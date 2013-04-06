@@ -16,7 +16,7 @@
       FB.api('/me', function(response) {
         alert('Good to see you, ' + response.name + '.'
         	+'You are from ' + response.hometown.name + '.'
-        	+'You go to ' + response.school.name + '.');
+        	+'You go to ' + response.education.school.name + '.');
 
     });
   }
