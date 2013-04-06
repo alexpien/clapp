@@ -11,6 +11,7 @@
 
     <div id="fb-root"></div>
     <script>
+
 //run this at load time
     function displayInfo() {
       FB.api('/me', function(response) {
@@ -20,8 +21,6 @@
 
     });
   }
-
-      window.onload = displayInfo();
 
 
   // Load the SDK Asynchronously
@@ -39,7 +38,6 @@
   </div>
   <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1" style="position:fixed">Login with Facebook</div>
   <button type="button" onclick="displayInfo()">Test API</button>
-
   <p id="displayInfo">
 
   </p>
