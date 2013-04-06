@@ -32,7 +32,6 @@
     }(document, 'script', 'facebook-jssdk'));
 
   </script>
-  <div id="top">
     
   </div>
   <div style="position:fixed">
@@ -41,7 +40,7 @@
   <p id="displayInfo">
 
   </p>
-
+  <div id="top">
   </div>
   <div id="wrapper">
     <div id="header">
