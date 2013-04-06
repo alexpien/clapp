@@ -22,4 +22,6 @@ header{
 
 #nav a{	
 	display: inline-block;
+	width:20px;
+	margin:0px 50px;
 }
