@@ -54,7 +54,11 @@ $user_id = $facebook->getUser();
   <div id="wrapper">
     <header>
       <div id="logo">
+<<<<<<< HEAD
         clapp
+=======
+        <h1>clapp</h1>
+>>>>>>> fea15d77c4dbfd40d2eba91a1454a1c7a8cdcaf3
       </div>
     </header>
     <h1>
