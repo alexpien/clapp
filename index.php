@@ -32,16 +32,7 @@ $user_id = $facebook->getUser();
 
 </head>
 <body>
-<<<<<<< HEAD
-  <div id="wrapper">
-    <header>
-      Welcome to this shit yo 
-    </header>
-    <h1>
-      hello
-    </h1>
-  </div>
-=======
+
   <header>
   Welcome to this shit yo
   </header>
@@ -94,6 +85,5 @@ $user_id = $facebook->getUser();
         </ul>
       </div>
 
->>>>>>> 7752e41fc37b79970d55c108a3d82fa46a102ccd
 </body>
 </html>
