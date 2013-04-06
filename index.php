@@ -22,6 +22,7 @@ $user_id = $facebook->getUser();
   </title>
   <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
   <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -50,7 +51,7 @@ $user_id = $facebook->getUser();
      ref.parentNode.insertBefore(js, ref);
    }(document));
 </script>
-
+  <wrapper>
   <header>
     <div id="logo">
       CLAPP
@@ -106,6 +107,6 @@ $user_id = $facebook->getUser();
           ?>
         </ul>
       </div>
-
+    </div>
 </body>
 </html>
