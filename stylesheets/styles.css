@@ -6,11 +6,10 @@ body{
 #header{
 	font-family:'Lobster';
 	margin:20px auto;
-	border-bottom: 1px solid black;
 	display:block;
 	background-color:#C8C8C8;
 	padding:10px;
-	height:120px;
+	height:140px;
 	margin:0px;
 
 }
