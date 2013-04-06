@@ -48,7 +48,7 @@ function testAPI() {
 <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1">Login with Facebook</div>
      
   <div id="wrapper">
-    <header>
+    <div id="header">
       <div id="logo">
         <h1>clapp</h1>
       </div>
@@ -58,7 +58,7 @@ function testAPI() {
         <a href="#about">about</a>
         <a href="#other">other</a>
       </div>
-    </header>
+    </div>
     <h1>
       hello
     </h1>
