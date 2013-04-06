@@ -38,7 +38,7 @@
   <div id="wrapper">
     <div id="header">
       <div id="logo">
-        <h1>clapp</h1>
+        <h1>cla<span style="color:#333;">pp</span></h1>
       </div>
       <div id="nav">
         <a href="#classes">classes</a>
