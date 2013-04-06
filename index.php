@@ -5,7 +5,8 @@
     Clapp
   </title>
   <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
-  <link type='text/css' rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster|Merriweather+Sans:800'/>
+  <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -35,7 +36,7 @@ function testAPI() {
     FB.init({
       appId      : 'APPID', // App ID
       status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to access the session
+      cookie     : true, // enable cookies to allow the server to accdess the session
       xfbml      : true  // parse XFBML
     });
 
@@ -62,7 +63,7 @@ function testAPI() {
      ref.parentNode.insertBefore(js, ref);
    }(document));
 </script>
-
+  <wrapper>
   <header>
     <div id="logo">
       CLAPP
@@ -72,6 +73,27 @@ function testAPI() {
   <h1>
     hello
   </h1>
+
+  <div class="list">
+        <h3>A few of your friends</h3>
+        <ul class="friends">
+          <?php
+            foreach ($friends as $friend) {
+              // Extract the pieces of info we need from the requests above
+              $id = idx($friend, 'id');
+              $name = idx($friend, 'name');
+          ?>
+          <li>
+            <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
+              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
+              <?php echo he($name); ?>
+            </a>
+          </li>
+          <?php
+            }
+          ?>
+        </ul>
+      </div>
 
 </body>
 </html>
