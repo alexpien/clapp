@@ -36,8 +36,8 @@ require_once('sdk/src/facebook.php');
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),
   'secret' => AppInfo::appSecret(),
-  //'sharedSession' => true, FIXES THE REDIRECT LOOP PROBLEM?
-  'trustForwarded' => true,
+  'sharedSession' => false
+  'trustForwarded' => false,
 ));
 
 $user_id = $facebook->getUser();
@@ -68,7 +68,6 @@ if ($user_id) {
 /*
 // get friends education
   $friends = idx($facebook->api('/me/friends?limit=4'), 'data', array());
-
 */
 
   // Here is an example of a FQL call that fetches all of your friends that are
