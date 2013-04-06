@@ -56,6 +56,11 @@ $user_id = $facebook->getUser();
       <div id="logo">
         <h1>clapp</h1>
       </div>
+      <div id="nav">
+        <a href="#classes">classes<a>
+        <a href"#friends">friends<a>
+        <a href="#about">about</a>
+      </div>
     </header>
     <h1>
       hello
