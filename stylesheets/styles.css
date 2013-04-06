@@ -30,9 +30,9 @@ a{
 }
 
 #nav a{	
-	float:left;
+	display:inline-block;
 	width:160px;
-	margin:0px 20px;
+	margin:0px 0px;
 	border-left:1px solid black;
 	border-right:1px solid black;
 
