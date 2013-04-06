@@ -51,19 +51,18 @@ $user_id = $facebook->getUser();
      ref.parentNode.insertBefore(js, ref);
    }(document));
 </script>
-  <wrapper>
-  <header>
-    <div id="logo">
-      CLAPP
-    </div>
+  <div id="wrapper">
+    <header>
+      <div id="logo">
+        CLAPP
+      </div>
+    </header>
+    <h1>
+      hello
+    </h1>
 
-  </header>
-  <h1>
-    hello
-  </h1>
 
-
-  <div class="list">
+    <div class="list">
         <h3>A few of your friends</h3>
         <ul class="friends">
           <?php
