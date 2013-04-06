@@ -19,3 +19,7 @@ header{
 	text-align:center;
 	font-size:44px;
 }
+
+#nav a{	
+	display: inline-block;
+}
