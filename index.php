@@ -72,14 +72,11 @@ function testAPI() {
   <div id="wrapper">
     <header>
       <div id="logo">
-<<<<<<< HEAD
         clapp test
-=======
         <h1>clapp</h1>
->>>>>>> fea15d77c4dbfd40d2eba91a1454a1c7a8cdcaf3
       </div>
       <div id="nav">
-        <a href="#classes">classes</a>
+        <a href="#classes">classes test</a>
         <a href="#friends">friends</a>
         <a href="#about">about</a>
         <a href="#other">other</a>
