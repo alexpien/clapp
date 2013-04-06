@@ -20,10 +20,11 @@ header{
 	font-size:44px;
 }
 #nav{
-	display:block;
+	display:;
 	margin-left:auto;
 	margin-right:auto;
 	height:30px;
+	width:800px;
 }
 
 #nav a{	
