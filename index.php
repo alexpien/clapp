@@ -39,8 +39,8 @@ $user_id = $facebook->getUser();
   <h1>
     hello
   </h1>
-
- <div class="list">
+  <div id = "wrapper">
+  <div class="list">
         <h3>A few of your friends</h3>
         <ul class="friends">
           <?php
@@ -84,6 +84,7 @@ $user_id = $facebook->getUser();
           ?>
         </ul>
       </div>
+    </div>
 
 </body>
 </html>
