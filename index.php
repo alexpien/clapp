@@ -19,6 +19,31 @@ function testAPI() {
         alert('Good to see you, ' + response.name + '.');
     });
   }
+ 
+ window.fbAsyncInit = function() {
+ 	FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    // connected
+  } else if (response.status === 'not_authorized') {
+    // not_authorized
+    login();
+  } else {
+    // not_logged_in
+    login();
+  }
+ });
+ };
+
+ function login() {
+    FB.login(function(response) {
+        if (response.authResponse) {
+            // connected
+            testAPI();
+        } else {
+            // cancelled
+        }
+    });
+}
 
   // Load the SDK Asynchronously
 (function(d, s, id) {
