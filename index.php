@@ -31,7 +31,7 @@ $user_id = $facebook->getUser();
   // Additional JS functions here
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : <?php echo $facebook->appId ?>, // App ID
+      appId      : 'APPID', // App ID
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
