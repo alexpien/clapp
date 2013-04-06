@@ -22,9 +22,9 @@ a{
 	font-size:44px;
 }
 #nav{
-	display:;
-	margin-left:auto;
-	margin-right:auto;
+	float:left;
+	display:inline-block;
+	margin:0px auto;
 	height:50px;
 }
 
