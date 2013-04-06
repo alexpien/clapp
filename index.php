@@ -57,13 +57,31 @@ if ($user_id) {
   // This fetches some things that you like . 'limit=*" only returns * values.
   // To see the format of the data you are retrieving, use the "Graph API
   // Explorer" which is at https://developers.facebook.com/tools/explorer/
-  $likes = idx($facebook->api('/me/likes?limit=4'), 'data', array());
+  $likes = idx($facebook->api('/me/likes?limit=16'), 'data', array());
 
   // This fetches 4 of your friends.
-  $friends = idx($facebook->api('/me/friends?limit=4'), 'data', array());
+  $friends = idx($facebook->api('/me/friends?limit=16'), 'data', array());
 
   // And this returns 16 of your photos.
   $photos = idx($facebook->api('/me/photos?limit=16'), 'data', array());
+
+/*
+// get friends and likes?
+FB.api("/likes?ids=533856945,841978743")
+
+FB.api("me/friends",{
+  fields:'id',
+  limit:10
+},function(res){
+  var l=''
+  $.each(res.data,function(idx,val){
+     l=l+val.id+(idx<res.data.length-1?',':'')
+  })
+  FB.api("likes?ids="+l,function(res){
+      console.log(res);
+  })
+})
+*/
 
   // Here is an example of a FQL call that fetches all of your friends that are
   // using this app
@@ -192,7 +210,7 @@ $app_name = idx($app_info, 'name', '');
           // window.location.reload() because if this is in a canvas there was a
           // post made to this page and a reload will trigger a message to the
           // user asking if they want to send data again.
-          window.location = window.location;
+          window.location = window.location.reload();
         });
 
         FB.Canvas.setAutoGrow();
