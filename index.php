@@ -48,7 +48,9 @@
   <div id="wrapper">
     <div id="header">
       <div id="logo">
-        <h1>cla<span style="color:#333;">pp</span></h1>
+        <a href="#home">
+          <h1>cla<span style="color:#333;">pp</span></h1>
+        </a>
       </div>
       <div id="nav">
         <a href="#classes">classes</a>
@@ -78,7 +80,7 @@
           Welcome to Clapp4. Login to facebook to get started.
         </h1>
       </div>  
-      <div id="#other_sec" style="display:none;">
+      <div id="other_sec" style="display:none;">
         <h1>
           Welcome to Clapp5. Login to facebook to get started.
         </h1>

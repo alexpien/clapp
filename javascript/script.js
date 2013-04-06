@@ -12,7 +12,7 @@ $(window).load(function(){
 
 
 
-	$("#nav a").click(function(){
+	$("#nav a, #logo a").click(function(){
 		target=$(this).attr("href");
 		$("#main>div").slideUp();
 		$(target+"_sec").slideDown();
