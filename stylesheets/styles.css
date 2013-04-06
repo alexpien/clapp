@@ -4,8 +4,8 @@ body{
 }
 header{
 	font-family:'Lobster';
-	margin:0px auto;
-	border-bottom: 1px black;
+	margin:20px auto;
+	border-bottom: 1px solid black;
 }
 a{
 	text-decoration: none;
@@ -25,14 +25,17 @@ a{
 	display:;
 	margin-left:auto;
 	margin-right:auto;
-	height:30px;
+	height:50px;
 	width:800px;
-	border-bottom:1px black;
 }
 
 #nav a{	
 	float:left;
-	width:200px;
+	width:160px;
+	margin:0px 20px;
+	border-left:1px solid black;
+	border-right:1px solid black;
+
 	text-align:center;
 	font-size: 24px;
 }
