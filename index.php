@@ -262,9 +262,9 @@ $app_name = idx($app_info, 'name', '');
 
     <section id="samples" class="clearfix">
       <?php
-        $school = end($school)
-        $schoolid= idx($school,'id')
-        $schoolname=idx($school,'name')
+        $school = end($school);
+        $schoolid= idx($school,'id');
+        $schoolname=idx($school,'name');
       ?>
       <h1>Classes you are enrolled in at <?php echo he($schoolname);?></h1>
  
