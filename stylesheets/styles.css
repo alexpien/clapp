@@ -22,7 +22,7 @@ a{
 	font-size:44px;
 }
 #nav{
-	display:;
+	display:inline-block;
 	margin-left:auto;
 	margin-right:auto;
 	height:50px;
