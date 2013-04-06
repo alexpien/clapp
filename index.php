@@ -55,29 +55,29 @@
         <a href="#other">other</a>
       </div>
     </div>
-    <div id="#home_sec">
+    <div id="#home_sec" display="none">
       <h1>
         Welcome to Clapp. Login to facebook to get started.
       </h1>
     </div>
-    <div id="#classes_sec">
+    <div id="#classes_sec" display="none">
       <h1>
-        Welcome to Clapp. Login to facebook to get started.
+        Welcome to Clapp2. Login to facebook to get started.
       </h1>
     </div>
-    <div id="#friends_sec">
+    <div id="#friends_sec" display="none">
       <h1>
-        Welcome to Clapp. Login to facebook to get started.
+        Welcome to Clapp3. Login to facebook to get started.
       </h1>
     </div>
-    <div id="#about_sec">
+    <div id="#about_sec" display="none">
       <h1>
-        Welcome to Clapp. Login to facebook to get started.
+        Welcome to Clapp4. Login to facebook to get started.
       </h1>
     </div>
-    <div id="#other_sec">
+    <div id="#other_sec" display="none">
       <h1>
-        Welcome to Clapp. Login to facebook to get started.
+        Welcome to Clapp5. Login to facebook to get started.
       </h1>
     </div>
   </div>
