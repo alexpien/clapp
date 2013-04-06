@@ -210,7 +210,7 @@ $app_name = idx($app_info, 'name', '');
           // window.location.reload() because if this is in a canvas there was a
           // post made to this page and a reload will trigger a message to the
           // user asking if they want to send data again.
-          window.location = "https://blooming-reef-3850.herokuapp.com";
+          window.location = "http://google.com";
         });
 
         FB.Canvas.setAutoGrow();
