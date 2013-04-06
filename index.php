@@ -55,9 +55,29 @@
         <a href="#other">other</a>
       </div>
     </div>
-    <div id="#content">
+    <div id="#home_sec">
       <h1>
-        hello
+        Welcome to Clapp. Login to facebook to get started.
+      </h1>
+    </div>
+    <div id="#classes_sec">
+      <h1>
+        Welcome to Clapp. Login to facebook to get started.
+      </h1>
+    </div>
+    <div id="#friends_sec">
+      <h1>
+        Welcome to Clapp. Login to facebook to get started.
+      </h1>
+    </div>
+    <div id="#about_sec">
+      <h1>
+        Welcome to Clapp. Login to facebook to get started.
+      </h1>
+    </div>
+    <div id="#other_sec">
+      <h1>
+        Welcome to Clapp. Login to facebook to get started.
       </h1>
     </div>
   </div>
