@@ -27,7 +27,7 @@ $user_id = $facebook->getUser();
     Clapp
   </title>
   <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
-  <link type='text/css' rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster|Merriweather+Sans:800'/>
+  <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
 
 </head>
 <body>
