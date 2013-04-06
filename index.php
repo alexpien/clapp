@@ -1,19 +1,3 @@
-<?php
-require_once('AppInfo.php');
-require_once('utils.php');
-/*
-$facebook = new Facebook(array(
-  'appId'  => AppInfo::appID(),
-  'secret' => AppInfo::appSecret(),
-  'sharedSession' => true,
-  'trustForwarded' => true,
-));
-$user_id = $facebook->getUser();
-  $likes = idx($facebook->api('/me/likes'), 'data', array());
-  $friends = idx($facebook->api('/me/friends'), 'data', array());
-  */
-  ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,16 +13,45 @@ $user_id = $facebook->getUser();
 
 <div id="fb-root"></div>
 <script>
+function login() {
+    FB.login(function(response) {
+        if (response.authResponse) {
+            // connected
+              testAPI();
+        } else {
+            // cancelled
+        }
+    });
+}
+
+function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+        console.log('Good to see you, ' + response.name + '.');
+    });
+}
+
   // Additional JS functions here
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : 'APPID', // App ID
+      appId      : '334873059942972', // App ID
+      channelUrl : '//blooming-reef-3850.herokuapp.com/channel.html', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to accdess the session
       xfbml      : true  // parse XFBML
     });
 
-    // Additional init code here
+    FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    // connected
+  } else if (response.status === 'not_authorized') {
+    // not_authorized
+      login();
+  } else {
+    // not_logged_in
+      login();
+  }
+ });
 
   };
 
@@ -70,8 +83,7 @@ $user_id = $facebook->getUser();
       hello
     </h1>
 
-
-    <div class="list">
+  <div class="list">
         <h3>A few of your friends</h3>
         <ul class="friends">
           <?php
@@ -92,29 +104,5 @@ $user_id = $facebook->getUser();
         </ul>
       </div>
 
-       <div class="list">
-        <h3>Things you like</h3>
-        <ul class="things">
-          <?php
-            foreach ($likes as $like) {
-              // Extract the pieces of info we need from the requests above
-              $id = idx($like, 'id');
-              $item = idx($like, 'name');
-
-              // This display's the object that the user liked as a link to
-              // that object's page.
-          ?>
-          <li>
-            <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($item); ?>">
-              <?php echo he($item); ?>
-            </a>
-          </li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
-    </div>
 </body>
 </html>
