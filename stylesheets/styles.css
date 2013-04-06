@@ -22,10 +22,10 @@ a{
 	font-size:44px;
 }
 #nav{
+	float:left;
 	display:inline-block;
 	margin:0px auto;
 	height:50px;
-	width:100%;
 }
 
 #nav a{	
