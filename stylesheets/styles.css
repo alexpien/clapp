@@ -1,9 +1,16 @@
-header{
+body{
 	font-family:'Fjalla One',sans-serif;
+
+}
+header{
+	font-family:'Lobster';
 }
 
 #wrapper{
 	width:960px;
 	margin:0px auto;
 	
+}
+#logo{
+	margin: 0px auto;
 }

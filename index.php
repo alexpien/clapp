@@ -21,8 +21,7 @@ $user_id = $facebook->getUser();
     Clapp
   </title>
   <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Open+Sans:300' rel='stylesheet' type='text/css'/>
-
+  <link type='text/css' rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster|Merriweather+Sans:800'/>
 
 </head>
 <body>
@@ -53,13 +52,16 @@ $user_id = $facebook->getUser();
 </script>
 
   <header>
-  Welcome to this shit yo
+    <div id="logo">
+      CLAPP
+    </div>
+
   </header>
   <h1>
     hello
   </h1>
 
-  <div id = "wrapper">
+
   <div class="list">
         <h3>A few of your friends</h3>
         <ul class="friends">
@@ -104,7 +106,6 @@ $user_id = $facebook->getUser();
           ?>
         </ul>
       </div>
-    </div>
 
 </body>
 </html>
