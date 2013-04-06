@@ -9,6 +9,8 @@ body{
 	border-bottom: 1px solid black;
 	display:block;
 	background-color:#C8C8C8;
+	padding:10px;
+
 }
 a{
 	text-decoration: none;
@@ -19,7 +21,6 @@ a:selected{
 #wrapper{
 	width:960px;
 	margin:0px auto;
-	padding:10px;
 }
 #logo{
 	display:inline-block;
