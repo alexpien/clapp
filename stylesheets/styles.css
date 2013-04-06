@@ -20,11 +20,12 @@ header{
 	font-size:44px;
 }
 #nav{
-	padding:auto auto !important;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #nav a{	
-	display: inline-block;
+	float:left;
 	width:200px;
 	text-align:center;
 	border-left:1px black;
