@@ -42,6 +42,10 @@ header {
   padding: 24px 18px;
 }
 
+#wrapper{
+  margin:0px auto;
+}
+
 header h1 {
   border-bottom: 2px solid #e9e9e9;
   margin: 0 0 9px;
