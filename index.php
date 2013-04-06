@@ -14,7 +14,6 @@ $user_id = $facebook->getUser();
   $friends = idx($facebook->api('/me/friends'), 'data', array());
   ?>
 
-<!DOCTYPE html>
 <html>
 <head>
   <title>
