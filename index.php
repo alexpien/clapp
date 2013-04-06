@@ -36,12 +36,14 @@ function testAPI() {
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '334873059942972', // App ID
-      channelUrl : 'https://blooming-reef-3850.herokuapp.com/channel.html', // Channel File
+      channelUrl : '//blooming-reef-3850.herokuapp.com/channel.html', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to accdess the session
       xfbml      : true  // parse XFBML
     });
+
     //additional init code
+
     FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     // connected
@@ -65,7 +67,8 @@ function testAPI() {
    }(document));
 
 </script>
-
+<div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1">Login with Facebook</div>
+     
   <div id="wrapper">
     <header>
       <div id="logo">
