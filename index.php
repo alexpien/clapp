@@ -1,9 +1,6 @@
 <?php
-// Provides access to app specific values such as your app id and app secret.
-// Defined in 'AppInfo.php'
+/*
 require_once('AppInfo.php');
-
-// This provides access to helper functions defined in 'utils.php'
 require_once('utils.php');
 
 require_once('sdk/src/facebook.php');
@@ -15,12 +12,10 @@ $facebook = new Facebook(array(
   'trustForwarded' => true,
 ));
 $user_id = $facebook->getUser();
-  // This fetches some things that you like . 'limit=*" only returns * values.
-  // To see the format of the data you are retrieving, use the "Graph API
-  // Explorer" which is at https://developers.facebook.com/tools/explorer/
   $likes = idx($facebook->api('/me/likes'), 'data', array());
   $friends = idx($facebook->api('/me/friends'), 'data', array());
   $photos = idx($facebook->api('/me/photos'), 'data', array());
+  */
   ?>
 
 
