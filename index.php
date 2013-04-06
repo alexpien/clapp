@@ -35,7 +35,7 @@ function testAPI() {
  <button type="button" onclick="testAPI()">Test API</button>
 
   <div id="wrapper">
-    <header>
+    <div id="header">
       <div id="logo">
         <h1>clapp</h1>
       </div>
@@ -45,7 +45,7 @@ function testAPI() {
         <a href="#about">about</a>
         <a href="#other">other</a>
       </div>
-    </header>
+    </div>
     <h1>
       hello
     </h1>
