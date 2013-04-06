@@ -45,5 +45,6 @@ a:selected{
 
 #top{
 	height:10px;
-	background-color:black:
+	background-color:black !important:
+	margin: 0px;
 }
