@@ -1,4 +1,5 @@
 <?php
+/*
 require_once('AppInfo.php');
 require_once('utils.php');
 require_once('facebook.php');
@@ -12,8 +13,10 @@ $facebook = new Facebook(array(
 $user_id = $facebook->getUser();
   $likes = idx($facebook->api('/me/likes'), 'data', array());
   $friends = idx($facebook->api('/me/friends'), 'data', array());
+  */
   ?>
 
+<!DOCTYPE html>
 <html>
 <head>
   <title>
