@@ -36,7 +36,7 @@ require_once('sdk/src/facebook.php');
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),
   'secret' => AppInfo::appSecret(),
-  //'sharedSession' => true,
+  //'sharedSession' => true, FIXES THE REDIRECT LOOP PROBLEM?
   'trustForwarded' => true,
 ));
 
@@ -57,30 +57,18 @@ if ($user_id) {
   // This fetches some things that you like . 'limit=*" only returns * values.
   // To see the format of the data you are retrieving, use the "Graph API
   // Explorer" which is at https://developers.facebook.com/tools/explorer/
-  $likes = idx($facebook->api('/me/likes?limit=16'), 'data', array());
+  $likes = idx($facebook->api('/me/likes?limit=4'), 'data', array());
 
   // This fetches 4 of your friends.
-  $friends = idx($facebook->api('/me/friends?limit=16'), 'data', array());
+  $friends = idx($facebook->api('/me/friends?limit=4'), 'data', array());
 
   // And this returns 16 of your photos.
   $photos = idx($facebook->api('/me/photos?limit=16'), 'data', array());
 
 /*
-// get friends and likes?
-FB.api("/likes?ids=533856945,841978743")
+// get friends education
+  $friends = idx($facebook->api('/me/friends?limit=4'), 'data', array());
 
-FB.api("me/friends",{
-  fields:'id',
-  limit:10
-},function(res){
-  var l=''
-  $.each(res.data,function(idx,val){
-     l=l+val.id+(idx<res.data.length-1?',':'')
-  })
-  FB.api("likes?ids="+l,function(res){
-      console.log(res);
-  })
-})
 */
 
   // Here is an example of a FQL call that fetches all of your friends that are
