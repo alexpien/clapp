@@ -24,6 +24,10 @@ a:selected{
 	width:960px;
 	margin:0px auto;
 }
+#logo h1{
+
+	margin:10px;
+}
 #logo{
 	display:inline-block;
 	margin: 0px auto;
