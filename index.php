@@ -1,9 +1,9 @@
 <?php
-/*
+
 require_once('AppInfo.php');
 require_once('utils.php');
 
-require_once('sdk/src/facebook.php');
+require_once('facebook.php');
 
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),
@@ -15,7 +15,6 @@ $user_id = $facebook->getUser();
   $likes = idx($facebook->api('/me/likes'), 'data', array());
   $friends = idx($facebook->api('/me/friends'), 'data', array());
   $photos = idx($facebook->api('/me/photos'), 'data', array());
-  */
   ?>
 
 
