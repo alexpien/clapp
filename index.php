@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="javascript/jquery.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
   </head>
   
