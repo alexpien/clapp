@@ -1,6 +1,8 @@
-<?php
-/*
+// Provides access to app specific values such as your app id and app secret.
+// Defined in 'AppInfo.php'
 require_once('AppInfo.php');
+
+// This provides access to helper functions defined in 'utils.php'
 require_once('utils.php');
 
 require_once('sdk/src/facebook.php');
@@ -8,48 +10,21 @@ require_once('sdk/src/facebook.php');
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),
   'secret' => AppInfo::appSecret(),
-  'sharedSession' => true,
-  'trustForwarded' => true,
+  'sharedSession' => false,
+  'trustForwarded' => false,
 ));
+
 $user_id = $facebook->getUser();
+
+
+  // This fetches some things that you like . 'limit=*" only returns * values.
+  // To see the format of the data you are retrieving, use the "Graph API
+  // Explorer" which is at https://developers.facebook.com/tools/explorer/
   $likes = idx($facebook->api('/me/likes'), 'data', array());
   $friends = idx($facebook->api('/me/friends'), 'data', array());
   $photos = idx($facebook->api('/me/photos'), 'data', array());
-  */
-  ?>
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>
-    Clapp
-  </title>
-  <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Open+Sans:300' rel='stylesheet' type='text/css'/>
-
-
-</head>
-<body>
-<<<<<<< HEAD
-  <div id="wrapper">
-    <header>
-      Welcome to this shit yo 
-    </header>
-    <h1>
-      hello
-    </h1>
-  </div>
-=======
-  <header>
-  Welcome to this shit yo
-  </header>
-  <h1>
-    hello
-  </h1>
-
- <div class="list">
+  
+  <div class="list">
         <h3>A few of your friends</h3>
         <ul class="friends">
           <?php
@@ -93,7 +68,3 @@ $user_id = $facebook->getUser();
           ?>
         </ul>
       </div>
-
->>>>>>> 7752e41fc37b79970d55c108a3d82fa46a102ccd
-</body>
-</html>
