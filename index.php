@@ -71,9 +71,11 @@ function testAPI() {
         <a href="#other">other</a>
       </div>
     </div>
-    <h1>
-      hello
-    </h1>
+    <div id="#content">
+      <h1>
+        hello
+      </h1>
+    </div>
   </div>
 </body>
 </html>
