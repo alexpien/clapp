@@ -33,8 +33,7 @@
 
   </script>
     
-  </div>
-  <div style="position:fixed">
+ 
   <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1" >Login with Facebook</div>
   <button type="button" onclick="testAPI()">Test API</button>
   <p id="displayInfo">
