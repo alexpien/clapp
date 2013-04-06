@@ -34,7 +34,7 @@ function testAPI() {
   // Additional JS functions here
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : 'APPID', // App ID
+      appId      : '334873059942972', // App ID
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to accdess the session
       xfbml      : true  // parse XFBML
