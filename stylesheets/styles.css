@@ -31,7 +31,11 @@ a{
 
 #nav a{	
 	float:left;
-	width:200px;
+	width:160px;
+	margin:0px 20px;
+	border-left:1px solid black;
+	border-right:1px solid black;
+
 	text-align:center;
 	font-size: 24px;
 }
