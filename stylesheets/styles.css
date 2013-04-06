@@ -7,7 +7,6 @@ body{
 	margin:20px auto;
 	border-bottom: 1px solid black;
 	display:block;
-	height:100px;
 }
 a{
 	text-decoration: none;
@@ -19,15 +18,15 @@ a{
 }
 #logo{
 	margin: 0px auto;
-	display:block;
+	display:inline-block;
 	text-align:center;
 	font-size:44px;
 }
 #nav{
-	float:left;
 	display:inline-block;
 	margin:0px auto;
 	height:50px;
+	margin:0px auto;
 }
 
 #nav a{	
