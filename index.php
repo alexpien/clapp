@@ -46,7 +46,7 @@ if ($user_id) {
     // Fetch the viewer's basic information
     $basic = $facebook->api('/me');
   } catch (FacebookApiException $e) {
-    // If the call fails we check if we still have a user. The user will be
+    // If the call fails we checked if we still have a user. The user will be
     // cleared if the error is because of an invalid accesstoken
     if (!$facebook->getUser()) {
       header('Location: '. AppInfo::getUrl($_SERVER['REQUEST_URI']));
@@ -65,6 +65,7 @@ if ($user_id) {
   // And this returns 16 of your photos.
   $photos = idx($facebook->api('/me/photos?limit=16'), 'data', array());
 
+  $school = idx($facebook->api('/me?fields=education'),'data',array());
 /*
 // get friends and likes?
 FB.api("/likes?ids=533856945,841978743")
@@ -273,8 +274,13 @@ $app_name = idx($app_info, 'name', '');
     ?>
 
     <section id="samples" class="clearfix">
-      <h1>Classes you are enrolled in</h1>
-
+      <?php
+        $school = end($school)
+        $schoolid= idx($school,'id')
+        $schoolname=idx($school,'name')
+      ?>
+      <h1>Classes you are enrolled in at <?php echo he($schoolname);?></h1>
+ 
       <div class="list">
         <h3>A few of your friends</h3>
         <ul class="friends">
