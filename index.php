@@ -30,8 +30,8 @@ function testAPI() {
     FB.api('/me', function(response) {
         console.log('Good to see you, ' + response.name + '.');
     });
-  };
-  
+  }
+
   // Additional JS functions here
   window.fbAsyncInit = function() {
     FB.init({
@@ -53,7 +53,7 @@ function testAPI() {
       login();
   }
  });
-
+}
 
   // Load the SDK Asynchronously
   (function(d){
