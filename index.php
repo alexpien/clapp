@@ -67,7 +67,12 @@ function testAPI() {
   <div id="wrapper">
     <header>
       <div id="logo">
-        CLAPP
+        <h1>clapp</h1>
+      </div>
+      <div id="nav">
+        <a href="#classes">classes<a>
+        <a href"#friends">friends<a>
+        <a href="#about">about</a>
       </div>
     </header>
     <h1>

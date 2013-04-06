@@ -19,3 +19,9 @@ header{
 	text-align:center;
 	font-size:44px;
 }
+
+#nav a{	
+	display: inline-block;
+	width:20px;
+	margin:0px 50px;
+}
