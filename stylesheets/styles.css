@@ -28,7 +28,7 @@ a:selected{
 #nav{
 	float:right;
 	display:inline-block;
-	margin:0px auto;
+	margin-top: 60px;
 	height:50px;
 	width:700px;
 
