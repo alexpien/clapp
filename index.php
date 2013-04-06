@@ -1,8 +1,6 @@
 <?php
-
 require_once('AppInfo.php');
 require_once('utils.php');
-
 require_once('facebook.php');
 
 $facebook = new Facebook(array(
@@ -14,10 +12,7 @@ $facebook = new Facebook(array(
 $user_id = $facebook->getUser();
   $likes = idx($facebook->api('/me/likes'), 'data', array());
   $friends = idx($facebook->api('/me/friends'), 'data', array());
-  $photos = idx($facebook->api('/me/photos'), 'data', array());
   ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -32,12 +27,38 @@ $user_id = $facebook->getUser();
 </head>
 <body>
 
+<div id="fb-root"></div>
+<script>
+  // Additional JS functions here
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : <?php echo $facebook->appId ?>, // App ID
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional init code here
+
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script>
+
   <header>
   Welcome to this shit yo
   </header>
   <h1>
     hello
   </h1>
+
   <div id = "wrapper">
   <div class="list">
         <h3>A few of your friends</h3>
