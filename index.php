@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>
-    Clapp
-  </title>
-  <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
-  <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <head>
+    <title>Clapp</title>
+    <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  </head>
+  
+  <body>
 
-</head>
-<body>
+    <div id="fb-root"></div>
+    <script>
 
-<div id="fb-root"></div>
-<script>
-
-function testAPI() {
-    FB.api('/me', function(response) {
+    function testAPI() {
+      FB.api('/me', function(response) {
         alert('Good to see you, ' + response.name + '.');
-    });
-  }
+      });
+    }
  
- window.fbAsyncInit = function() {
- 	FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    // connected
-  } else if (response.status === 'not_authorized') {
-    // not_authorized
-    login();
-  } else {
-    // not_logged_in
-    login();
-  }
- });
- };
+    window.fbAsyncInit = function() {
+ 	    FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+          // connected
+        } else if (response.status === 'not_authorized') {
+          // not_authorized
+          login();
+        } else {
+          // not_logged_in
+          login();
+        }
+      });
+    };
 
- function login() {
-    FB.login(function(response) {
+    function login() {
+      FB.login(function(response) {
         if (response.authResponse) {
             // connected
             testAPI();
         } else {
             // cancelled
         }
-    });
-}
+      });
+    }
 
   // Load the SDK Asynchronously
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=358797270908365";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=358797270908365";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
-</script>
+  </script>
 
   <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1">Login with Facebook</div>
   <button type="button" onclick="testAPI()">Test API</button>
