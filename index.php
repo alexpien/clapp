@@ -71,7 +71,7 @@ function testAPI() {
       </div>
       <div id="nav">
         <a href="#classes">classes</a>
-        <a href"#friends">friends</a>
+        <a href="#friends">friends</a>
         <a href="#about">about</a>
         <a href="#other">other</a>
       </div>

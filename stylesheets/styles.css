@@ -5,7 +5,7 @@ body{
 header{
 	font-family:'Lobster';
 	margin:0px auto;
-
+	border-bottom: 1px black;
 }
 
 #wrapper{
@@ -18,6 +18,9 @@ header{
 	display:block;
 	text-align:center;
 	font-size:44px;
+}
+#nave{
+	margin: 0px auto;
 }
 
 #nav a{	
