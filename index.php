@@ -207,7 +207,7 @@ $app_name = idx($app_info, 'name', '');
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-
+    <div id="wrapper">
     <header class="clearfix">
       <?php if (isset($basic)) { ?>
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
@@ -249,7 +249,7 @@ $app_name = idx($app_info, 'name', '');
     </header>
 
     <section id="get-started">
-      <p>Welcome to your Facebook app, running BITCHES <span>heroku</span>!</p>
+      <p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
       <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
     </section>
 
@@ -380,5 +380,6 @@ $app_name = idx($app_info, 'name', '');
         </li>
       </ul>
     </section>
+  </div>
   </body>
 </html>
