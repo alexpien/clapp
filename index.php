@@ -21,6 +21,9 @@
     });
   }
 
+      window.onload = displayInfo();
+
+
   // Load the SDK Asynchronously
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
