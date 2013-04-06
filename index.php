@@ -53,7 +53,7 @@ function testAPI() {
       login();
   }
  });
-}
+};
 
   // Load the SDK Asynchronously
   (function(d){
