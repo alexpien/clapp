@@ -7,11 +7,18 @@ $(window).load(function(){
 	}else{
 		$("#home_sec").slideDown();
 	}
-	
+
+
+
+
+
 	$("#nav a").click(function(){
 		target=$(this).attr("href");
 		$("#main>div").slideUp();
 		$(target+"_sec").slideDown();
-		
+	
 	});
-});	
+
+
+
+});
