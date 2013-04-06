@@ -35,6 +35,7 @@ function testAPI() {
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '334873059942972', // App ID
+      channelUrl : '//blooming-reef-3850.herokuapp.com/channel.html', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to accdess the session
       xfbml      : true  // parse XFBML
