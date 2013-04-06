@@ -74,35 +74,15 @@ function testAPI() {
 >>>>>>> fea15d77c4dbfd40d2eba91a1454a1c7a8cdcaf3
       </div>
       <div id="nav">
-        <a href="#classes">classes<a>
-        <a href"#friends">friends<a>
+        <a href="#classes">classes</a>
+        <a href"#friends">friends</a>
         <a href="#about">about</a>
+        <a href="#other">other</a>
       </div>
     </header>
     <h1>
       hello
     </h1>
-
-  <div class="list">
-        <h3>A few of your friends</h3>
-        <ul class="friends">
-          <?php
-            foreach ($friends as $friend) {
-              // Extract the pieces of info we need from the requests above
-              $id = idx($friend, 'id');
-              $name = idx($friend, 'name');
-          ?>
-          <li>
-            <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
-              <?php echo he($name); ?>
-            </a>
-          </li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
 
 </body>
 </html>
