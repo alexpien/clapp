@@ -6,7 +6,7 @@
   </title>
   <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
   <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
