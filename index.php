@@ -32,7 +32,7 @@ $user_id = $facebook->getUser();
     FB.init({
       appId      : 'APPID', // App ID
       status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to access the session
+      cookie     : true, // enable cookies to allow the server to accdess the session
       xfbml      : true  // parse XFBML
     });
 
