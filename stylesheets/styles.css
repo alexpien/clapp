@@ -1,15 +1,21 @@
 body{
 	font-family:'Fjalla One',sans-serif;
+	margin:0px;
 
 }
 #header{
 	font-family:'Lobster';
 	margin:20px auto;
-	border-bottom: 1px solid black;
 	display:block;
+	background-color:#C8C8C8;
+	padding:10px;
+	height:140px;
+	margin:0px;
+
 }
 a{
 	text-decoration: none;
+	color: black;
 }
 a:selected{
 
@@ -17,7 +23,11 @@ a:selected{
 #wrapper{
 	width:960px;
 	margin:0px auto;
-	
+}
+#logo h1{
+
+	margin:10px;
+	margin-left:35px;
 }
 #logo{
 	display:inline-block;
@@ -28,7 +38,7 @@ a:selected{
 #nav{
 	float:right;
 	display:inline-block;
-	margin-top: 120px;
+	margin-top: 60px;
 	height:50px;
 	width:700px;
 
