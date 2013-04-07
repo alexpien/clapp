@@ -165,7 +165,8 @@ form{
 	-webkit-transition:all .3s;
 }
 	.profile a{
-		width:225 px;
+		width:225px;
+		height:20px;
 		padding:2px;
 	}
 	.profile img{
@@ -178,7 +179,7 @@ form{
 	.profile a:hover{
 		position:relative;
 		left:-7px;
-		text-decoration:none;
+		background:#DFFFA5;
 	}
 
 html, body {
