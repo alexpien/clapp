@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,16 +19,6 @@
     <div id="fb-root"></div>
     <script>
 
-//run this at load time
-    function displayInfo() {
-      FB.api('/me', function(response) {
-      	document.getElementById("displayInfo").innerHTML='Good to see you, ' + response.name + '.'
-        	+'You are from ' + response.hometown.name + '.'
-        	+'You go to ' + response.education[response.education.length-1].school.name + '.';
-
-    });
-  }
-
 
   // Load the SDK Asynchronously
     (function(d, s, id) {
@@ -40,10 +34,6 @@
  
   <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1" >Login with Facebook</div>
   <button type="button" onclick="testAPI()">Test API</button>
-
-  <p id="displayInfo">
-
-  </p>
   <div id="top">
   </div>
   <div id="wrapper">
