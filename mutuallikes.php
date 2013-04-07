@@ -296,7 +296,7 @@ $db = new PDO($dsn);
                     echo $specificUid;
                     echo "<br>";
 
-                $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid='$specificUid';";
+                $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=$specificUid)";
                               $response = $facebook->api(array(
                                 'method' => 'fql.query',
                                 'query' =>$fql,
