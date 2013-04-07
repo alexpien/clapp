@@ -141,7 +141,7 @@ $db = new PDO($dsn);
                                              echo '<input type="hidden" name="class" value="';
                                              echo $row["class"];
                                              echo'">';
-                                             echo '<input type="submit" value="x"/></form></div>';
+                                             echo '<input type="submit" value="x" style="background:#ff6666;"/></form></div>';
                                              echo "<div  class='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div><br><br>";
                                 }
                                 $result->closeCursor();
