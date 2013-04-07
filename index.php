@@ -95,7 +95,8 @@ $userId = $facebook->getUser();
                               ?>
 
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
-            
+                              <?echo "<img src=\"" . $profile_pic . "\" height=48/>"; ?>
+
             
                     </div>
                     <p>
