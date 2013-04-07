@@ -26,7 +26,6 @@ a:selected{
 	margin:0px auto;
 }
 .titleblock{
-	display:inline-block;
 	border-bottom:1px solid black;
 	font-size:28px;
 	padding:20px 0px;
