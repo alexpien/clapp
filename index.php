@@ -100,7 +100,7 @@ $userId = $facebook->getUser();
             
                     </div>
                     <p>
-                        Welcome to clapp, the best app to connect with your classmates. To begin, enter your classes below. 
+                        Welcome to <span style="font-family:'Lobster';">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
                     </p>
                     <p>
                       DROPDOWN
