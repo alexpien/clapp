@@ -139,7 +139,7 @@ $userId = $facebook->getUser();
           Friends
         </div>
         	<p>
-        		Other Clapp Users:
+        		Your Clapp Friends:
         	</p>
 
         	<?php
