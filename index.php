@@ -206,7 +206,7 @@ $db = new PDO($dsn);
             <div id="friends_sec" style="display:none;">
                 <div class="contentwrapper">
                     <div class="titleblock">
-                        Your <span>clapp</span> Friends
+                        Your <span>clapp</span> friends
                     </div>
                     <div style="padding-left:100px">
           	        
