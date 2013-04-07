@@ -62,10 +62,7 @@ $userId = $facebook->getUser();
   </div>
   <div id="wrapper">
     <div id="header">
-      kevin is testingasdfasdf
       <div id="logo">
-        clapp
-        <h1>clapp</h1>
         <a href="#home">
           <div style="display:inline-block; float:left;">
 
