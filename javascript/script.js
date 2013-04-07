@@ -19,6 +19,16 @@ $(window).load(function(){
 	
 	});
 
+	$("#classes_sec a").click(function(){
+		$("#classes_sec>div").removeClass("colored");
+		$(this).toggleClass("colored");
+		$("#classwrapper>div").hide();
+		target=$(this).attr("href");
+		$("target").show();
+
+
+	});
+
 
 
 });
