@@ -72,6 +72,7 @@ $userId = $facebook->getUser();
                 <a href="#about">about</a>
                 <a href="#other">other</a>
             </div>
+
         </div>
         <div id="main">
             <div id="home_sec" style="display:none;">

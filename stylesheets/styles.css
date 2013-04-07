@@ -83,6 +83,12 @@ div{
 	
 }
 
+#home_sec span{
+	font-family:'Lobster';
+	font-color:#333;
+	font-size:16px;
+}
+
 .column{
 	display:inline-block;
 	width:315px;
