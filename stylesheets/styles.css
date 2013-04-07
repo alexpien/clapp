@@ -40,14 +40,14 @@ a:selected{
 	float:right;
 	display:inline-block;
 	margin:auto 20px;
-
+	margin-top:20px;
 }
 
 #nav a{	
 	font-family:"Open Sans Condensed, sans-serif";
 	display:inline-block;
 	width:80px;
-	height:30px;
+	
 	border-radius:3px;
 	margin:0px 0px;
 	color:#333;
@@ -55,7 +55,7 @@ a:selected{
 	font-size: 14px;
 	font-family: Arial;
 	vertical-align:50%;
-	padding:8px;
+	padding:10px;
 }
 #nav a:hover{
 	background-color:#333;
