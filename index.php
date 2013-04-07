@@ -127,7 +127,7 @@ $db = new PDO($dsn);
                               <input id="course" name="course" placeholder=" Course #" required>
 
                               <input type="submit" value="+"/>
-                              <input type="hidden" name="name" value=<?=$userInfo['name']?>>
+                              <input type="hidden" name="name" value="<?=$userInfo['name']?>">
                       </form>
                     </div>
                           <!-- list of current classes, if any -->
@@ -162,10 +162,10 @@ $db = new PDO($dsn);
                               <input id="course" name="course" placeholder=" Course #" required>
 
                               <input type="submit" value="+"/>
-                              <input type="hidden" name="name" value=<?=$userInfo['name']?>>
+                              <input type="hidden" name="name" value="<?=$userInfo['name']?>">
                       </form>
 
-                      
+
                     </div>                        
                 
                     <div class="column">
