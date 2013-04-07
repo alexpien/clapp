@@ -38,6 +38,7 @@ $userId = $facebook->getUser();
             xfbml      : true  // parse XFBML
           });
 
+
           FB.Event.subscribe('auth.login', function(response) {
           window.location.reload();
         });
@@ -75,7 +76,6 @@ $userId = $facebook->getUser();
     <div id="main">
       <div id="home_sec" style="display:none;">
           <h1> 
-            hihi
          <?php if ($userId) { 
 
       $userInfo = $facebook->api('/' . $userId);
