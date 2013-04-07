@@ -27,7 +27,7 @@ a:selected{
 #logo h1{
 
 	margin:10px;
-	margin-left:35px;
+	margin-left:0px;
 }
 #logo{
 	display:inline-block;
@@ -47,7 +47,7 @@ a:selected{
 #nav a{	
 	font-family:Garamond;
 	display:inline-block;
-	width:160px;
+	width:140px;
 	margin:0px 0px;
 	color:#333;
 	text-align:center;
