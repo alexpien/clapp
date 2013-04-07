@@ -132,6 +132,8 @@ $db = new PDO($dsn);
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                             $number=$number+1;
+                                    	    	
+
                                             echo '<div class="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
@@ -184,16 +186,16 @@ $db = new PDO($dsn);
                           $result2 = $db->query($query2);
                           while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
                           //display people in this class           
-                      echo '<div class="profile">';
-                          $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
-                             	//echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp";
+                                echo '<div class="profile">';
 
+                          $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
+                             	echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
 
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
-					          $str = file_get_contents($facebookUrl); 
-          					$result3 = json_decode($str); 
-          					//echo $result3->name; 
-                          echo "<a href='http://facebook.com/".$row2['fbid']."'><img class='peeps' src=\"".$profile_pic."\"/>&nbsp&nbsp&nbsp&nbsp<div class='peepname'>".$result3->name."</div></a>";
+					$str = file_get_contents($facebookUrl); 
+					$result3 = json_decode($str); 
+					echo $result3->name; 
+
                      echo "</div>";
                          }
                      echo '</div>';
@@ -222,11 +224,11 @@ $db = new PDO($dsn);
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
-                              	echo "<div title='$friendId' class='prof2'>";
+                              	echo "<div id='$friendId'>";
 
-                         		   echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                         		echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                             	 echo "</div>";
-                               echo '<div id="mouseover'.$friendId.'" style="display:none;">';
+                               echo '<div id="mouseover"'.$friendId.';display:none>';
                                echo $friendName;
                                echo '<ul>';
 
@@ -271,7 +273,8 @@ $db = new PDO($dsn);
                         Mutual Likes (MuLi): Search for friends with the most common interests.
                     </p>
                       <?php
-                                      $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=me())";
+
+                        $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=me())";
                        
                               $response = $facebook->api(array(
                                 'method' => 'fql.query',
@@ -286,9 +289,39 @@ $db = new PDO($dsn);
                                 echo "<p>";
                                 //echo the image out
                                 echo "<img class='peeps' src=\"" . $profile_pic . "\" />";
-                                             echo $likeName;
+                                echo $likeName;
                                 echo "</p>";
                           }
+
+                      $fql = "SELECT uid1 from friend where uid2=me()";
+                       $friendids = $facebook->api(array(
+                                'method' => 'fql.query',
+                                'query' =>$fql,
+                              ));
+                       $friendids=$friendids['data'];
+                                foreach ($friendids as &$friendid) {
+                    echo $friendid;                                
+                      }
+
+                    $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=658008653";
+                              $response = $facebook->api(array(
+                                'method' => 'fql.query',
+                                'query' =>$fql,
+                              ));
+                                foreach ($response as &$like) {
+                                $likeId=$like['page_id'];
+                                $likeName=$like['name'];
+                              
+                            //create the url
+                              $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
+                                echo "<p>";
+                                //echo the image out
+                                echo "<img class='peeps' src=\"" . $profile_pic . "\" />";
+                                             echo $likeName;
+                                echo "</p>";   
+                          }
+
+
                       ?>
                 </div>
             </div>  
