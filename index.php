@@ -75,24 +75,27 @@ $userId = $facebook->getUser();
     </div>
     <div id="main">
       <div id="home_sec" style="display:none;">
-         <?php if ($userId) { 
+        <div class="titleblock">
+          
+           <?php if ($userId) { 
 
       $userInfo = $facebook->api('/' . $userId);
       $mySchoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
       $schoolInfo = $facebook->api('/' . $mySchoolId);
-      $schoolName= $schoolInfo['name'];
+      $schoolName= $schoolInfo['name']  ;
 
         //create the url
   $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
 
  //echo the image out
- echo "<img src=\"" . $profile_pic . "\" />"; 
+ echo "<img src=\"" . $profile_pic . "\" height=48/>"; 
 
       ?>
 
-      Welcome, <?= $userInfo['name'] ?> from <?= $schoolName ?>!
+      <?= $userInfo['name'] ?> - <?= $schoolName ?>
       
-      </h1>
+      
+    </div>
       <p>
         You're now on clapp, the best app to connect with your classmates. To begin, enter your classes below:
       </p>
@@ -115,9 +118,9 @@ $userId = $facebook->getUser();
     <?php } ?>
       </div>
       <div id="classes_sec" style="display:none;">
-        <h1>
+        <div class="titleblock">
           Classes
-        </h1>
+        </div>
         <div>
           c1 your classes
         </div>
@@ -129,13 +132,15 @@ $userId = $facebook->getUser();
         </div>
       </div>
       <div id="friends_sec" style="display:none;">
-        <h1>
+         <div class="titleblock">
+          Friends
+        </div>
         	<p>
-        		Other friends at your school:
+        		At  <?= $schoolName ?>
         	</p>
 
         	<?php
-      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(100).fields(education)');
+      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(20).fields(education)');
       $friendData=$friendData['friends']['data'];
 
       foreach ($friendData as &$friend) {
@@ -166,9 +171,9 @@ $userId = $facebook->getUser();
         </h1>
       </div>
       <div id="about_sec" style="display:none;">
-        <h1>
-          About        
-        </h1>
+         <div class="titleblock">
+          About
+        </div>
         <p> 
           Clapp is the best way to connect to your classmates. Enter your schedule and find the other members of that class, as well as the classes that your friends are in.
         </p>
@@ -177,12 +182,14 @@ $userId = $facebook->getUser();
         </p>
       </div>  
       <div id="other_sec" style="display:none;">
-        <h1>
+         <div class="titleblock">
           Other
-        </h1>
-        
+        </div>
       </div>
     </div>  
+  </div>
+  <div style="text-align:center;border-bottom: 1px solid black; border-top:1px solid black; height:20px">
+    us llol
   </div>
 </body>
 </html>
