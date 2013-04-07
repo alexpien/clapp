@@ -97,12 +97,12 @@ $db = new PDO($dsn);
                         $schoolName= $schoolInfo['name']  ;
 
                         //create the url
-                        $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
+                        $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
                               ?>
                               <div class="titleblock">
                               Hello,<br>
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
-                              <?echo "<br><br><img src=\"" . $profile_pic . "\" style=\"height:72px;\"/>"; ?>
+                              <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
 
             
                     </div>

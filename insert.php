@@ -10,7 +10,7 @@ $db = new PDO($dsn);
 
 $subjectAndSection=$_POST[subject]." ".$_POST[course];
 
-$sql="INSERT INTO entries (name, class) VALUES ('$_POST[name]','$subjectAndSection')";
+$sql="INSERT INTO entries (fbid, class) VALUES ('$_POST[fbid]','$subjectAndSection')";
 
 // Performs the $sql query on the server to insert the values
 $db->query($sql);
