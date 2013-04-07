@@ -140,10 +140,11 @@ $db = new PDO($dsn);
 
  								<?php
                                 	$query = "SELECT class FROM entries WHERE fbid = '$userId';";
-
+                                  $number=0;
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                    	    	echo "<div id='sub'>". $row["class"] . "</div>";
+                                            $number=$number+1;
+                                    	    	echo "<div id='sub'><a href=#Class".$number.">".$row["class"] . "</a></div>";
 
                                             echo '<div id="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
