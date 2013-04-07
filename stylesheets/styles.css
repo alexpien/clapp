@@ -171,7 +171,9 @@ html, body {
    width:100%;
 }
 
-
+#classes_sec a:hover{
+	background-color:#DFFFA5;
+}
 
 .colored{
 	background-color:#333;
