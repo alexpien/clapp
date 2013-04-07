@@ -133,9 +133,9 @@ $db = new PDO($dsn);
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                             $number=$number+1;
-                                    	    	echo "<div id='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div>";
+                                    	    	echo "<div  class='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div>";
 
-                                            echo '<div id="remove"><form action="delete.php" method="post">
+                                            echo '<div class"remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
                                              echo '">';
@@ -180,6 +180,9 @@ $db = new PDO($dsn);
                      echo '" style="display:none">';
 
                      $className=$row['class'];
+                     echo '<h3>';
+                     echo $className;
+                     echo '</h3><br>';
                        $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
                           $result2 = $db->query($query2);
                           while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
@@ -229,9 +232,6 @@ $db = new PDO($dsn);
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
                                              echo '">';
-                                             echo '<input type="hidden" name="class" value="';
-                                             echo $row["class"];
-                                             echo'">';
                                              echo '<input type="submit" value="';
                                              echo $friendName;
                                              echo '"/></form>';
