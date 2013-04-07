@@ -117,12 +117,7 @@ $userId = $facebook->getUser();
                               <input type="submit"value="+"/>
                       </form>
                     </div>
-                    <p>
-                      CLASS NUMBER BOX
-                    </p>
-                    <p>
-                      SUBMIT BUTTON
-                    </p>
+            
 
                           <!-- list of current classes, if any -->
                     <?php } 
