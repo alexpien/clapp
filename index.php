@@ -113,7 +113,6 @@ $db = new PDO($dsn);
                       <div style="text-align:center">
                       <form action="insert.php" method="post">
                               <select name="subject">
-
                                 <?php
                                 	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
                                 	$result = $db->query($query);
@@ -127,16 +126,15 @@ $db = new PDO($dsn);
                               <input id="section" name="course" placeholder=" Course #" required>
 
                               <input type="submit" value="+"/>
+                              <input type="hidden" name="name" value=<?$userInfo['name']?>>
                       </form>
                     </div>
-            
-
                           <!-- list of current classes, if any -->
                     <?php } 
                     else { ?>
 
                     <h1>Log in to Facebook to begin:</h1>
-                    <fb:login-button scope="friends_education_history,friends_likes"></fb:login-button>
+                    <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
 
                     <?php } ?>
                </div>
