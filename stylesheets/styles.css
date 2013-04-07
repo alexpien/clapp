@@ -165,7 +165,7 @@ form{
 }
 	.profile a:hover{
 		position:relative;
-		left:-7px;
+		left:-4px;
 		background:transparent;
 	}
 
@@ -179,11 +179,11 @@ html, body {
 	height:14px;
 	display:block;
 	font-size:12px;
-	 position:fixed;
-   left:0px;
-   bottom:0px;
-   height:14px;
-   width:100%;
+	position:fixed;
+   	left:0px;
+   	bottom:0px;
+   	height:14px;
+   	width:100%;
 }
 
 #classes_sec a:hover{
