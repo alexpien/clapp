@@ -122,7 +122,6 @@ $db = new PDO($dsn);
 }
 $result->closeCursor();
 ?>
-                                <option value="African and African American Studies">African and African American Studies</option>
                               </select>
 
                              
