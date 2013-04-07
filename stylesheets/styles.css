@@ -81,21 +81,11 @@ a:selected{
 	
 }
 
-#classes_sec div:nth-child(1){
+.column{
+	display:inline-block;
 	width:310px;
 	float:left;
 
-}
-#classes_sec div:nth-child(2){
-	width:310px;
-	float:left;
-	
-}
-#classes_sec div:nth-child(3){
-	width:310px;
-	float:left;
-	
-}
 
 
 #top{

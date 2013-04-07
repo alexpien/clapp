@@ -121,13 +121,14 @@ $userId = $facebook->getUser();
         <div class="titleblock">
           Classes
         </div>
-        <div>
+        <div class="column">
           c1 your classes
         </div>
-        <div>
+        <div class="column">
+
           c2 your friends
         </div>
-        <div>
+        <div class="column">
           c3 others in class
         </div>
       </div>
