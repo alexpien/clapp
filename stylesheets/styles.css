@@ -90,7 +90,7 @@ div{
 #home_sec span{
 	font-family:'Lobster';
 	font-color:#333;
-	font-size:16px;
+	font-size:18px;
 }
 
 .column{
@@ -105,9 +105,9 @@ div{
 	margin: 0px;
 }
 
-#class_sec span{
+#friends_sec span{
 	font-family:'Lobster';
-	font-size:16px;
+	font-size:32px;
 	font-color:#333;
 }
 
