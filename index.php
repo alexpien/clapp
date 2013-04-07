@@ -97,11 +97,11 @@ $db = new PDO($dsn);
                   ?>
                   <div class="titleblock">
                     Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
-                    <?echo "<br><br><img id='peeps' src=\"" . $profile_pic . "\"/>"; ?>
+                    <?echo "<br><br><img class='peeps' src=\"" . $profile_pic . "\"/>"; ?>
                   </div>
                   <div style="text-align:center">
                     <p>
-                      Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
+                      Welcome to <span style="font-family:'Lobster'; font-size:18px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
                     </p>
                   </div>
                   <br>
@@ -211,8 +211,6 @@ $db = new PDO($dsn);
                         Your <span>clapp</span> friends
                     </div>
                     <div style="padding-left:100px">
-          	        
-
                         	<?php
                         	$fql = "SELECT uid, name FROM user WHERE is_app_user AND uid IN (SELECT uid2 FROM friend WHERE uid1 = me())";
                  
@@ -225,9 +223,10 @@ $db = new PDO($dsn);
                               	$friendId=$friend['uid'];
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
+
                               	echo "<div id='$friendId'>";
+
                          		echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
-                         					
                             	 echo "</div>";
                                echo '<div id="mouseover"'.$friendId.';display:none>';
                                echo $friendName;
@@ -247,9 +246,7 @@ $db = new PDO($dsn);
                                   echo '</ul>';
                                   echo '</div>';
                             		}
-
                               ?>
-            
                       </div>
                 </div>
             </div>
@@ -290,11 +287,11 @@ $db = new PDO($dsn);
                               $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
                                 echo "<p>";
                                 //echo the image out
-                            echo "<img id='peeps' src=\"" . $profile_pic . "\" />";
+                                echo "<img class='peeps' src=\"" . $profile_pic . "\" />";
                                              echo $likeName;
-                              echo "</p>";
+                                echo "</p>";
                           }
-                            ?>
+                      ?>
                 </div>
             </div>  
         </div>
