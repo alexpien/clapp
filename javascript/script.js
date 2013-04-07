@@ -31,7 +31,7 @@ $(window).load(function(){
 
 	$("div.asdf").bind("mousemove",function(event){
 		targ=$(this).attr("id");
-		alert(targ);
+		
 		$("#mouseover"+targ).css({	top:event.pageY +5 +"px",left:event.pageX+5+"px"}).show();
 		}).bind("mouseout",function(){$("#mouseover"+targ).hide();
 	});
