@@ -135,7 +135,7 @@ $db = new PDO($dsn);
                                             $number=$number+1;
                                     	    	
 
-                                            echo '<div class"remove"><form action="delete.php" method="post">
+                                            echo '<div class="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
                                              echo '">';
