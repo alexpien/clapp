@@ -38,6 +38,12 @@ $userId = $facebook->getUser();
             xfbml      : true  // parse XFBML
           });
 
+          FB.login(function(response) {
+    if (response.authResponse) {
+        alert('Logged in and accepted permissions!');
+    }
+}, {scope:'friends_education_history','friends_likes'});
+
           FB.Event.subscribe('auth.login', function(response) {
           window.location.reload();
         });
@@ -106,10 +112,12 @@ $userId = $facebook->getUser();
         SUBMIT BUTTON
       </p>
 
-    <?php } else { ?>
+    <?php } 
+    else { ?>
 
     <h1>Log in to Facebook to begin:</h1>
     <fb:login-button></fb:login-button>
+
     <?php } ?>
       </div>
       <div id="classes_sec" style="display:none;">
@@ -122,7 +130,7 @@ $userId = $facebook->getUser();
         	<p>
         		Other friends at your school:
         	</p>
-        	
+
         	<?php
       $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(100).fields(education)');
       $friendData=$friendData['friends']['data'];
