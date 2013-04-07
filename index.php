@@ -136,10 +136,12 @@ $userId = $facebook->getUser();
           Friends
         </div>
         	<p>
-        		At  <?= $schoolName ?>
+
+        		Other clapp users:
+
         	</p>
 
-        	<?php
+        	<?php/*
       $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(20).fields(education)');
       $friendData=$friendData['friends']['data'];
 
@@ -167,6 +169,7 @@ $userId = $facebook->getUser();
   
 
 	}
+	*/
       ?>
           
         </h1>
@@ -182,11 +185,31 @@ $userId = $facebook->getUser();
           This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang for the HackBlue 2013 hackathon at Duke University.
         </p>
       </div>  
+
       <div id="other_sec" style="display:none;">
          <div class="titleblock">
           Other
-        </div>
       </div>
+        <p>
+        Mutual Likes:
+    </p>
+
+       <?php
+      $myLikes= $facebook->api('/' . $userId. '?fields=likes');
+      $myLikesData=$myLikes['likes']['data'];
+
+      foreach ($myLikesData as &$like) {
+      	$likeId=$like['id'];
+      	$likeName=$like['name'];
+//create the url
+  $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
+      	echo "<p>";
+      //echo the image out
+ 	echo "<img src=\"" . $profile_pic . "\" />";
+	    echo $likeName;
+    	echo "</p>";
+}
+      ?>
     </div>  
   </div>
   <div style="text-align:center;background-color:#DFFFA5; height:20px">
@@ -194,3 +217,9 @@ $userId = $facebook->getUser();
   </div>
 </body>
 </html>
+$fql = "SELECT page_id, name from page where name='Coke'";
+ 
+$response = $facebook->api(array(
+     'method' => 'fql.query',
+     'query' =>$fql,
+));
