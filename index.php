@@ -83,7 +83,15 @@ $userId = $facebook->getUser();
       $schoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
       $schoolInfo = $facebook->api('/' . $schoolId);
       $schoolName= $schoolInfo['name'];
+
+        //create the url
+  $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
+
+ //echo the image out
+ echo "<img src=\"" . $profile_pic . "\" />"; 
+
       ?>
+
       Welcome, <?= $userInfo['name'] ?> from <?= $schoolName ?>!
       </h1>
     </div>
@@ -116,12 +124,21 @@ Classes
       $friendData=$friendData['friends']['data'];
 
       foreach ($friendData as &$friend) {
+      	$friendId=$friend['id'];
+      	$friendName=$friendInfo['name'];
+      	$friendInfo= $facebook->api('/' . $friendId);
 
-      	$friendInfo= $facebook->api('/' . $friend['id']);
-		$friendName=$friendInfo['name'];
+        //create the url
+  $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
-		//$schoolInfo = $facebook->api('/' . $friend['education'][count($friend['education'])-1]['school']['id']);
+ //echo the image out
+ echo "<img src=\"" . $profile_pic . "\" />"; 
+
+		$schoolInfo = $facebook->api('/' . $friend['education'][count($friend['education'])-1]['school']['id']);
+		var_dump($schoolInfo);
       	//$friendSchoolName= $schoolInfo['name'];
+
+
 
 		echo "<p>";
 	    echo $friendName."<br>";
