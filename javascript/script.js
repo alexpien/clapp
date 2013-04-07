@@ -20,11 +20,11 @@ $(window).load(function(){
 	});
 
 	$("#classes_sec a").click(function(){
+		
 		$("#classwrapper>div").slideUp();
 		target=$(this).attr("id");
-		alert(target);
+		alert(target)
 		$(target).slideDown();
-		if(target).css()
 
 
 	});
