@@ -56,8 +56,9 @@
       <div id="logo">
         <a href="#home">
           <div style="display:inline-block; float:left;"
-        <img src="images/icone.png" height="100" />
-      </div><h1>cla<span style="color:#333;">pp</span></h1>
+            <img src="images/icone.png" height="100" />
+          </div>
+          <h1>cla<span style="color:#333;">pp</span></h1>
         </a>
       </div>
       <div id="nav">
