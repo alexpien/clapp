@@ -19,21 +19,36 @@
     <div id="fb-root"></div>
     <script>
 
+     window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '358797270908365', // App ID
+            channelUrl : '//blooming-reef-3850.herokuapp.com/channel.html', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+          });
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
 
-  // Load the SDK Asynchronously
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=358797270908365";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-  </script>
+   // Load the SDK Asynchronously
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
 
  
   <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1" >Login with Facebook</div>
-  <button type="button" onclick="testAPI()">Test API</button>
   <div id="top">
   </div>
   <div id="wrapper">
@@ -42,7 +57,7 @@
         clapp
         <h1>clapp</h1>
         <a href="#home">
-          <h1>cla<span style="color:#333;">pp</span></h1>
+        <img src="images/icone.png" height="50" /><h1>cla<span style="color:#333;">pp</span></h1>
         </a>
       </div>
       <div id="nav">
