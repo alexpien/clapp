@@ -43,7 +43,11 @@ a:selected{
 	#logo img{
 		display:inline-block;
 		float:left;
-		height:100px;
+		height:75px;
+	}
+	#logo h1{
+		display:inline-block;
+		float:left;
 	}
 
 #nav{
