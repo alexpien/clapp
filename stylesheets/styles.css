@@ -88,10 +88,6 @@ div{
 #main{
 	padding:10px;
 }
-#someelse{
-	margin:0px auto;
-}
-
 
 #button{
 	background-color:#DFFFA5;
@@ -102,6 +98,11 @@ div{
 	font-family:'Lobster';
 	font-size:40px;
 	font-color:#006633;
+	margin:0px auto;
+}
+
+#someelse{
+	text-align:center;
 	margin:0px auto;
 }
 
