@@ -176,7 +176,7 @@ $db = new PDO($dsn);
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
                     </div> 
-
+                    <div id="classwrapper">
                     <?php
                                 	$query = "SELECT class FROM entries WHERE fbid = '$userId';";
 
@@ -211,6 +211,7 @@ $db = new PDO($dsn);
                                 }
                                 //closecursor?
                                 ?>
+                              </div>
                 </div>
             </div>
             <div id="friends_sec" style="display:none;">
