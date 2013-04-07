@@ -48,6 +48,8 @@ a:selected{
 	font-family:"Open Sans Condensed, sans-serif";
 	display:inline-block;
 	width:80px;
+	height:30px;
+	border-radius:3px;
 	margin:0px 0px;
 	color:#333;
 	text-align:center;
