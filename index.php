@@ -99,11 +99,8 @@ $db = new PDO($dsn);
 
                         //create the url
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
-
-                         //echo the image out
-
                               ?>
-
+                              Welcome,<br>
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
                               <?echo "<br><br><img src=\"" . $profile_pic . "\" height=72/>"; ?>
 
@@ -117,7 +114,14 @@ $db = new PDO($dsn);
                       <div style="text-align:center">
                       <form>
                               <select name="subject">
-                                <option value="nothing">Select Subject</option>
+<?php
+	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
+	$result = $db->query($query);
+	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>"
+}
+$result->closeCursor();
+?>
                                 <option value="African and African American Studies">African and African American Studies</option>
                               </select>
 
