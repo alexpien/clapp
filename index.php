@@ -90,12 +90,11 @@ $userId = $facebook->getUser();
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
 
                          //echo the image out
-                         echo "<img src=\"" . $profile_pic . "\" height=48/>"; 
 
                               ?>
 
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
-                              <?echo "<img src=\"" . $profile_pic . "\" height=48/>"; ?>
+                              <?echo "<br><img src=\"" . $profile_pic . "\" height=72/>"; ?>
 
             
                     </div>
