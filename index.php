@@ -186,7 +186,7 @@ $db = new PDO($dsn);
                                     <?php for other in class?>
                                       <p><?other?></p>
                                 </div>
-                    </div>
+                     </div>
 
 
                 </div>
