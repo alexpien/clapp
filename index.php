@@ -160,7 +160,7 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
                               </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
+                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;margin-left:2px;" required>
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
