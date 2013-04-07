@@ -66,14 +66,11 @@ $userId = $facebook->getUser();
     <div id="header">
       <div id="logo">
         <a href="#home">
-<<<<<<< HEAD
-        <img href="images/icone.png"/><h1>cla<span style="color:#333;">pp</span></h1>
-=======
+
           <div style="display:inline-block; float:left;"
             <img src="images/icone.png" height="100" />
           </div>
           <h1>cla<span style="color:#333;">pp</span></h1>
->>>>>>> ed24806b980928e7d92c12474a1f25945910324d
         </a>
       </div>
       <div id="nav">
