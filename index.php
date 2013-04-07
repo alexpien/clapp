@@ -172,7 +172,6 @@ $db = new PDO($dsn);
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
                     </div>        
-
                      <div id="<?#?>_subsection" style="display:none">
                           <?php for class in classes?>              
                                 <div class="<?class?>">
@@ -187,8 +186,6 @@ $db = new PDO($dsn);
                                       <p><?other?></p>
                                 </div>
                      </div>
-
-
                 </div>
             </div>
             <div id="friends_sec" style="display:none;">
