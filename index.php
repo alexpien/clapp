@@ -188,7 +188,7 @@ $userId = $facebook->getUser();
       </div>
     </div>  
   </div>
-  <div style="text-align:center;border-bottom: 1px solid black; border-top:1px solid black; height:20px">
+  <div style="text-align:center;background-color:#DFFFA5; height:20px">
     us llol
   </div>
 </body>
