@@ -142,6 +142,15 @@ $userId = $facebook->getUser();
         	</p>
 
         	<?php
+
+        	/*
+        	$fql = "SELECT page_id, name from page where name='Coke'";
+ 
+$response = $facebook->api(array(
+     'method' => 'fql.query',
+     'query' =>$fql,
+));
+*/
       $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(30).fields(education)');
       $friendData=$friendData['friends']['data'];
 
@@ -214,9 +223,3 @@ $userId = $facebook->getUser();
   </div>
 </body>
 </html>
-$fql = "SELECT page_id, name from page where name='Coke'";
- 
-$response = $facebook->api(array(
-     'method' => 'fql.query',
-     'query' =>$fql,
-));
