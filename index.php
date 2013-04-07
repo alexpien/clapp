@@ -124,17 +124,17 @@ $userId = $facebook->getUser();
           Classes
         </div>
         <div id = "column_contain">
-        <div class="column">
-          c1 your classes
-        </div>
-        <div class="column">
+          <div class="column">
+            c1 your classes
+          </div>
+          <div class="column">
 
-          c2 your friends
+            c2 your friends
+          </div>
+          <div class="column">
+            c3 others in class
+          </div>
         </div>
-        <div class="column">
-          c3 others in class
-        </div>
-      </div>
       </div>
       </div>
       <div id="friends_sec" style="display:none;">
