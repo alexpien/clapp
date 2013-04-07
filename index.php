@@ -145,7 +145,7 @@ $userId = $facebook->getUser();
                     <div class="titleblock">
                         Your Clap Friends
                     </div>
-                    <div style="padding-left:120px">
+                    <div style="padding-left:100px">
           	        
 
                         	<?php
