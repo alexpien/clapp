@@ -148,6 +148,9 @@ $result->closeCursor();
                     <div class="titleblock">
                         Classes
                     </div>
+                    <div id="space">
+                      
+                    </div>
                     <div class="column">
                         c1 your classes
                     </div>
