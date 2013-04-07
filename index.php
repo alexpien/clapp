@@ -136,7 +136,7 @@ $userId = $facebook->getUser();
         	</p>
 
         	<?php
-      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(100).fields(education)');
+      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(20).fields(education)');
       $friendData=$friendData['friends']['data'];
 
       foreach ($friendData as &$friend) {
