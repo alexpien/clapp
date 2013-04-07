@@ -85,6 +85,7 @@ $userId = $facebook->getUser();
       $schoolName= $schoolInfo['name'];
       ?>
       Welcome, <?= $userInfo['name'] ?> from <?= $schoolName ?>!
+      </h1>
     </div>
       <p>
       You're now on clapp, the best app to connect to your classmates.  To begin, enter your classes below:
