@@ -273,7 +273,7 @@ $db = new PDO($dsn);
                         Mutual Likes (MuLi): Search for friends with the most common interests.
                     </p>
                       <?php
-
+/*
                         $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=me())";
                        
                               $response = $facebook->api(array(
@@ -292,14 +292,14 @@ $db = new PDO($dsn);
                                 echo $likeName;
                                 echo "</p>";
                           }
-
+*/
                       $fql = "SELECT uid1 from friend where uid2=me()";
                        $friendids = $facebook->api(array(
                                 'method' => 'fql.query',
                                 'query' =>$fql,
                               ));
                        $friendids=$friendids['data'];
-                                foreach ($friendids as &$friendid) {
+                    foreach ($friendids as &$friendid) {
                     echo $friendid;                                
                       }
 
@@ -317,7 +317,7 @@ $db = new PDO($dsn);
                                 echo "<p>";
                                 //echo the image out
                                 echo "<img class='peeps' src=\"" . $profile_pic . "\" />";
-                                             echo $likeName;
+                                echo $likeName;
                                 echo "</p>";   
                           }
 

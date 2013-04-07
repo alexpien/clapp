@@ -161,12 +161,24 @@ form{
 .profile{
 	display:inline-block;
 	width:225px;
-	margin:20px;
-
+	margin:20px
+	-webkit-transition:all .3s;
 }
+	.profile a{
+		width:225 px;
+		padding:2px;
+	}
+	.profile img{
+		float:left;
+	}
 	.profile .peepname{
 		float:left;
-		padding-bottom:5px;
+		padding:2px;
+	}
+	.profile a:hover{
+		position:relative;
+		left:-7px;
+		text-decoration:none;
 	}
 
 html, body {
