@@ -112,23 +112,23 @@ $db = new PDO($dsn);
                       </p>
                     </div>
                       <div style="text-align:center">
-                      <form>
+                      <form action="insert.php" method="post">
                               <select name="subject">
-<?php
-	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
-	$result = $db->query($query);
-	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
-}
-$result->closeCursor();
-?>
+                              <?php
+                              	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
+                              	$result = $db->query($query);
+                              	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                  	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
+                              }
+                              $result->closeCursor();
+                              ?>
                                 <option value="African and African American Studies">African and African American Studies</option>
                               </select>
 
                              
                               <input id="section" name="course" placeholder=" Course #" required>
 
-                              <input type="submit"value="+"/>
+                              <input type="submit" value="+"/>
                       </form>
                     </div>
             
