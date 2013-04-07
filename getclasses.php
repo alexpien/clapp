@@ -15,5 +15,6 @@ $db = new PDO($dsn);
                                              echo $row["class"];
 
                                 }
+                                
                                 $result->closeCursor();
                                 ?>
