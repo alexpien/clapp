@@ -60,7 +60,7 @@ $userId = $facebook->getUser();
       <div id="logo">
         <a href="#home">
           <div style="display:inline-block; float:left;">
-            
+            e
             <h1>cla<span style="color:#333;">pp</span></h1>
           </div>
         </a>
@@ -170,10 +170,10 @@ $userId = $facebook->getUser();
           Other
         </h1>
         <p> 
-          This 
+          This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang for the HackBlue 2013 hackathon at Duke University.
         </p>
       </div>
-    </div>
+    </div>  
   </div>
 </body>
 </html>
