@@ -113,8 +113,9 @@ Classes
         <h1>
         	<?php
       $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(10).fields(education)');
-      $friendData=$friendData['friends']['data'];
-      foreach ($friendData as &$friend) {
+      $friendDataArray=$friendData['friends']['data'];
+
+      foreach ($friendDataArray as &$friend) {
 
       	$friendInfo= $facebook->api('/' . $friend['id']);
 		$friendName=$friendInfo['name'];
