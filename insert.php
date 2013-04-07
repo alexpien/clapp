@@ -12,7 +12,11 @@ $db = new PDO($dsn);
 $subjectAndSection=$_POST[subject]." ".$_POST[course];
 
 if ($_POST[fbid]!='0'){
-$sql="INSERT INTO entries (fbid, class) VALUES ('$_POST[fbid]','$subjectAndSection')";
+$sql="INSERT INTO entries (fbid, class) VALUES ('$_POST[fbid]','$subjectAndSection')
+WHERE NOT EXISTS (
+    SELECT * FROM entries AS T
+    WHERE T.col2 = $_POST[fbid]
+      AND T.col3 = $subjectAndSection)";
 
 // Performs the $sql query on the server to insert the values
 $db->query($sql);
