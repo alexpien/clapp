@@ -92,7 +92,7 @@ $userId = $facebook->getUser();
 
       ?>
 
-      <?= $userInfo['name'] ?>, <?= $schoolName ?>!
+      <?= $userInfo['name'] ?> - <?= $schoolName ?>
       
       
     </div>
@@ -118,9 +118,9 @@ $userId = $facebook->getUser();
     <?php } ?>
       </div>
       <div id="classes_sec" style="display:none;">
-        <h1>
+        <div class="titleblock">
           Classes
-        </h1>
+        </div>
         <div>
           c1 your classes
         </div>
@@ -169,9 +169,9 @@ $userId = $facebook->getUser();
         </h1>
       </div>
       <div id="about_sec" style="display:none;">
-        <h1>
-          About        
-        </h1>
+         <div class="titleblock">
+          About
+        </div>
         <p> 
           Clapp is the best way to connect to your classmates. Enter your schedule and find the other members of that class, as well as the classes that your friends are in.
         </p>
@@ -180,10 +180,9 @@ $userId = $facebook->getUser();
         </p>
       </div>  
       <div id="other_sec" style="display:none;">
-        <h1>
+         <div class="titleblock">
           Other
-        </h1>
-        
+        </div>
       </div>
     </div>  
   </div>
