@@ -115,15 +115,15 @@ $userId = $facebook->getUser();
         <h1>
           Classes
         </h1>
-          <div>
-            c1 your classes
-          </div>
-          <div>
-            c2 your friends
-          </div>
-          <div>
-            c3 others in class
-          </div>
+        <div>
+          c1 your classes
+        </div>
+        <div>
+          c2 your friends
+        </div>
+        <div>
+          c3 others in class
+        </div>
       </div>
       <div id="friends_sec" style="display:none;">
         <h1>
