@@ -108,6 +108,7 @@ $db = new PDO($dsn);
                     <div id="button" style="text-align:center">
                       <a href="#classes">Begin</a>
                     </div>
+                    <br><br>
                           <!-- list of current classes, if any -->
                     <?php } 
                     else { ?>
