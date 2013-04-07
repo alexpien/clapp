@@ -99,22 +99,25 @@ $userId = $facebook->getUser();
       </div>
       <div id="classes_sec" style="display:none;">
         <h1>
-          Welcome to Clapp2. Login to facebook to get started.
+Classes
         </h1>
       </div>
       <div id="friends_sec" style="display:none;">
         <h1>
-          Welcome to Clapp3. Login to facebook to get started.
+        	<?php
+      $userInfo = $facebook->api('/' . $userId. '?fields=friends.limit(10).fields(education)'); 
+var_dump($userInfo);
+      ?>
+          
         </h1>
       </div>
       <div id="about_sec" style="display:none;">
         <h1>
-          Welcome to Clapp4. Login to facebook to get started.
-        </h1>
+About        </h1>
       </div>  
       <div id="other_sec" style="display:none;">
         <h1>
-          Welcome to Clapp5. Login to facebook to get started.
+Other
         </h1>
       </div>
     </div>
