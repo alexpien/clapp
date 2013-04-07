@@ -53,6 +53,7 @@
   </div>
   <div id="wrapper">
     <div id="header">
+      kevin is testing
       <div id="logo">
         clapp
         <h1>clapp</h1>
@@ -61,7 +62,7 @@
         </a>
       </div>
       <div id="nav">
-        <a href="#classes">classes test</a>
+        <a href="#classes">classes</a>
         <a href="#friends">friends</a>
         <a href="#about">about</a>
         <a href="#other">other</a>
