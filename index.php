@@ -76,7 +76,7 @@ $userId = $facebook->getUser();
     <div id="main">
       <div id="home_sec" style="display:none;">
         <div class="titleblock">
-        <h1> 
+          <h1> 
          <?php if ($userId) { 
 
       $userInfo = $facebook->api('/' . $userId);
