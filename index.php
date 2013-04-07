@@ -15,7 +15,7 @@ $userId = $facebook->getUser();
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Clapp</title>
+    <title>clapp</title>
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
     <link rel="Shortcut Icon" href="images/favicon.ico">
     <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster'/>
