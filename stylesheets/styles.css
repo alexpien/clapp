@@ -164,6 +164,10 @@ form{
 	margin:20px;
 
 }
+	.profile .peepname{
+		float:left;
+		padding-bottom:5px;
+	}
 
 html, body {
     height: 100%;
