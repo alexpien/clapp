@@ -1,0 +1,3 @@
+CREATE TABLE subjects (subject_id SERIAL, abbrev VARCHAR(30), fullname VARCHAR(100));
+
+\copy subjects from 'database.csv' with (format csv, header true);

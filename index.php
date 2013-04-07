@@ -10,6 +10,16 @@ $facebook = new Facebook(array(
 
 $userId = $facebook->getUser();
 
+
+$dsn = "pgsql:"
+    . "host=ec2-23-21-161-153.compute-1.amazonaws.com;"
+    . "dbname=dfnau2c20ikt1v;"
+    . "user=qqldptzbgskfay;"
+    . "port=5432;"
+    . "sslmode=require;"
+    . "password=3aCt96iydyR59_GmRL2ltLaXU3";
+$db = new PDO($dsn);
+
 ?>
 
 <!DOCTYPE html>
@@ -89,11 +99,8 @@ $userId = $facebook->getUser();
 
                         //create the url
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
-
-                         //echo the image out
-
                               ?>
-
+                              Welcome,<br>
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
                               <?echo "<br><br><img src=\"" . $profile_pic . "\" height=72/>"; ?>
 
@@ -107,7 +114,14 @@ $userId = $facebook->getUser();
                       <div style="text-align:center">
                       <form>
                               <select name="subject">
-                                <option value="nothing">Select Subject</option>
+<?php
+	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
+	$result = $db->query($query);
+	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>"
+}
+$result->closeCursor();
+?>
                                 <option value="African and African American Studies">African and African American Studies</option>
                               </select>
 
