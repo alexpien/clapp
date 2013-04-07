@@ -8,7 +8,7 @@ body{
 	font-family:'Lobster';
 	margin:20px auto;
 	display:block;
-	background-color:#DFFFA5;
+	background-color:white;
 	padding:10px;
 	height:70px;
 	margin:0px;
@@ -59,12 +59,12 @@ a:selected{
 }
 #nav a:hover{
 	background-color:#333;
-	color:#CDC9C9;
+	color:#DFFFA5;
 
 }
 
 #top{
 	height:14px;
-	background-color:#CDC9C9;
+	background-color:#DFFFA5;
 	margin: 0px;
 }
