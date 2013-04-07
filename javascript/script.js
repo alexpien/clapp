@@ -12,11 +12,22 @@ $(window).load(function(){
 
 
 
-	$("#nav a, #logo a").click(function(){
+	$("#nav a, #logo a,#button a").click(function(){
 		target=$(this).attr("href");
 		$("#main>div").slideUp();
 		$(target+"_sec").slideDown();
 	
+	});
+
+	$("#classes_sec a").click(function(){
+		$("#classes_sec>a").removeClass("colored");
+		$(this).toggleClass("colored");
+		$("#classwrapper>div").slideUp();
+		target=$(this).attr("id");
+		alert(target);
+		$(target).slideDown();
+
+
 	});
 
 

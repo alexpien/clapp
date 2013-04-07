@@ -2,6 +2,7 @@ body{
 	font-family:'Open Sans',sans-serif;
 	margin:0px;
 	height:100%;
+	background:#fffdee;
 }
 #header{
 
@@ -89,6 +90,23 @@ div{
 	padding:10px;
 }
 
+#button{
+	background-color:#DFFFA5;
+	border-radius:5px;
+	border:2px solid #006633;
+	padding:5px 10px;
+	width:100px;
+	font-family:'Lobster';
+	font-size:40px;
+	font-color:#006633;
+	margin:0px auto;
+}
+
+#someelse{
+	text-align:center;
+	margin:0px auto;
+}
+
 .column{
 	display:inline-block;
 	width:295px;
@@ -112,12 +130,9 @@ div{
 	#remove{
 		display:inline-block;
 		float:right;
-		padding-right:3px;
-		-webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-		  -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-		  -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-		  -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-		  box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+		margin-right:3px;
+		background:red;
+		border-radius:5px;
 	}
 
 #top{
@@ -156,6 +171,9 @@ html, body {
    width:100%;
 }
 
-.classes a{
-	text
+
+
+.colored{
+	background-color:#333;
+	font-color:white;
 }

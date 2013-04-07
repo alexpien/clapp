@@ -87,49 +87,38 @@ $db = new PDO($dsn);
         <div id="main">
             <div id="home_sec" style="display:none;">
                 <div class="contentwrapper">
-                        <?php if ($userId) { 
-                        $userInfo = $facebook->api('/' . $userId);
-                        $mySchoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
-                        $schoolInfo = $facebook->api('/' . $mySchoolId);
-                        $schoolName= $schoolInfo['name']  ;
+                  <?php if ($userId) { 
+                  $userInfo = $facebook->api('/' . $userId);
+                  $mySchoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
+                  $schoolInfo = $facebook->api('/' . $mySchoolId);
+                  $schoolName= $schoolInfo['name']  ;
 
-                        //create the url
-                        $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
-                              ?>
-                              <div class="titleblock">
-                              Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
-                              <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
-                              </div>
-                    <div style="text-align:center">
-                      <p>
-                        Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
-                      </p>
+                //create the url
+                $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
+                  ?>
+                  <div class="titleblock">
+                    Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
+                    <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
+                  </div>
+                  <div style="text-align:center">
+                    <p>
+                      Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
+                    </p>
+                  </div>
+                  <br>
+                  <div id="button" style="text-align:center">
+                    <a href="#classes">Begin</a>
+                  </div>
+                        <!-- list of current classes, if any -->
+                  <?php } 
+                  else { ?>
+                    <div id="someelse">
+                      <h1>Log in to Facebook to begin:</h1>
+                      <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
+                      
                     </div>
-                      <div style="text-align:center">
-                      <form action="insert.php" method="post">
-                              <select name="subject">
-                                <?php
-                                	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
-                                	$result = $db->query($query);
-                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
-                                }
-                                $result->closeCursor();
-
-                                ?>
-                              </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
-                              <input type="submit" value="+"/>
-                              <input type="hidden" name="fbid" value="<?=$userId?>">
-                      </form>
-                    </div>
-                          <!-- list of current classes, if any -->
-                    <?php } 
-                    else { ?>
-                    <h1>Log in to Facebook to begin:</h1>
-                    <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
-                    <?php } ?>
-               </div>
+                  <?php } ?>
+                </div>
             </div>
             <div id="classes_sec" style="display:none;">
                 <div class="contentwrapper">
@@ -145,7 +134,7 @@ $db = new PDO($dsn);
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                             $number=$number+1;
-                                    	    	echo "<div id='sub'><a href=#Class".$number.">".$row["class"] . "</a></div>";
+                                    	    	echo "<div id='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div>";
 
                                             echo '<div id="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
@@ -177,12 +166,12 @@ $db = new PDO($dsn);
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
                     </div> 
-
+                    <div id="classwrapper">
                     <?php
                     for ($i=1; $i<=$number; $i++){
                      echo '<div id="class';
                      echo $number;
-                     echo '" style="display:block">';
+                     echo '" style="display:none">';
 
                      $className=$row['class'];
                        $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
@@ -207,12 +196,13 @@ $db = new PDO($dsn);
                                 }
                                 //closecursor?
                                 ?>
+                              </div>
                 </div>
             </div>
             <div id="friends_sec" style="display:none;">
                 <div class="contentwrapper">
                     <div class="titleblock">
-                        Your <span>clapp</span> Friends
+                        Your <span>clapp</span> friends
                     </div>
                     <div style="padding-left:100px">
           	        
