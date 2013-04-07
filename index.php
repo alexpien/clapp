@@ -147,7 +147,7 @@ $db = new PDO($dsn);
 
                                             echo '<form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="<?=$userId?>">
-                                             <input type="hidden" name="class" value="<?=$row["class"]>">
+                                             <input type="hidden" name="class" value="<?=$row["class"]?>">
                                              <input type="submit" value="-"/>
                                             </form>';
 
