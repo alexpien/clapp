@@ -50,7 +50,7 @@
     <div id="header">
       <div id="logo">
         <a href="#home">
-          <h1>cla<span style="color:#333;">pp</span></h1>
+        <img href="images/icone.png"/><<h1>cla<span style="color:#333;">pp</span></h1>
         </a>
       </div>
       <div id="nav">
