@@ -177,7 +177,7 @@ $db = new PDO($dsn);
 
                      echo '<div id="class';
                      echo $number;
-                     echo '" style="display:block">';
+                     echo '" style="display:none">';
 
                      $className=$row['class'];
                        $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
