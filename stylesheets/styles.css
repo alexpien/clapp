@@ -29,6 +29,7 @@ a:selected{
 	display:inline-block;
 	border-bottom:1px solid black;
 	font-size:28px;
+	padding:20px 0px;
 }
 #logo h1{
 

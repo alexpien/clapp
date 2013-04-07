@@ -88,7 +88,7 @@ $userId = $facebook->getUser();
   $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
 
  //echo the image out
- echo "<img src=\"" . $profile_pic . "\" height=28/>"; 
+ echo "<img src=\"" . $profile_pic . "\" height=48/>"; 
 
       ?>
 
