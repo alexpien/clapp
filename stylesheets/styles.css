@@ -93,12 +93,6 @@ div{
 	font-size:20px;
 }
 
-#space{
-	display:inline-block;
-	float:left;
-	width:100px;
-}
-
 .column{
 	display:inline-block;
 	width:300px;

@@ -114,15 +114,15 @@ $db = new PDO($dsn);
                       <div style="text-align:center">
                       <form action="insert.php" method="post">
                               <select name="subject">
-                              <?php
-                              	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
-                              	$result = $db->query($query);
-                              	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                  	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
-                              }
-                              $result->closeCursor();
-                              ?>
-                                <option value="African and African American Studies">African and African American Studies</option>
+
+                                <?php
+                                	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
+                                	$result = $db->query($query);
+                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
+                                }
+                                $result->closeCursor();
+                                ?>
                               </select>
 
                              
@@ -147,8 +147,6 @@ $db = new PDO($dsn);
                 <div class="contentwrapper">
                     <div class="titleblock">
                         Classes
-                    </div>
-                    <div id="space">
                     </div>
                     <div class="column">
                         c1 your classes
