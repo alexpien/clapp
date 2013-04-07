@@ -147,7 +147,7 @@ div{
 		border-radius:5px;
 	}
 	.remove:hover{
-		color:red;
+		color:red !important;
 	}
 
 form{
