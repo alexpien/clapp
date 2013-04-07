@@ -223,7 +223,7 @@ $userId = $facebook->getUser();
 
     </div>
  
-  <div style="text-align:center;background-color:#DFFFA5; height:20px;display:block">
+  <div style="text-align:center;background-color:#DFFFA5; height:14px;display:block; font-size:8px;">
     &copy DLnk Industries 2013
   </div>
 </body>
