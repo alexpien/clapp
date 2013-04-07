@@ -54,6 +54,10 @@ a:selected{
 	font-size: 14px;
 	font-family: Arial;
 }
+#nav a:hover{
+	background:black;
+	font-color:#DFFFA5;
+}
 
 #top{
 	height:14px;
