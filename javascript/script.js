@@ -20,7 +20,7 @@ $(window).load(function(){
 	});
 
 	$("#classes_sec a").click(function(){
-		$("#classes_sec>a").toggleClass("colored");
+		$("#classes_sec>a").removeClass("colored");
 		$(this).toggleClass("colored");
 		$("#classwrapper>div").slideUp();
 		target=$(this).attr("href");
