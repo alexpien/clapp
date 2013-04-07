@@ -140,6 +140,7 @@ $db = new PDO($dsn);
 
  								<?php
                                 	$query = "SELECT class FROM entries ORDER BY class ASC WHERE fbid = $userId";
+
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                     	    	echo "<p>". $row["class"] . "</p>";
