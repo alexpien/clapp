@@ -130,7 +130,7 @@ Classes
       	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
 
 	
-	if ($friendSchoolId!=NULL){
+	if (!is_null($friendSchoolId){
 //create the url
   $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
