@@ -102,25 +102,11 @@ $db = new PDO($dsn);
                               </div>
                     <div style="text-align:center">
                       <p>
-                        Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
+                        Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
                       </p>
                     </div>
-                      <div style="text-align:center">
-                      <form action="insert.php" method="post">
-                              <select name="subject">
-                                <?php
-                                	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
-                                	$result = $db->query($query);
-                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
-                                }
-                                $result->closeCursor();
-                                ?>
-                              </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
-                              <input type="submit" value="+"/>
-                              <input type="hidden" name="fbid" value="<?=$userId?>">
-                      </form>
+                    <div id="button" style="text-align:center">
+                      Begin
                     </div>
                           <!-- list of current classes, if any -->
                     <?php } 
