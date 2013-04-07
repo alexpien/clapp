@@ -93,6 +93,10 @@ div{
 	font-size:20px;
 }
 
+#home_sec div div span{
+	font-color:#333;
+}
+
 .column{
 	display:inline-block;
 	width:295px;
