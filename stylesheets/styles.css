@@ -45,7 +45,7 @@ a:selected{
 }
 
 #nav a{	
-	font-family:"Open Sans Condensed";
+	font-family:"Open Sans Condensed, sans-serif";
 	display:inline-block;
 	width:80px;
 	margin:0px 0px;
@@ -53,6 +53,10 @@ a:selected{
 	text-align:center;
 	font-size: 14px;
 	font-family: Arial;
+}
+#nav a:hover{
+	background-color:#333;
+	color:#CDC9C9;
 }
 
 #top{
