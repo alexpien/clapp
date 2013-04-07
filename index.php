@@ -85,7 +85,8 @@ $userId = $facebook->getUser();
           Welcome to Clapp. Login to facebook to get started.
          <?php if ($userId) { 
       $userInfo = $facebook->api('/' . $userId); ?>
-      Welcome <?= $userInfo['name'] ?>
+      Welcome, <?= $userInfo['name'] ?> from <?= $userInfo['education'][count($userInfo['education'])]['school']['name'] ?>!
+
       <p>
       You're now on clapp, the best app to connect to your classmates.  To begin, enter your classes below:
 </p>
