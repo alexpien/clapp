@@ -112,7 +112,7 @@ Classes
 	$friendName=$friendInfo['name'];
 	echo "<p>";
     echo $friendName;
-    echo "</p>;
+    echo "</p>";
 	}
       ?>
           
