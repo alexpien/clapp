@@ -81,20 +81,9 @@ a:selected{
 	
 }
 
-#classes_sec div:nth-child(1){
+#classes_sec div{
 	width:310px;
 	float:left;
-
-}
-#classes_sec div:nth-child(2){
-	width:310px;
-	float:left;
-	
-}
-#classes_sec div:nth-child(3){
-	width:310px;
-	float:left;
-	
 }
 
 
