@@ -22,9 +22,9 @@ $(window).load(function(){
 	$("#classes_sec a").click(function(){
 		$("#classes_sec>a").toggleClass("colored");
 		$(this).toggleClass("colored");
-		$("#classwrapper>div").hide();
+		$("#classwrapper>div").slideUp();
 		target=$(this).attr("href");
-		$(target).show();
+		$(target).slideDown();
 
 
 	});
