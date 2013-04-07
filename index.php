@@ -19,7 +19,8 @@ $userId = $facebook->getUser();
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
     <link rel="Shortcut Icon" href="images/favicon.ico">
     <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster'/>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'/>
+
 
     <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
