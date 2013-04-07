@@ -141,13 +141,12 @@ $userId = $facebook->getUser();
 	if (!is_null($friendSchoolId)){
 //create the url
   $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
-
- 	//echo the image out
- 	echo "<img src=\"" . $profile_pic . "\" />"; 
 	
 		$schoolInfo = $facebook->api('/' . $friendSchoolId);
       	$friendSchoolName= $schoolInfo['name'];
       	echo "<p>";
+      //echo the image out
+ 	echo "<img src=\"" . $profile_pic . "\" />"; 
 	    echo $friendName."<br>";
 		echo $friendSchoolName;
     	echo "</p>";
