@@ -87,10 +87,7 @@ $db = new PDO($dsn);
         <div id="main">
             <div id="home_sec" style="display:none;">
                 <div class="contentwrapper">
-                    
-                
                         <?php if ($userId) { 
-
                         $userInfo = $facebook->api('/' . $userId);
                         $mySchoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
                         $schoolInfo = $facebook->api('/' . $mySchoolId);
@@ -100,11 +97,9 @@ $db = new PDO($dsn);
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
                               ?>
                               <div class="titleblock">
-                              Hello,<br>
-                              <?= $userInfo['name'] ?> - <?= $schoolName ?>
+                              Hello,
+                              <?= $userInfo['name'] ?>, from <?= $schoolName ?>
                               <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
-
-            
                     </div>
                     <div style="text-align:center">
                       <p>
