@@ -19,7 +19,8 @@ $userId = $facebook->getUser();
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
     <link rel="Shortcut Icon" href="images/favicon.ico">
     <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster'/>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'/>
+
 
     <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
@@ -90,17 +91,19 @@ $userId = $facebook->getUser();
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
 
                          //echo the image out
-                         echo "<img src=\"" . $profile_pic . "\" height=48/>"; 
 
                               ?>
 
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
-            
+                              <?echo "<br><br><img src=\"" . $profile_pic . "\" height=72/>"; ?>
+
             
                     </div>
-                    <p>
-                        Welcome to clapp, the best app to connect with your classmates. To begin, enter your classes below. 
-                    </p>
+                    <div style="text-align:center">
+                      <p>
+                        Welcome to <span style="font-family:'Lobster';">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
+                      </p>
+                    </div>
                     <p>
                       DROPDOWN
                     </p>
@@ -140,11 +143,10 @@ $userId = $facebook->getUser();
             <div id="friends_sec" style="display:none;">
                 <div class="contentwrapper">
                     <div class="titleblock">
-                        Friends
+                        Your Clap Friends
                     </div>
-          	        <p>
-          		          Your Clapp Friends:
-          	        </p>
+                    <div style="padding-left:100px">
+          	        
 
                         	<?php
                         	$fql = "SELECT uid, name FROM user WHERE is_app_user AND uid IN (SELECT uid2 FROM friend WHERE uid1 = me())";
@@ -158,16 +160,16 @@ $userId = $facebook->getUser();
                               	$friendId=$friend['uid'];
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
-                              	echo "<p>";
+                              	echo "<div class='profile'>";
                               //echo the image out
                          	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                         	    echo $friendName."<br>";
-                            	echo "</p>";
+                            	echo "</div>";
                             		}
 
                               ?>
             
-          
+                      </div>
                 </div>
             </div>
             <div id="about_sec" style="display:none;">
@@ -223,7 +225,7 @@ $userId = $facebook->getUser();
 
     </div>
  
-  <div style="text-align:center;background-color:#DFFFA5; height:20px;display:block">
+  <div style="text-align:center;background-color:#DFFFA5; height:14px;display:block; font-size:12px;">
     &copy DLnk Industries 2013
   </div>
 </body>
