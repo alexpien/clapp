@@ -216,7 +216,7 @@ $userId = $facebook->getUser();
 
           <p>
         Likes:
-    </p>
+        </p>
 
        <?php
                	$fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=me())";
