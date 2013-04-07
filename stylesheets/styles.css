@@ -114,6 +114,7 @@ div{
 		float:right;
 		margin-right:3px;
 		background:red;
+		border-radius:5px;
 	}
 
 #top{
