@@ -142,9 +142,9 @@ $db = new PDO($dsn);
                         Classes
                     </div>
                     <div class="column">
-                      c1 your classes
-                 
+                      <h3>Your Classes</h3>
                       <form action="insert.php" method="post">
+                              <label>Add more classes:</label>
                               <select name="subject">
                                 <?php
                                   $query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
