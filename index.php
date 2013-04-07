@@ -97,7 +97,7 @@ $userId = $facebook->getUser();
       
     </div>
       <p>
-        You're now on clapp, the best app to connect with your classmates. To begin, enter your classes below:
+        Welcome to clapp, the best app to connect with your classmates. To begin, enter your classes below. 
       </p>
       <p>
         DROPDOWN
@@ -108,7 +108,7 @@ $userId = $facebook->getUser();
       <p>
         SUBMIT BUTTON
       </p>
-
+      <!-- list of current classes, if any -->
     <?php } 
     else { ?>
 
@@ -204,7 +204,7 @@ $response = $facebook->api(array(
     </div>  
   </div>
   <div style="text-align:center;background-color:#DFFFA5; height:20px;display:block">
-    &copy Alex, Howie, Kevin, Vinny
+    &copy DLnk Industries
   </div>
 </body>
 </html>
