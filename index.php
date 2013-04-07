@@ -234,7 +234,30 @@ $db = new PDO($dsn);
                                              echo '<input type="submit" value="';
                                              echo $friendName;
                                              echo '"/></form>';
-                            	echo "</div>";
+                            	 echo "</div>";
+                               echo '<div class="mouseover";display:none>';
+                               echo '<ul>'
+
+                                      $dsn = "pgsql:"
+                                          . "host=ec2-23-21-161-153.compute-1.amazonaws.com;"
+                                          . "dbname=dfnau2c20ikt1v;"
+                                          . "user=qqldptzbgskfay;"
+                                          . "port=5432;"
+                                          . "sslmode=require;"
+                                          . "password=3aCt96iydyR59_GmRL2ltLaXU3";
+                                      $db = new PDO($dsn);
+                                  
+                                  $query = "SELECT class FROM entries WHERE fbid = $friendId ORDER BY class ASC;";
+                                  $result = $db->query($query);
+                                  while ($row = $result->fetch(PDO::FETCH_ASSOC)) {  
+                                             
+                                             echo '<li>';
+                                             echo $row["class"];
+                                             echo '</li>'
+                                  }
+                                  $result->closeCursor();
+                                  echo '</ul>';
+                                  echo '</div>';
                             		}
 
                               ?>
