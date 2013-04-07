@@ -89,6 +89,17 @@ div{
 	padding:10px;
 }
 
+#button{
+	background-color:#DFFFA5;
+	border-radius:5px;
+	border:1px solid #006633;
+	padding:5px 10px;
+	width:100px;
+	font-family:'Lobster';
+	font-size:20px;
+	margin:0px auto;
+}
+
 .column{
 	display:inline-block;
 	width:295px;
@@ -112,12 +123,9 @@ div{
 	#remove{
 		display:inline-block;
 		float:right;
-		padding-right:3px;
-		-webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-		  -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-		  -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-		  -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
-		  box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+		margin-right:3px;
+		background:red;
+		border-radius:5px;
 	}
 
 #top{

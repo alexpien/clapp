@@ -102,25 +102,11 @@ $db = new PDO($dsn);
                               </div>
                     <div style="text-align:center">
                       <p>
-                        Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
+                        Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
                       </p>
                     </div>
-                      <div style="text-align:center">
-                      <form action="insert.php" method="post">
-                              <select name="subject">
-                                <?php
-                                	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
-                                	$result = $db->query($query);
-                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
-                                }
-                                $result->closeCursor();
-                                ?>
-                              </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
-                              <input type="submit" value="+"/>
-                              <input type="hidden" name="fbid" value="<?=$userId?>">
-                      </form>
+                    <div id="button" style="text-align:center">
+                      <a href="#classes">Begin</a>
                     </div>
                           <!-- list of current classes, if any -->
                     <?php } 
@@ -139,7 +125,7 @@ $db = new PDO($dsn);
                       <h3>Your Classes</h3>
 
  								<?php
-                                	$query = "SELECT class FROM entries WHERE fbid = '$userId';";
+                                	$query = "SELECT class FROM entries WHERE fbid = '$userId' ORDER BY class ASC;";
                                   $number=0;
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -178,7 +164,7 @@ $db = new PDO($dsn);
                     </div> 
                     <div id="classwrapper">
                     <?php
-                                	$query = "SELECT class FROM entries WHERE fbid = '$userId';";
+                                	$query = "SELECT class FROM entries WHERE fbid = '$userId' ORDER BY class ASC;";
 
                                 	$result = $db->query($query);
                                 	$number=0;
@@ -189,14 +175,14 @@ $db = new PDO($dsn);
                      echo '<div id="class';
                      echo $number;
                      echo '" style="display:block">';
+
                      $className=$row['class'];
-                         $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
+                       $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
                           $result2 = $db->query($query2);
-                               while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
+                          while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
                           //display people in this class           
                                 echo '<div class="profile">';
 
-       
                           $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
                              	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
 
@@ -205,7 +191,7 @@ $db = new PDO($dsn);
 					$result3 = json_decode($str); 
 					echo $result3->name; 
 
-                            	echo "</div>";
+                     echo "</div>";
                          }
                      echo '</div>';
                                 }
