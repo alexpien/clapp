@@ -298,9 +298,8 @@ $db = new PDO($dsn);
                                 'method' => 'fql.query',
                                 'query' =>$fql,
                               ));
-                       $friendids=$friendids['data'];
                     foreach ($friendids as &$friendid) {
-                    echo $friendid;                                
+                    echo $friendid['uid1'];                                
                       }
 
                     $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=658008653";
