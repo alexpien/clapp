@@ -219,8 +219,8 @@ $response = $facebook->api(array(
       </div>
     </div>  
   </div>
-  <div style="text-align:center;background-color:#DFFFA5; height:20px">
-    &copy YOYOOYOYOYO
+  <div style="text-align:center;background-color:#DFFFA5; height:20px;display:block">
+    &copy Alex, Howie, Kevin, Vinny
   </div>
 </body>
 </html>
