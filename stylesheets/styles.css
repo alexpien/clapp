@@ -78,6 +78,7 @@ a:selected{
 }
 #classes_sec div:nth-child(2){
 	width:300px;
+	float:left;
 	
 }
 #classes_sec div:nth-child(3){
