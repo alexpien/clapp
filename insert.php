@@ -13,10 +13,13 @@ echo $subjectAndSection;
 
 $sql="INSERT INTO entries (name, class) VALUES ('$_POST[name]','$subjectAndSection')";
 
-if (!mysqli_query($db,$sql))
-  {
-  die('Error: ' . mysqli_error());
-  }
-echo "1 record added";
+// Performs the $sql query on the server to insert the values
+if ($db->query($sql) === TRUE) {
+  echo 'users entry saved successfully';
+}
+else {
+ echo 'Error: '. $conn->error;
+}
+$conn->close();
 
 ?>
