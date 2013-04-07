@@ -171,7 +171,7 @@ $response = $facebook->api(array(
           Clapp is the best way to connect to your classmates. Enter your schedule and find the other members of that class, as well as the classes that your friends are in.
         </p>
         <p>
-          This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang for the HackBlue 2013 hackathon at Duke University.
+          This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang of DLnk Industries for the HackBlue 2013 hackathon at Duke University.
         </p>
       </div>  
       <div id="other_sec" style="display:none;">
