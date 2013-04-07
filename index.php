@@ -146,14 +146,13 @@ $db = new PDO($dsn);
                                     	    	echo "<p>". $row["class"] . "</p>";
 
                                             echo '<form action="delete.php" method="post">
-                                             <input type="hidden" name="fbid" value="'
+                                             <input type="hidden" name="fbid" value="';
                                              echo $userId;
                                              echo '">';
-                                             echo '<input type="hidden" name="class" value="'
+                                             echo '<input type="hidden" name="class" value="';
                                              echo $row["class"];
                                              echo'">';
-                                             echo '<input type="submit" value="-"/>
-                                            </form>';
+                                             echo '<input type="submit" value="-"/></form>';
 
                                 }
                                 $result->closeCursor();
@@ -175,8 +174,11 @@ $db = new PDO($dsn);
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
-                    </div>        
-                     <div id="1_subsection" style="display:none">
+                    </div>    
+                    <?php
+                    /* for each class 
+
+                     <div id="PHPNUMBER_subsection" style="display:none">
                           <?php /*for class in classes*/ ?>              
                                 <div class="PHPCLASS">
                                     <h3>Friends in this class</h3>
