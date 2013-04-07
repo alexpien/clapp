@@ -121,13 +121,14 @@ $userId = $facebook->getUser();
         <div class="titleblock">
           Classes
         </div>
-        <div>
+        <div class="column">
           c1 your classes
         </div>
-        <div>
+        <div class="column">
+
           c2 your friends
         </div>
-        <div>
+        <div class="column">
           c3 others in class
         </div>
       </div>
@@ -140,6 +141,14 @@ $userId = $facebook->getUser();
         	</p>
 
         	<?php
+        	/*
+        	$fql = "SELECT page_id, name from page where name='Coke'";
+ 
+$response = $facebook->api(array(
+     'method' => 'fql.query',
+     'query' =>$fql,
+));
+*/
       $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(20).fields(education)');
       $friendData=$friendData['friends']['data'];
 
@@ -161,9 +170,9 @@ $userId = $facebook->getUser();
  	echo "<img src=\"" . $profile_pic . "\" />"; 
 	    echo $friendName."<br>";
     	echo "</p>";
-
+      
 }
-  
+
 
 	}
       ?>
@@ -185,11 +194,33 @@ $userId = $facebook->getUser();
          <div class="titleblock">
           Other
         </div>
+
+          <p>
+        Mutual Likes:
+    </p>
+
+       <?php
+      $myLikes= $facebook->api('/' . $userId. '?fields=likes');
+      $myLikesData=$myLikes['likes']['data'];
+
+      foreach ($myLikesData as &$like) {
+      	$likeId=$like['id'];
+      	$likeName=$like['name'];
+//create the url
+  $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
+      	echo "<p>";
+      //echo the image out
+ 	echo "<img src=\"" . $profile_pic . "\" />";
+	    echo $likeName;
+    	echo "</p>";
+}
+      ?>
+      
       </div>
     </div>  
   </div>
   <div style="text-align:center;background-color:#DFFFA5; height:20px">
-    us llol
+    &copy DLnk Industries
   </div>
 </body>
 </html>

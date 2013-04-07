@@ -81,11 +81,10 @@ a:selected{
 	
 }
 
-#classes_sec div{
+.column{
+	display:inline-block;
 	width:310px;
 	float:left;
-}
-
 
 #top{
 	height:20px;
