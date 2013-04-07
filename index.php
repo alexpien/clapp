@@ -88,7 +88,7 @@ $db = new PDO($dsn);
         <div id="main">
             <div id="home_sec" style="display:none;">
                 <div class="contentwrapper">
-                    <div class="titleblock">
+                    
                 
                         <?php if ($userId) { 
 
@@ -100,6 +100,7 @@ $db = new PDO($dsn);
                         //create the url
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
                               ?>
+                              <div class="titleblock">
                               Welcome,<br>
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
                               <?echo "<br><br><img src=\"" . $profile_pic . "\" height=72/>"; ?>
