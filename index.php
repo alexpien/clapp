@@ -102,7 +102,7 @@ $db = new PDO($dsn);
                               <div class="titleblock">
                               Hello,<br>
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
-                              <?echo "<br><br><img src=\"" . $profile_pic . "\" height=72/>"; ?>
+                              <?echo "<br><br><img src=\"" . $profile_pic . "\" style=\"height:72px;\"/>"; ?>
 
             
                     </div>
@@ -131,10 +131,8 @@ $db = new PDO($dsn);
                           <!-- list of current classes, if any -->
                     <?php } 
                     else { ?>
-
                     <h1>Log in to Facebook to begin:</h1>
                     <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
-
                     <?php } ?>
                </div>
             </div>
@@ -157,9 +155,7 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
                               </select>
-                            
-                              <input id="course" name="course" placeholder=" Course #" required>
-
+                              <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
                               <input type="submit" value="+"/>
                               <input type="hidden" name="name" value="<?=$userInfo['name']?>">
                       </form>
@@ -227,7 +223,7 @@ $db = new PDO($dsn);
                     </div>
 
                     <p>
-                        Likes:
+                        Mutual Likes (MuLi): Search for friends with the most common interests.
                     </p>
                       <?php
                                       $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=me())";
