@@ -66,7 +66,6 @@ $userId = $facebook->getUser();
   <div id="wrapper">
     <div id="header">
       <div id="logo">
-        <h1>clapp</h1>
         <a href="#home">
           <div style="display:inline-block; float:left; margin-top:15px">
 
