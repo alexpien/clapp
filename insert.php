@@ -18,7 +18,7 @@ if ($db->query($sql) === TRUE) {
   echo 'users entry saved successfully';
 }
 else {
- echo 'Error: '. $conn->error;
+ echo 'Error: '. $db->error;
 }
 $conn->close();
 
