@@ -106,7 +106,7 @@ $userId = $facebook->getUser();
       </div>
       <div id="classes_sec" style="display:none;">
         <h1>
-Classes
+          Classes
         </h1>
       </div>
       <div id="friends_sec" style="display:none;">
@@ -134,11 +134,12 @@ Classes
       </div>
       <div id="about_sec" style="display:none;">
         <h1>
-About        </h1>
+          About        
+        </h1>
       </div>  
       <div id="other_sec" style="display:none;">
         <h1>
-Other
+          Other
         </h1>
       </div>
     </div>
