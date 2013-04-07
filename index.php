@@ -54,12 +54,14 @@ $userId = $facebook->getUser();
       </script>
 
    <div id="top" style="color:white;">
+
      <?php if ($userId) { 
       $userInfo = $facebook->api('/' . $userId); ?>
       Welcome <?= $userInfo['name'] ?>
     <?php } else { ?>
     <fb:login-button></fb:login-button>
     <?php } ?>
+
   </div>
   <div id="wrapper">
     <div id="header">
@@ -81,9 +83,27 @@ $userId = $facebook->getUser();
     </div>
     <div id="main">
       <div id="home_sec" style="display:none;">
-        <h1>
-          Welcome to Clapp. Login to facebook to get started.
-        </h1>
+
+         <?php if ($userId) { 
+      $userInfo = $facebook->api('/' . $userId); ?>
+      Welcome <?= $userInfo['name'] ?>
+      <p>
+      You're now on clapp, the best app to connect to your classmates.  To begin, enter your classes below:
+</p>
+<p>
+      DROPDOWN
+</p>
+<p>
+      CLASS NUMBER BOX
+</p>
+<p>
+      SUBMIT BUTTON
+</p>
+    <?php } else { ?>
+    <h1>Log in to Facebook to begin:</h1>
+    <fb:login-button></fb:login-button>
+    <?php } ?>
+
       </div>
       <div id="classes_sec" style="display:none;">
         <h1>
