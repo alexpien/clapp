@@ -57,7 +57,9 @@ a:selected{
 	margin:auto 20px;
 	margin-top:20px;
 }
-
+div{
+	display:block;
+}
 #nav a{	
 	font-family:"Open Sans Condensed, sans-serif";
 	display:inline-block;
@@ -81,9 +83,15 @@ a:selected{
 	
 }
 
+#home_sec span{
+	font-family:'Lobster';
+	font-color:#333;
+	font-size:16px;
+}
+
 .column{
 	display:inline-block;
-	width:310px;
+	width:315px;
 	float:left;
 
 #top{
