@@ -253,7 +253,7 @@ $db = new PDO($dsn);
                                              
                                              echo '<li>';
                                              echo $row["class"];
-                                             echo '</li>'
+                                             echo '</li>';
                                   }
                                   $result->closeCursor();
                                   echo '</ul>';
