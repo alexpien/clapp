@@ -19,18 +19,13 @@ $userId = $facebook->getUser();
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
     <link rel="Shortcut Icon" href="images/favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link type='text/css' rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster|Merriweather+Sans:800'/>
     <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
   </head>
   
   <body>
- <?php if ($userId) { 
-      $userInfo = $facebook->api('/' . $userId); ?>
-      Welcome <?= $userInfo['name'] ?>
-    <?php } else { ?>
-    <fb:login-button></fb:login-button>
-    <?php } ?>
+
     <script>
 
      window.fbAsyncInit = function() {
@@ -58,19 +53,27 @@ $userId = $facebook->getUser();
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
-   <div id="top">
+   <div id="top" style="color:white;">
+     <?php if ($userId) { 
+      $userInfo = $facebook->api('/' . $userId); ?>
+      Welcome <?= $userInfo['name'] ?>
+    <?php } else { ?>
+    <fb:login-button></fb:login-button>
+    <?php } ?>
   </div>
   <div id="wrapper">
     <div id="header">
       <div id="logo">
-        
         <h1>clapp</h1>
         <a href="#home">
-          <div style="display:inline-block; float:left;">
+          <div style="display:inline-block; float:left; margin-top:15px">
 
-            <img src="images/icone.png" height="100" />
-          </div>
+            <img src="images/icon.png" height="100" />
+         </div>
+              <div style="display:inline-block; float:left;">
+
           <h1>cla<span style="color:#333;">pp</span></h1>
+           </div>
         </a>
       </div>
       <div id="nav">
