@@ -10,7 +10,6 @@ $facebook = new Facebook(array(
 
 $userId = $facebook->getUser();
 
-
 $dsn = "pgsql:"
     . "host=ec2-23-21-161-153.compute-1.amazonaws.com;"
     . "dbname=dfnau2c20ikt1v;"
@@ -123,11 +122,11 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
                               </select>
-
-                             
+                            
                               <input id="section" name="course" placeholder=" Course #" required>
 
                               <input type="submit" value="+"/>
+                              <input type="hidden" name="name" value=<?$userInfo['name']?>>
                       </form>
                     </div>
                           <!-- list of current classes, if any -->
