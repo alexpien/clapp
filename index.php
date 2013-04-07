@@ -247,7 +247,7 @@ $result->closeCursor();
 
     </div>
  
-  <div style="text-align:center;background-color:#DFFFA5; height:14px;display:block; font-size:12px;">
+  <div id="footer">
     &copy DLnk Industries 2013
   </div>
 </body>
