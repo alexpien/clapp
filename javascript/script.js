@@ -24,6 +24,7 @@ $(window).load(function(){
 		$(this).toggleClass("colored");
 		$("#classwrapper>div").slideUp();
 		target=$(this).attr("href");
+		alert(target);
 		$(target).slideDown();
 
 
