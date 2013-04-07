@@ -39,8 +39,7 @@ a:selected{
 #nav{
 	float:right;
 	display:inline-block;
-	margin-top: 25px;
-	height:50px;
+	margin:auto 20px;
 
 }
 
@@ -55,6 +54,7 @@ a:selected{
 	text-align:center;
 	font-size: 14px;
 	font-family: Arial;
+	vertical-align:50%;
 }
 #nav a:hover{
 	background-color:#333;
