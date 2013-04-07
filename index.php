@@ -52,20 +52,7 @@ $userId = $facebook->getUser();
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
-<<<<<<< HEAD
-   <div id="top" style="color:white;">
 
-=======
-   <div id="top" style="color:#333;">
->>>>>>> 6bea86335f0dfa9b5e880552ff4d24fba9e62090
-     <?php if ($userId) { 
-      $userInfo = $facebook->api('/' . $userId); ?>
-      Welcome <?= $userInfo['name'] ?>
-    <?php } else { ?>
-    <fb:login-button></fb:login-button>
-    <?php } ?>
-
-  </div>
   <div id="wrapper">
     <div id="header">
       <div id="logo">
