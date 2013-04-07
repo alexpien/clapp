@@ -20,7 +20,7 @@ $userId = $facebook->getUser();
     <link rel="Shortcut Icon" href="images/favicon.ico">
     <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster'/>
     <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'/>
-
+    <link type="text/css" href="inputstyle.css" rel="stylesheet"/>
 
     <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
@@ -104,9 +104,17 @@ $userId = $facebook->getUser();
                         Welcome to <span style="font-family:'Lobster';">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
                       </p>
                     </div>
-                    <p>
-                      DROPDOWN
-                    </p>
+                      <form>
+                              <select name="subject">
+                                <option value="nothing">Select Subject</option>
+                                <option value="African and African American Studies">African and African American Studies</option>
+                              </select>
+
+                             
+                              <input type="number" id="section" name="course" placeholder=" Course #" required>
+
+                              <input type="submit"value="Submit Class"/>
+                      </form>
                     <p>
                       CLASS NUMBER BOX
                     </p>
