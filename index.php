@@ -160,8 +160,8 @@ $userId = $facebook->getUser();
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
                               	echo "<p>";
                               //echo the image out
-                         	echo "<img src=\"" . $profile_pic . "\" />"; 
-                        	    echo $friendName."&nbsp&nbsp<br>";
+                         	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                        	    echo $friendName."<br>";
                             	echo "</p>";
                             		}
 
