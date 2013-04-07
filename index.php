@@ -161,7 +161,7 @@ $userId = $facebook->getUser();
                               	$friendId=$friend['uid'];
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
-                              	echo "<div id='profile'>";
+                              	echo "<div class='profile'>";
                               //echo the image out
                          	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                         	    echo $friendName."<br>";
