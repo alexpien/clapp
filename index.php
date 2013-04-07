@@ -97,10 +97,9 @@ $db = new PDO($dsn);
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
                               ?>
                               <div class="titleblock">
-                              Hello,
-                              <?= $userInfo['name'] ?>, from <?= $schoolName ?>
+                              Hello <?= $userInfo['name'] ?>, from <?= $schoolName ?>
                               <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
-                    </div>
+                              </div>
                     <div style="text-align:center">
                       <p>
                         Welcome to <span style="font-family:'Lobster';">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
@@ -154,12 +153,11 @@ $db = new PDO($dsn);
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                       </form>
-
-
                     </div>                        
-                
                     <div class="column">
+
                         <h3>Friends in this class</h3>
+
                     </div>
                     <div class="column">
                         <h3>Others in class</h3>
