@@ -161,7 +161,7 @@ $userId = $facebook->getUser();
                               	echo "<p>";
                               //echo the image out
                          	echo "<img src=\"" . $profile_pic . "\" />"; 
-                        	    echo $friendName."<br>";
+                        	    echo $friendName."&nbsp&nbsp<br>";
                             	echo "</p>";
                             		}
 
