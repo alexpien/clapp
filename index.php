@@ -25,12 +25,7 @@ $userId = $facebook->getUser();
   </head>
   
   <body>
- <?php if ($userId) { 
-      $userInfo = $facebook->api('/' . $userId); ?>
-      Welcome <?= $userInfo['name'] ?>
-    <?php } else { ?>
-    <fb:login-button></fb:login-button>
-    <?php } ?>
+
     <script>
 
      window.fbAsyncInit = function() {
@@ -58,7 +53,13 @@ $userId = $facebook->getUser();
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
-   <div id="top">
+   <div id="top" style="color:white;">
+     <?php if ($userId) { 
+      $userInfo = $facebook->api('/' . $userId); ?>
+      Welcome <?= $userInfo['name'] ?>
+    <?php } else { ?>
+    <fb:login-button></fb:login-button>
+    <?php } ?>
   </div>
   <div id="wrapper">
     <div id="header">
