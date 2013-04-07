@@ -59,11 +59,10 @@ $userId = $facebook->getUser();
     <div id="header">
       <div id="logo">
         <a href="#home">
-         
-              <div style="display:inline-block; float:left;">
-
-          <h1>cla<span style="color:#333;">pp</span></h1>
-           </div>
+          <div style="display:inline-block; float:left;">
+            <img src="/images/icon.png"/>
+            <h1>cla<span style="color:#333;">pp</span></h1>
+          </div>
         </a>
       </div>
       <div id="nav">
@@ -96,7 +95,7 @@ $userId = $facebook->getUser();
       
       </h1>
       <p>
-        You're now on clapp, the best app to connect to your classmates.  To begin, enter your classes below:
+        You're now on clapp, the best app to connect with your classmates. To begin, enter your classes below:
       </p>
       <p>
         DROPDOWN
