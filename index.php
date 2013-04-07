@@ -107,10 +107,12 @@ $userId = $facebook->getUser();
         SUBMIT BUTTON
       </p>
 
-    <?php } else { ?>
+    <?php } 
+    else { ?>
 
     <h1>Log in to Facebook to begin:</h1>
-    <fb:login-button></fb:login-button>
+    <fb:login-button scope="friends_education_history,friends_likes"></fb:login-button>
+
     <?php } ?>
       </div>
       <div id="classes_sec" style="display:none;">
@@ -129,8 +131,12 @@ $userId = $facebook->getUser();
       </div>
       <div id="friends_sec" style="display:none;">
         <h1>
+        	<p>
+        		Other friends at your school:
+        	</p>
+
         	<?php
-      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(25).fields(education)');
+      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(100).fields(education)');
       $friendData=$friendData['friends']['data'];
 
       foreach ($friendData as &$friend) {
