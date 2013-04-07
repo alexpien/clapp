@@ -99,17 +99,18 @@ div{
 	font-size:12px;
 }
 	.column h3{
-		font-size:20px;
+		font-size:24px;
 	}
-#sub{
-	display:inline-block;
-	float:left;
-}
-#remove{
-	display:inline-block;
-	float:right;
-	padding-right:3px;
-}
+	#sub{
+		display:inline-block;
+		float:left;
+		padding-bottom:2px;
+	}
+	#remove{
+		display:inline-block;
+		float:right;
+		padding-right:3px;
+	}
 
 #top{
 	height:14px;
