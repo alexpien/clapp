@@ -8,11 +8,9 @@ $dsn = "pgsql:"
     . "password=3aCt96iydyR59_GmRL2ltLaXU3";
 $db = new PDO($dsn);
 
-
-$sql="DELETE FROM entries WHERE fbid = '$_POST[fbid]' WHERE class = '$_POST[class]';"
+$sql="DELETE FROM entries WHERE fbid = '$_POST[fbid]' AND class = '$_POST[class]';"
 
 // Performs the $sql query on the server to insert the values
 $db->query($sql);
-
 header( "Location: https://blooming-reef-3850.herokuapp.com/#classes" ) ;
 ?>
