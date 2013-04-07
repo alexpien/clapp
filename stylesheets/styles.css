@@ -206,3 +206,7 @@ html, body {
 	background-color:#333;
 	font-color:white;
 }
+.asdf{
+
+	width:150px;margin:30px 50px; position: absolute;z-index:1000;display:inline-block;
+}
