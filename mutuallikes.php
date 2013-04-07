@@ -295,7 +295,7 @@ $db = new PDO($dsn);
                       $specificUid=$friendid['uid1'];
                     echo $specificUid;
                     echo "<br>";
-
+/*
                 $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=$specificUid)";
                               $response = $facebook->api(array(
                                 'method' => 'fql.query',
@@ -309,7 +309,7 @@ $db = new PDO($dsn);
                                 echo "<br>";   
                           }
                           echo count(array_intersect ($userResponse , $response));
-                           
+                           */
                       }
 
 
