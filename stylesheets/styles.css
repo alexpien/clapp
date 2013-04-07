@@ -41,9 +41,6 @@ a:selected{
 	font-size:20px;
 }
 
-#logo img{
-	height:20px;
-}
 #nav{
 	float:right;
 	display:inline-block;
@@ -68,12 +65,27 @@ a:selected{
 #nav a:hover{
 	background-color:#333;
 	color:#DFFFA5;
-
 }
 
 #main{
 	padding-left:10px;
 }
+
+#classes_sec div:nth-child(1){
+	width:300px;
+	float:left;
+
+}
+#classes_sec div:nth-child(2){
+	width:300px;
+	
+}
+#classes_sec div:nth-child(3){
+	width:300px;
+	float:right;
+	
+}
+
 
 #top{
 	height:14px;

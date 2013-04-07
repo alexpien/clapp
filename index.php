@@ -60,6 +60,7 @@ $userId = $facebook->getUser();
       <div id="logo">
         <a href="#home">
           <div style="display:inline-block; float:left;">
+            <img src="/images/icon.png"/>
             <h1>cla<span style="color:#333;">pp</span></h1>
           </div>
         </a>
@@ -114,6 +115,15 @@ $userId = $facebook->getUser();
         <h1>
           Classes
         </h1>
+          <div>
+            c1 your classes
+          </div>
+          <div>
+            c2 your friends
+          </div>
+          <div>
+            c3 others in class
+          </div>
       </div>
       <div id="friends_sec" style="display:none;">
         <h1>
@@ -158,6 +168,9 @@ $userId = $facebook->getUser();
         <h1>
           Other
         </h1>
+        <p> 
+          This 
+        </p>
       </div>
     </div>
   </div>
