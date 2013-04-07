@@ -87,37 +87,37 @@ $db = new PDO($dsn);
         <div id="main">
             <div id="home_sec" style="display:none;">
                 <div class="contentwrapper">
-                        <?php if ($userId) { 
-                        $userInfo = $facebook->api('/' . $userId);
-                        $mySchoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
-                        $schoolInfo = $facebook->api('/' . $mySchoolId);
-                        $schoolName= $schoolInfo['name']  ;
+                  <?php if ($userId) { 
+                  $userInfo = $facebook->api('/' . $userId);
+                  $mySchoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
+                  $schoolInfo = $facebook->api('/' . $mySchoolId);
+                  $schoolName= $schoolInfo['name']  ;
 
-                        //create the url
-                        $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
-                              ?>
-                              <div class="titleblock">
-                              Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
-                              <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
-                              </div>
-                    <div style="text-align:center">
-                      <p>
-                        Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
-                      </p>
-                    </div>
-                    <br>
-                    <div id="button" style="text-align:center">
-                      <a href="#classes">Begin</a>
-                    </div>
-                          <!-- list of current classes, if any -->
-                    <?php } 
-                    else { ?>
+                //create the url
+                $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
+                  ?>
+                  <div class="titleblock">
+                    Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
+                    <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
+                  </div>
+                  <div style="text-align:center">
+                    <p>
+                      Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
+                    </p>
+                  </div>
+                  <br>
+                  <div id="button" style="text-align:center">
+                    <a href="#classes">Begin</a>
+                  </div>
+                        <!-- list of current classes, if any -->
+                  <?php } 
+                  else { ?>
                     <div id="someelse">
                       <h1>Log in to Facebook to begin:</h1>
                       <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
-                      <?php } ?>
                     </div>
-               </div>
+                  <?php } ?>
+                </div>
             </div>
             <div id="classes_sec" style="display:none;">
                 <div class="contentwrapper">
