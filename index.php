@@ -140,10 +140,11 @@ $db = new PDO($dsn);
 
  								<?php
                                 	$query = "SELECT class FROM entries WHERE fbid = '$userId' ORDER BY class ASC;";
-
+                                  $number=0;
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                    	    	echo "<div id='sub'>". $row["class"] . "</div>";
+                                            $number=$number+1;
+                                    	    	echo "<div id='sub'><a href=#Class".$number.">".$row["class"] . "</a></div>";
 
                                             echo '<div id="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
@@ -201,8 +202,8 @@ $db = new PDO($dsn);
 
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
-					$result = json_decode($str); 
-					echo $result->name; 
+					$result3 = json_decode($str); 
+					echo $result3->name; 
 
                      echo "</div>";
                          }
