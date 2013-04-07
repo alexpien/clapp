@@ -12,7 +12,7 @@ $(window).load(function(){
 
 
 
-	$("#nav a, #logo a").click(function(){
+	$("#nav a, #logo a,#button a").click(function(){
 		target=$(this).attr("href");
 		$("#main>div").slideUp();
 		$(target+"_sec").slideDown();
@@ -24,6 +24,7 @@ $(window).load(function(){
 		$(this).toggleClass("colored");
 		$("#classwrapper>div").slideUp();
 		target=$(this).attr("id");
+		alert(target);
 		$(target).slideDown();
 
 
