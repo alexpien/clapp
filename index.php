@@ -64,10 +64,7 @@ $userId = $facebook->getUser();
     <div id="header">
       <div id="logo">
         <a href="#home">
-          <div style="display:inline-block; float:left; margin-top:15px">
-
-            <img src="images/icon.png" height="90" />
-         </div>
+         
               <div style="display:inline-block; float:left;">
 
           <h1>cla<span style="color:#333;">pp</span></h1>
