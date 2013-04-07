@@ -38,6 +38,7 @@ $userId = $facebook->getUser();
             xfbml      : true  // parse XFBML
           });
 
+
           FB.Event.subscribe('auth.login', function(response) {
           window.location.reload();
         });
@@ -74,8 +75,11 @@ $userId = $facebook->getUser();
     </div>
     <div id="main">
       <div id="home_sec" style="display:none;">
+<<<<<<< HEAD
+        <h1></h1>
+=======
           <h1> 
-            hihi
+>>>>>>> ec376f0f1807f45fb93f0f27f6f3bf235786a019
          <?php if ($userId) { 
 
       $userInfo = $facebook->api('/' . $userId);
@@ -170,14 +174,18 @@ $userId = $facebook->getUser();
         <h1>
           About        
         </h1>
+        <p> 
+          Clapp is the best way to connect to your classmates. Enter your schedule and find the other members of that class, as well as the classes that your friends are in.
+        </p>
+        <p>
+          This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang for the HackBlue 2013 hackathon at Duke University.
+        </p>
       </div>  
       <div id="other_sec" style="display:none;">
         <h1>
           Other
         </h1>
-        <p> 
-          This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang for the HackBlue 2013 hackathon at Duke University.
-        </p>
+        
       </div>
     </div>  
   </div>
