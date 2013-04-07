@@ -130,7 +130,7 @@ $userId = $facebook->getUser();
       	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
 
 	
-	if ($mySchoolId==$friendSchoolId)){
+	if ($mySchoolId==$friendSchoolId){
 //create the url
   $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 	
