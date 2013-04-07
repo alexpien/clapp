@@ -121,13 +121,14 @@ $userId = $facebook->getUser();
         <div class="titleblock">
           Classes
         </div>
-        <div>
+        <div class="column">
           c1 your classes
         </div>
-        <div>
+        <div class="column">
+
           c2 your friends
         </div>
-        <div>
+        <div class="column">
           c3 others in class
         </div>
       </div>
@@ -157,6 +158,7 @@ $response = $facebook->api(array(
 	    echo $friendName."<br>";
     	echo "</p>";
     		}
+
       ?>
           
         </h1>
@@ -201,8 +203,8 @@ $response = $facebook->api(array(
       </div>
     </div>  
   </div>
-  <div style="text-align:center;background-color:#DFFFA5; height:20px">
-    us llol
+  <div style="text-align:center;background-color:#DFFFA5; height:20px;display:block">
+    &copy Alex, Howie, Kevin, Vinny
   </div>
 </body>
 </html>
