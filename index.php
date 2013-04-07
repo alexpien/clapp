@@ -177,12 +177,12 @@ $userId = $facebook->getUser();
           This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang for the HackBlue 2013 hackathon at Duke University.
         </p>
       </div>  
-      <!-- <div id="other_sec" style="display:none;">
+      <div id="other_sec" style="display:none;">
         <h1>
           Other
         </h1>
         
-      </div> -->
+      </div>
     </div>  
   </div>
 </body>
