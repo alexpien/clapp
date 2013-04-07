@@ -26,9 +26,9 @@ a:selected{
 	margin:0px auto;
 }
 .titleblock{
-	border-bottom:1px solid black;
 	font-size:28px;
 	padding:20px 0px;
+	text-align:center;
 }
 #logo h1{
 
@@ -78,7 +78,7 @@ a:selected{
 }
 
 #main{
-	padding-left:10px;
+	
 }
 
 #classes_sec div:nth-child(1){
