@@ -146,7 +146,9 @@ div{
 		background:red;
 		border-radius:5px;
 	}
-
+form{
+	display:inline-block;
+}
 #top{
 	height:14px;
 	background-color:#DFFFA5;
