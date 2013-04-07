@@ -77,7 +77,9 @@ $userId = $facebook->getUser();
       <div id="home_sec" style="display:none;">
         <h1> 
          <?php if ($userId) { 
-      $userInfo = $facebook->api('/' . $userId); ?>
+      $userInfo = $facebook->api('/' . $userId); 
+var_dump($userInfo['education'][count($userInfo['education'])-1]['school']['name']);
+      ?>
       Welcome, <?= $userInfo['name'] ?> from <?= $userInfo['education'][count($userInfo['education'])-1]['school']['name'] ?>!
 
       <p>
