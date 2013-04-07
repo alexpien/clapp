@@ -173,16 +173,16 @@ $db = new PDO($dsn);
                         </form>
                     </div>        
                      <div id="<?#?>_subsection" style="display:none">
-                          <?php for class in classes?>              
+                          <?php /*for class in classes*/ ?>              
                                 <div class="<?class?>">
                                     <h3>Friends in this class</h3>
                                     for person in
-                                    <?php for friend in class?>
+                                    <?php/* for friend in class*/?>
                                       <p><?friend?></p>
                                 </div>
                                 <div class="column">
                                     <h3>Others in class</h3>
-                                    <?php for other in class?>
+                                    <?php/* for other in class */?>
                                       <p><?other?></p>
                                 </div>
                      </div>
