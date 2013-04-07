@@ -102,7 +102,7 @@ $db = new PDO($dsn);
                               </div>
                     <div style="text-align:center">
                       <p>
-                        Welcome to <span style="font-family:'Lobster';">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
+                        Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
                       </p>
                     </div>
                       <div style="text-align:center">
@@ -144,6 +144,13 @@ $db = new PDO($dsn);
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                     	    	echo "<p>". $row["class"] . "</p>";
+                                            <form action="delete.php" method="post">
+                                                <input type="hidden" name="fbid" value="<?=$userId?>">
+                                                <input type="hidden" name="class" value="<?=$row["class"]>">
+                                                <input type="submit" value="+"/>
+
+                                            </form>
+
                                 }
                                 $result->closeCursor();
                                 ?>
@@ -164,15 +171,24 @@ $db = new PDO($dsn);
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
-                    </div>                        
-                    <div class="column">
+                    </div>        
 
-                        <h3>Friends in this class</h3>
+                     <div id="<?#?>_subsection" style="display:none">
+                          <?php for class in classes?>              
+                                <div class="<?class?>">
+                                    <h3>Friends in this class</h3>
+                                    for person in
+                                    <?php for friend in class?>
+                                      <p><?friend?></p>
+                                </div>
+                                <div class="column">
+                                    <h3>Others in class</h3>
+                                    <?php for other in class?>
+                                      <p><?other?></p>
+                                </div>
+                    </div>
 
-                    </div>
-                    <div class="column">
-                        <h3>Others in class</h3>
-                    </div>
+
                 </div>
             </div>
             <div id="friends_sec" style="display:none;">
