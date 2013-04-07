@@ -97,6 +97,7 @@ div{
 	float:left;
 }
 #top{
+	position:absolute;
 	height:14px;
 	background-color:#DFFFA5;
 	margin: 0px;
@@ -107,4 +108,7 @@ div{
 	width:225px;
 	margin:20px;
 
+}
+html, body {
+    height: 100%;
 }
