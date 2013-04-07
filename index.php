@@ -143,16 +143,16 @@ $db = new PDO($dsn);
 
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                    	    	echo "<p>". $row["class"] . "</p>";
+                                    	    	echo "<div id='sub'>". $row["class"] . "</div>";
 
-                                            echo '<form action="delete.php" method="post">
+                                            echo '<div id="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
                                              echo '">';
                                              echo '<input type="hidden" name="class" value="';
                                              echo $row["class"];
                                              echo'">';
-                                             echo '<input type="submit" value="-"/></form>';
+                                             echo '<input type="submit" value="-"/></form></div><br><br>';
 
                                 }
                                 $result->closeCursor();
