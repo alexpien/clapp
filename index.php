@@ -98,7 +98,7 @@ $db = new PDO($dsn);
                   ?>
                   <div class="titleblock">
                     Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
-                    <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
+                    <?echo "<br><br><img style=\"border-radius:5px;\" src=\"" . $profile_pic . "\"/>"; ?>
                   </div>
                   <div style="text-align:center">
                     <p>
@@ -187,7 +187,7 @@ $db = new PDO($dsn);
                                 echo '<div class="profile">';
 
                           $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
-                             	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                             	echo "<img style=\"border-radius:5px;\" src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
 
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
@@ -225,7 +225,7 @@ $db = new PDO($dsn);
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
                               	echo "<div class='profile'>";
                               //echo the image out
-                         	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                         	echo "<img style=\"border-radius:5px;\" src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                         	    echo $friendName."<br>";
                             	echo "</div>";
                             		}
