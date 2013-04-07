@@ -72,6 +72,7 @@ a:selected{
 }
 
 #classes_sec div:nth-child(1){
+	padding-left:30px;
 	width:310px;
 	float:left;
 
