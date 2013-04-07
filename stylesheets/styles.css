@@ -26,6 +26,8 @@ a:selected{
 #wrapper{
 	width:960px;
 	margin:0px auto;
+	min-height:100%;
+	margin: 0px auto;
 }
 .titleblock{
 	font-size:28px;
@@ -97,6 +99,7 @@ div{
 	float:left;
 }
 #top{
+	position:absolute;
 	height:14px;
 	background-color:#DFFFA5;
 	margin: 0px;
@@ -107,4 +110,7 @@ div{
 	width:225px;
 	margin:20px;
 
+}
+html, body {
+    height: 100%;
 }

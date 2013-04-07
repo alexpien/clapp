@@ -126,7 +126,7 @@ $result->closeCursor();
                               </select>
 
                              
-                              <input type="number" id="section" name="course" placeholder=" Course #" required>
+                              <input id="section" name="course" placeholder=" Course #" required>
 
                               <input type="submit"value="+"/>
                       </form>
