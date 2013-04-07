@@ -100,7 +100,7 @@ $db = new PDO($dsn);
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
                               ?>
                               <div class="titleblock">
-                              Welcome,<br>
+                              Hello,<br>
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
                               <?echo "<br><br><img src=\"" . $profile_pic . "\" height=72/>"; ?>
 
@@ -124,7 +124,7 @@ $db = new PDO($dsn);
                                 ?>
                               </select>
                             
-                              <input id="section" name="course" placeholder=" Course #" required>
+                              <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
 
                               <input type="submit" value="+"/>
                               <input type="hidden" name="name" value=<?=$userInfo['name']?>>
