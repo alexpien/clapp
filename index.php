@@ -172,6 +172,7 @@ $db = new PDO($dsn);
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
                     </div>        
+
                      <div id="<?#?>_subsection" style="display:none">
                           <?php for class in classes?>              
                                 <div class="<?class?>">
