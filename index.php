@@ -159,8 +159,8 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
                               </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
-                              <input type="submit" value="+"/>
+                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;margin-left:3px;" required>
+                              <input type="submit" value="+" style="background:#DFFFA5;/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
                     </div> 
