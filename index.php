@@ -180,6 +180,7 @@ $db = new PDO($dsn);
                      echo '" style="display:none">';
 
                      $className=$row['class'];
+                     echo $className;
                        $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
                           $result2 = $db->query($query2);
                           while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
