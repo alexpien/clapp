@@ -115,6 +115,7 @@ $db = new PDO($dsn);
                     <div id="someelse">
                       <h1>Log in to Facebook to begin:</h1>
                       <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
+                      
                     </div>
                   <?php } ?>
                 </div>
@@ -167,14 +168,7 @@ $db = new PDO($dsn);
                     </div> 
                     <div id="classwrapper">
                     <?php
-                                	$query = "SELECT class FROM entries WHERE fbid = '$userId' ORDER BY class ASC;";
-
-                                	$result = $db->query($query);
-                                	$number=0;
-                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                     //for each class
-                                		$number=$number+1;
-
+                    for ($i=1; $i<=$number; $i++){
                      echo '<div id="class';
                      echo $number;
                      echo '" style="display:none">';
@@ -192,7 +186,9 @@ $db = new PDO($dsn);
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
 					$result3 = json_decode($str); 
+					echo '<button value="';
 					echo $result3->name; 
+					echo'" type="submit" action="getclasses.php" method="post"';
 
                      echo "</div>";
                          }

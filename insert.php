@@ -11,10 +11,12 @@ $db = new PDO($dsn);
 //concatenate subject and course
 $subjectAndSection=$_POST[subject]." ".$_POST[course];
 
+if (!$_POST[fbid]!='0'){}
 $sql="INSERT INTO entries (fbid, class) VALUES ('$_POST[fbid]','$subjectAndSection')";
 
 // Performs the $sql query on the server to insert the values
 $db->query($sql);
+}
 
 header( "Location: https://blooming-reef-3850.herokuapp.com/#classes" ) ;
 ?>
