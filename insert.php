@@ -9,17 +9,12 @@ $dsn = "pgsql:"
 $db = new PDO($dsn);
 
 $subjectAndSection=$_POST[subject]." ".$_POST[course];
-echo $subjectAndSection;
+echo $_POST[name];
 
 $sql="INSERT INTO entries (name, class) VALUES ('$_POST[name]','$subjectAndSection')";
 
 // Performs the $sql query on the server to insert the values
-if ($db->query($sql) === TRUE) {
-  echo 'users entry saved successfully';
-}
-else {
- echo 'Error: '. $db->error;
-}
-$conn->close();
+$db->query($sql);
 
+$db->close();
 ?>
