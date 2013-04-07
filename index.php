@@ -172,9 +172,9 @@ $db = new PDO($dsn);
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
                     </div>        
-                     <div id="<?#?>_subsection" style="display:none">
+                     <div id="1_subsection" style="display:none">
                           <?php /*for class in classes*/ ?>              
-                                <div class="<?class?>">
+                                <div class="PHPCLASS">
                                     <h3>Friends in this class</h3>
                                     for person in
                                     <?php/* for friend in class*/?>
