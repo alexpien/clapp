@@ -8,11 +8,10 @@ body{
 	font-family:'Lobster';
 	margin:20px auto;
 	display:block;
-	background-color:white;
 	padding:10px;
 	height:70px;
 	margin:0px;
-	bottom-border:1px solid black;
+	bottom-border:1px solid black !important;
 
 }
 a{
