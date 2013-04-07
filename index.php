@@ -219,7 +219,7 @@ $response = $facebook->api(array(
       </div>
     </div>  
   </div>
-  <div style="text-align:center;background-color:#DFFFA5; height:20px">
+  <div style="text-align:center;background-color:#DFFFA5; height:20px;display:block">
     &copy DLnk Industries
   </div>
 </body>
