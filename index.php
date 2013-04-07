@@ -161,11 +161,11 @@ $userId = $facebook->getUser();
                               	$friendId=$friend['uid'];
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
-                              	echo "<p>";
+                              	echo "<div id='profile'><p>";
                               //echo the image out
                          	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                         	    echo $friendName."<br>";
-                            	echo "</p>";
+                            	echo "</p></div>";
                             		}
 
                               ?>
@@ -210,9 +210,9 @@ $userId = $facebook->getUser();
                               $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
                                 echo "<p>";
                                 //echo the image out
-                            echo "<div class='profile'><img src=\"" . $profile_pic . "\" />";
+                            echo "<img src=\"" . $profile_pic . "\" />";
                               echo $likeName;
-                              echo "</p></div>";
+                              echo "</p>";
                           }
                             ?>
                 </div>
