@@ -139,11 +139,12 @@ $db = new PDO($dsn);
                       <h3>Your Classes</h3>
 
  								<?php
-                                	$query = "SELECT class FROM entries WHERE fbid = '$userId';";
-
+                                	$query = "SELECT class FROM entries WHERE fbid = '$userId' ORDER BY class ASC;";
+                                  $number=0;
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                    	    	echo "<div id='sub'>". $row["class"] . "</div>";
+                                            $number=$number+1;
+                                    	    	echo "<div id='sub'><a href=#Class".$number.">".$row["class"] . "</a></div>";
 
                                             echo '<div id="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
@@ -177,7 +178,7 @@ $db = new PDO($dsn);
                     </div> 
 
                     <?php
-                                	$query = "SELECT class FROM entries WHERE fbid = '$userId';";
+                                	$query = "SELECT class FROM entries WHERE fbid = '$userId' ORDER BY class ASC;";
 
                                 	$result = $db->query($query);
                                 	$number=0;
@@ -188,23 +189,23 @@ $db = new PDO($dsn);
                      echo '<div id="class';
                      echo $number;
                      echo '" style="display:block">';
+
                      $className=$row['class'];
-                         $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
+                       $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
                           $result2 = $db->query($query2);
-                               while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
+                          while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
                           //display people in this class           
                                 echo '<div class="profile">';
 
-       
                           $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
                              	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
 
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
-					$result = json_decode($str); 
-					echo $result->name; 
+					$result3 = json_decode($str); 
+					echo $result3->name; 
 
-                            	echo "</div>";
+                     echo "</div>";
                          }
                      echo '</div>';
                                 }
