@@ -30,7 +30,7 @@ $(window).load(function(){
 	});
 
 	$("div.prof2").bind("mousemove",function(event){
-		targ=(this).attr("id");
+		targ=(this).attr("title");
 		alert(targ);
 		$("#mouseover"+targ).css({	top:event.pageY +5 +"px",left:event.pageX+5+"px"}).show();
 		}).bind("mouseout",function(){$("#mouseover"+targ).hide();
