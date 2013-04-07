@@ -52,7 +52,7 @@ $userId = $facebook->getUser();
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
-   <div id="top" style="color:white;">
+   <div id="top" style="color:#333;">
      <?php if ($userId) { 
       $userInfo = $facebook->api('/' . $userId); ?>
       Welcome <?= $userInfo['name'] ?>
