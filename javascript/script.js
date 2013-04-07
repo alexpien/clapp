@@ -29,7 +29,7 @@ $(window).load(function(){
 
 	});
 
-	$("#friend_sec div").bind("mousemove",function(event){
+	$("#friend_sec img").bind("mousemove",function(event){
 		targ=(this).attr("id");
 		alert(targ);
 		$("#mouseover"+targ).css({	top:event.pageY +5 +"px",left:event.pageX+5+"px"}).show();
