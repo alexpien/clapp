@@ -132,9 +132,11 @@ $userId = $facebook->getUser();
         </div>
       </div>
       <div id="friends_sec" style="display:none;">
-        <h1>
+         <div class="titleblock">
+          Friends
+        </div>
         	<p>
-        		Other friends at your school:
+        		At  <?= $schoolName ?>
         	</p>
 
         	<?php
