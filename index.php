@@ -131,8 +131,6 @@ $db = new PDO($dsn);
                               <input type="submit"value="+"/>
                       </form>
                     </div>
-            
-
                           <!-- list of current classes, if any -->
                     <?php } 
                     else { ?>
