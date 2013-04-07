@@ -236,7 +236,7 @@ $db = new PDO($dsn);
                                              echo '"/></form>';
                             	 echo "</div>";
                                echo '<div class="mouseover";display:none>';
-                               echo '<ul>'
+                               echo '<ul>';
 
                                       $dsn = "pgsql:"
                                           . "host=ec2-23-21-161-153.compute-1.amazonaws.com;"
