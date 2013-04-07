@@ -161,24 +161,12 @@ form{
 .profile{
 	display:inline-block;
 	width:225px;
-	margin:20px;
+	margin:10px;
 }
-	.profile a{
-		width:225px;
-		height:20px;
-		padding:4px;
-	}
-	.profile img{
-		float:left;
-	}
-	.profile .peepname{
-		float:left;
-		padding:2px;
-	}
 	.profile a:hover{
 		position:relative;
 		left:-7px;
-		background:#DFFFA5;
+		background:transparent;
 	}
 
 html, body {
@@ -205,4 +193,8 @@ html, body {
 .colored{
 	background-color:#333;
 	font-color:white;
+}
+.asdf{
+
+	width:150px;margin:30px 50px;display:inline-block;
 }

@@ -193,7 +193,7 @@ $db = new PDO($dsn);
 					          $str = file_get_contents($facebookUrl); 
           					$result3 = json_decode($str); 
           					//echo $result3->name; 
-                          echo "<a href='http://facebook.com/".$row2['fbid']."'><img class='peeps' src=\"".$profile_pic."\"/>&nbsp&nbsp&nbsp&nbsp<div class='peepname'>".$result3->name."</div></a>";
+                          echo "<a href='http://facebook.com/".$row2['fbid']."'><img class='peeps' src=\"".$profile_pic."\"/>&nbsp&nbsp&nbsp&nbsp".$result3->name."</a>";
                      echo "</div>";
                          }
                      echo '</div>';
@@ -222,11 +222,11 @@ $db = new PDO($dsn);
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
-                              	echo "<div id='$friendId' class='asdf' style='width:270px;display:inline-block;'>";
+                              	echo "<div id='$friendId' class='asdf' >";
 
                          		   echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                             	 echo "</div>";
-                               echo '<div id="mouseover'.$friendId.'" style="display:none;">';
+                               echo '<div id="mouseover'.$friendId.'" style="display:none;position: absolute;z-index:1000;">';
                                echo $friendName;
                                echo '<ul>';
 
