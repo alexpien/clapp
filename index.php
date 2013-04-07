@@ -84,7 +84,8 @@ $userId = $facebook->getUser();
     <div id="main">
       <div id="home_sec" style="display:none;">
         <h1>
-          Welcome to Clapp. Login to facebook to get started.
+
+          Welcome to Clapp. Login to facebook to get started. test.
         </h1>
       </div>
       <div id="classes_sec" style="display:none;">
