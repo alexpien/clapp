@@ -87,7 +87,7 @@ $db = new PDO($dsn);
         <div id="main">
             <div id="home_sec" style="display:none;">
                 <div class="contentwrapper">
-                    <div class="titleblock">
+                    
                 
                         <?php if ($userId) { 
 
@@ -99,6 +99,7 @@ $db = new PDO($dsn);
                         //create the url
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
                               ?>
+                              <div class="titleblock">
                               Welcome,<br>
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
                               <?echo "<br><br><img src=\"" . $profile_pic . "\" height=72/>"; ?>
@@ -126,7 +127,7 @@ $db = new PDO($dsn);
                               <input id="section" name="course" placeholder=" Course #" required>
 
                               <input type="submit" value="+"/>
-                              <input type="hidden" name="name" value=<?$userInfo['name']?>>
+                              <input type="hidden" name="name" value=<?=$userInfo['name']?>>
                       </form>
                     </div>
                           <!-- list of current classes, if any -->
