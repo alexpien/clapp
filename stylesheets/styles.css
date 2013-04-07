@@ -102,6 +102,14 @@ div{
 	margin:0px auto;
 }
 
+.peeps{
+	-webkit-transition:all .3s;
+}
+.peeps:hover{
+	position:relative;
+	left:-10px;
+}
+
 #someelse{
 	text-align:center;
 	margin:0px auto;
@@ -122,12 +130,12 @@ div{
 	.column label{
 		font-size:16px;
 	}
-	#sub{
+	.sub{
 		display:inline-block;
 		float:left;
 		padding-bottom:2px;
 	}
-	#remove{
+	.remove{
 		display:inline-block;
 		float:right;
 		margin-right:3px;
