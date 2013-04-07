@@ -96,6 +96,7 @@ div{
 .column{
 	display:inline-block;
 	width:295px;
+	height:800px;
 	float:left;
 	border-right:1px #DFFFA5 solid;
 	margin-right:15px;
