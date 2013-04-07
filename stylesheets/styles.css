@@ -88,6 +88,10 @@ div{
 #main{
 	padding:10px;
 }
+#someelse{
+	margin:0px auto;
+}
+
 
 #button{
 	background-color:#DFFFA5;

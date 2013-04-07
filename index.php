@@ -112,9 +112,11 @@ $db = new PDO($dsn);
                           <!-- list of current classes, if any -->
                     <?php } 
                     else { ?>
-                    <h1>Log in to Facebook to begin:</h1>
-                    <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
-                    <?php } ?>
+                    <div id="someelse">
+                      <h1>Log in to Facebook to begin:</h1>
+                      <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
+                      <?php } ?>
+                    </div>
                </div>
             </div>
             <div id="classes_sec" style="display:none;">
