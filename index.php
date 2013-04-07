@@ -119,8 +119,12 @@ $userId = $facebook->getUser();
       </div>
       <div id="friends_sec" style="display:none;">
         <h1>
+        	<p>
+        		Other friends at your school:
+        	</p>
+        	
         	<?php
-      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(25).fields(education)');
+      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(100).fields(education)');
       $friendData=$friendData['friends']['data'];
 
       foreach ($friendData as &$friend) {
