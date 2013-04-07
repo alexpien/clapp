@@ -40,6 +40,11 @@ a:selected{
 	text-align:center;
 	font-size:20px;
 }
+	#logo img{
+		display:inline-block;
+		float:left;
+		height:100px;
+	}
 
 #nav{
 	float:right;
@@ -72,7 +77,6 @@ a:selected{
 }
 
 #classes_sec div:nth-child(1){
-	padding-left:30px;
 	width:310px;
 	float:left;
 
