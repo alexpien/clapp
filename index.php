@@ -210,9 +210,9 @@ $userId = $facebook->getUser();
                               $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
                                 echo "<p>";
                                 //echo the image out
-                            echo "<img src=\"" . $profile_pic . "\" />";
+                            echo "<div class='profile'><img src=\"" . $profile_pic . "\" />";
                               echo $likeName;
-                              echo "</p>";
+                              echo "</p></div>";
                           }
                             ?>
                 </div>
