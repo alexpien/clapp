@@ -8,7 +8,7 @@ $dsn = "pgsql:"
     . "password=3aCt96iydyR59_GmRL2ltLaXU3";
 $db = new PDO($dsn);
 
-$subjectAndSection=$_POST[subject]." ".$_POST[section];
+$subjectAndSection=$_POST[subject]." ".$_POST[course];
 echo $subjectAndSection;
 
 $sql="INSERT INTO entries (name, class) VALUES ('$_POST[name]','$subjectAndSection')";
