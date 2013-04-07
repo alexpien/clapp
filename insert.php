@@ -9,7 +9,6 @@ $dsn = "pgsql:"
 $db = new PDO($dsn);
 
 $subjectAndSection=$_POST[subject]." ".$_POST[course];
-echo $_POST[name];
 
 $sql="INSERT INTO entries (name, class) VALUES ('$_POST[name]','$subjectAndSection')";
 
