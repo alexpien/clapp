@@ -141,7 +141,7 @@ div{
 	}
 	.remove{
 		display:inline-block;
-		float:right;
+		float:left;
 		margin-right:3px;
 		background:red;
 		border-radius:5px;
