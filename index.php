@@ -118,6 +118,7 @@ $userId = $facebook->getUser();
     <?php } ?>
       </div>
       <div id="classes_sec" style="display:none;">
+        <div id="class_contain">
         <div class="titleblock">
           Classes
         </div>
@@ -131,6 +132,7 @@ $userId = $facebook->getUser();
         <div class="column">
           c3 others in class
         </div>
+      </div>
       </div>
       <div id="friends_sec" style="display:none;">
          <div class="titleblock">
