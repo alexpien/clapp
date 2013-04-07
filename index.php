@@ -225,6 +225,7 @@ $db = new PDO($dsn);
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
                             echo "<div class='profile'>";
                          		echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+<<<<<<< HEAD
                          		echo '<form action="getclasses.php" method="post">
                                   <input type="hidden" name="fbid" value="';
                             echo $friendId;
@@ -234,6 +235,34 @@ $db = new PDO($dsn);
                             echo '"/></form>';
                             echo "</div>";
                             	}
+=======
+                         					echo '<form action="getclasses.php" method="post">
+                                             <input type="hidden" name="fbid" value="';
+                                             echo $userId;
+                                             echo '">';
+                                             echo '<input type="submit" value="';
+                                             echo $friendName;
+                                             echo '"/></form>';
+                            	 echo "</div>";
+                               echo '<div class="mouseover";display:none>';
+                               echo '<ul>';
+
+                                      
+                                  
+                                  $query = "SELECT class FROM entries WHERE fbid = '$friendId' ORDER BY class ASC;";
+                                  $result10 = $db->query($query);
+                                  while ($row = $result10->fetch(PDO::FETCH_ASSOC)) {  
+                                             
+                                             echo '<li>';
+                                             echo $row["class"];
+                                             echo '</li>';
+                                  }
+                                  $result10->closeCursor();
+                                  echo '</ul>';
+                                  echo '</div>';
+                            		}
+
+>>>>>>> 92f626176b7faaf08867d89c7d3f85448c712e3d
                               ?>
                       </div>
                 </div>
