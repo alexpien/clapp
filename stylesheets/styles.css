@@ -164,13 +164,16 @@ form{
 	margin:20px
 	-webkit-transition:all .3s;
 }
+	.profile a{
+		width:225 px;
+		padding:2px;
+	}
 	.profile img{
 		float:left;
 	}
 	.profile .peepname{
 		float:left;
-		padding-bottom:2px;
-		padding-right:2px;
+		padding:2px;
 	}
 	.profile a:hover{
 		position:relative;
