@@ -23,7 +23,7 @@ $(window).load(function(){
 		$("#classes_sec>a").removeClass("colored");
 		$(this).toggleClass("colored");
 		$("#classwrapper>div").slideUp();
-		target=$(this).attr("href");
+		target=$(this).attr("id");
 		$(target).slideDown();
 
 
