@@ -132,10 +132,10 @@ $userId = $facebook->getUser();
       <div id="friends_sec" style="display:none;">
         <h1>
         	<p>
-        		Other friends at your school:
+        		Other clapp users:
         	</p>
 
-        	<?php
+        	<?php/*
       $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(20).fields(education)');
       $friendData=$friendData['friends']['data'];
 
@@ -162,6 +162,7 @@ $userId = $facebook->getUser();
 
 
 	}
+	*/
       ?>
           
         </h1>
