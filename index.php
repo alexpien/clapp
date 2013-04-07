@@ -226,7 +226,7 @@ $db = new PDO($dsn);
 
                          		   echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                             	 echo "</div>";
-                               echo '<div id="mouseover'.$friendId.'" style="display:none;position: absolute;z-index:1000;background-color:#DFFFA5;padding:15px;position: absolute;z-index:1000;">';
+                               echo '<div id="mouseover'.$friendId.'" style="display:none;position: absolute;z-index:1000;background-color:#DFFFA5;padding:15px;border:2 px solid #006633;position: absolute;z-index:1000;">';
                                echo $friendName;
                                echo '<ul>';
 
