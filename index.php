@@ -141,8 +141,8 @@ $userId = $facebook->getUser();
 
         	</p>
 
-        	<?php/*
-      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(20).fields(education)');
+        	<?php
+      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(30).fields(education)');
       $friendData=$friendData['friends']['data'];
 
       foreach ($friendData as &$friend) {
@@ -166,10 +166,7 @@ $userId = $facebook->getUser();
     	echo "</p>";
       ?><!-- Facebook Badge START --><a href="https://www.facebook.com/kevin.jian.39" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Kevin Jian">Kevin Jian</a><span style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; line-height: 16px; font-variant: normal; font-style: normal; font-weight: normal; color: #555555; text-decoration: none;">&nbsp;|&nbsp;</span><a href="https://www.facebook.com/badges/" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Make your own badge!">Create Your Badge</a><br/><a href="https://www.facebook.com/kevin.jian.39" target="_TOP" title="Kevin Jian"><img src="https://badge.facebook.com/badge/658008653.2074.1347434826.png" style="border: 0px;" /></a><!-- Facebook Badge END -->
 <?}
-  
-
 	}
-	*/
       ?>
           
         </h1>
