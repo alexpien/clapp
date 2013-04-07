@@ -97,12 +97,12 @@ $db = new PDO($dsn);
                         $schoolName= $schoolInfo['name']  ;
 
                         //create the url
-                        $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
+                        $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
                               ?>
                               <div class="titleblock">
                               Hello,<br>
                               <?= $userInfo['name'] ?> - <?= $schoolName ?>
-                              <?echo "<br><br><img src=\"" . $profile_pic . "\" style=\"height:72px;\"/>"; ?>
+                              <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
 
             
                     </div>
@@ -125,7 +125,7 @@ $db = new PDO($dsn);
                               </select>
                               <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
                               <input type="submit" value="+"/>
-                              <input type="hidden" name="name" value="<?=$userInfo['name']?>">
+                              <input type="hidden" name="name" value="<?=$userId?>">
                       </form>
                     </div>
                           <!-- list of current classes, if any -->
@@ -142,9 +142,9 @@ $db = new PDO($dsn);
                         Classes
                     </div>
                     <div class="column">
-                      c1 your classes
-                 
+                      <h3>Your Classes</h3>
                       <form action="insert.php" method="post">
+                              <label>Add more classes:</label>
                               <select name="subject">
                                 <?php
                                   $query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
@@ -157,7 +157,7 @@ $db = new PDO($dsn);
                               </select>
                               <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
                               <input type="submit" value="+"/>
-                              <input type="hidden" name="name" value="<?=$userInfo['name']?>">
+                              <input type="hidden" name="fbid" value="<?=$userId?>">
                       </form>
 
 
