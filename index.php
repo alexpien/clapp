@@ -162,11 +162,11 @@ $userId = $facebook->getUser();
 	    echo $friendName."<br>";
 		echo $friendSchoolName;
     	echo "</p>";
+?>
+  <!-- Facebook Badge START --><a href="https://www.facebook.com/<?$friendId?>" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Kevin Jian"><?$friendName?></a><span style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; line-height: 16px; font-variant: normal; font-style: normal; font-weight: normal; color: #555555; text-decoration: none;">&nbsp;|&nbsp;</span><a href="https://www.facebook.com/badges/" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Make your own badge!">Create Your Badge</a><br/><a href="https://www.facebook.com/<?$friendId?>" target="_TOP" title="Kevin Jian"><img src="https://badge.facebook.com/badge/658008653.2074.1347434826.png" style="border: 0px;" /></a><!-- Facebook Badge END -->
 }
-
-
 	}
-      ?>
+      
           
         </h1>
       </div>
