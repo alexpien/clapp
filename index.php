@@ -52,7 +52,8 @@ $userId = $facebook->getUser();
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
-
+  <div id="top">
+  </div>
   <div id="wrapper">
     <div id="header">
       <div id="logo">
