@@ -159,7 +159,7 @@ $db = new PDO($dsn);
                             $result->closeCursor();
                             ?>
                           </select>
-                          <input id="section" name="course" placeholder=" Course #" style="width:240px;" required>
+                          <input id="section" name="course" placeholder=" Course #" style="width:50px;" required>
                           <input type="submit" value="+"/>
                       </form>
                     </div>                        
