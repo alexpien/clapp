@@ -269,7 +269,7 @@ $db = new PDO($dsn);
                             echo "<img src=\"" . $profile_pic . "\" />";
                             echo '<button value="';
                               echo $likeName;
-							echo'" type="submit" action="getclasses.php" method="post"';
+							echo'" type="submit" action="getclasses.php" method="post">';
                               echo "</p>";
                           }
                             ?>
