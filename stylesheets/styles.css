@@ -67,6 +67,10 @@ a:selected{
 
 }
 
+#main{
+	padding-left:10px;
+}
+
 #top{
 	height:14px;
 	background-color:#DFFFA5;

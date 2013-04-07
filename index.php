@@ -88,17 +88,17 @@ $userId = $facebook->getUser();
       </h1>
     </div>
       <p>
-      You're now on clapp, the best app to connect to your classmates.  To begin, enter your classes below:
-</p>
-<p>
-      DROPDOWN
-</p>
-<p>
-      CLASS NUMBER BOX
-</p>
-<p>
-      SUBMIT BUTTON
-</p>
+        You're now on clapp, the best app to connect to your classmates.  To begin, enter your classes below:
+      </p>
+      <p>
+        DROPDOWN
+      </p>
+      <p>
+        CLASS NUMBER BOX
+      </p>
+      <p>
+        SUBMIT BUTTON
+      </p>
     <?php } else { ?>
     <h1>Log in to Facebook to begin:</h1>
     <fb:login-button></fb:login-button>
