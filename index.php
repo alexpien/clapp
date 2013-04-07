@@ -273,7 +273,18 @@ $db = new PDO($dsn);
                                 echo "<p>";
                                 //echo the image out
                             echo "<img src=\"" . $profile_pic . "\" />";
-                              echo $likeName;
+
+								echo '<form action="getclasses.php" method="post">
+                                             <input type="hidden" name="fbid" value="';
+                                             echo $userId;
+                                             echo '">';
+                                             echo '<input type="hidden" name="class" value="';
+                                             echo $row["class"];
+                                             echo'">';
+                                             echo '<input type="submit" value="';
+                                             echo $likeName;
+                                             echo '"/></form>';
+
                               echo "</p>";
                           }
                             ?>
