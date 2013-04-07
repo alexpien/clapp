@@ -105,14 +105,15 @@ Classes
       <div id="friends_sec" style="display:none;">
         <h1>
         	<?php
-      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(100).fields(education)');
+      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(10).fields(education)');
       $friendData=$friendData['friends']['data'];
       foreach ($friendData as &$friend) {
-      	 $friendInfo= $facebook->api('/' . $friend['id']);
+      	$friendInfo= $facebook->api('/' . $friend['id']);
 		$friendName=$friendInfo['name'];
+		$friendSchool=$friend['education'][count($friend['education'])-1]['school']['name'];
 		echo "<p>";
-	    echo $friendName." ";
-		echo $friend['education'][count($friend['education'])-1]['school']['name'];
+	    echo $friendName."<br>";
+		echo $friendSchool;
     	echo "</p>";
 	}
       ?>
