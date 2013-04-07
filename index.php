@@ -53,7 +53,12 @@ $userId = $facebook->getUser();
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
-
+     <?php if ($userId) { 
+      $userInfo = $facebook->api('/' . $userId); ?>
+      Welcome <?= $userInfo['name'] ?>
+    <?php } else { ?>
+    <fb:login-button></fb:login-button>
+    <?php } ?>
   <div id="top">
   </div>
   <div id="wrapper">
@@ -76,7 +81,8 @@ $userId = $facebook->getUser();
     </div>
     <div id="main">
       <div id="home_sec" style="display:none;">
-
+        <h1> 
+          Welcome to Clapp. Login to facebook to get started.
          <?php if ($userId) { 
       $userInfo = $facebook->api('/' . $userId); ?>
       Welcome <?= $userInfo['name'] ?>
@@ -96,7 +102,6 @@ $userId = $facebook->getUser();
     <h1>Log in to Facebook to begin:</h1>
     <fb:login-button></fb:login-button>
     <?php } ?>
-
       </div>
       <div id="classes_sec" style="display:none;">
         <h1>
