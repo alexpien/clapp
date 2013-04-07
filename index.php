@@ -145,6 +145,7 @@ $userId = $facebook->getUser();
                     <div class="titleblock">
                         Friends
                     </div>
+                    <div style="padding-left:120px"
           	        <p>
           		          Your Clapp Friends:
           	        </p>
@@ -170,7 +171,7 @@ $userId = $facebook->getUser();
 
                               ?>
             
-          
+                      </div>
                 </div>
             </div>
             <div id="about_sec" style="display:none;">
