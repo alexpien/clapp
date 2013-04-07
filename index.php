@@ -125,8 +125,8 @@ Classes
 
       foreach ($friendData as &$friend) {
       	$friendId=$friend['id'];
-      	$friendName=$friendInfo['name'];
       	$friendInfo= $facebook->api('/' . $friendId);
+      	$friendName=$friendInfo['name'];
       	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
 
 	
