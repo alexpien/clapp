@@ -144,12 +144,15 @@ $db = new PDO($dsn);
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                     	    	echo "<p>". $row["class"] . "</p>";
-                                            <form action="delete.php" method="post">
-                                                <input type="hidden" name="fbid" value="<?=$userId?>">
-                                                <input type="hidden" name="class" value="<?=$row["class"]>">
-                                                <input type="submit" value="+"/>
 
-                                            </form>
+                                            echo '<form action="delete.php" method="post">
+                                             <input type="hidden" name="fbid" value="';
+                                             echo $userId;
+                                             echo '">';
+                                             echo '<input type="hidden" name="class" value="';
+                                             echo $row["class"];
+                                             echo'">';
+                                             echo '<input type="submit" value="-"/></form>';
 
                                 }
                                 $result->closeCursor();
@@ -171,19 +174,20 @@ $db = new PDO($dsn);
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
-                    </div>        
-
-                     <div id="<?#?>_subsection" style="display:none">
-                          <?php for class in classes?>              
-                                <div class="<?class?>">
+                    </div>    
+                    <?php
+                    /* for each class 
+                     <div id="PHPNUMBER_subsection" style="display:none">
+                          <?php /*for class in classes*/ ?>              
+                                <div class="PHPCLASS">
                                     <h3>Friends in this class</h3>
                                     for person in
-                                    <?php for friend in class?>
+                                    <?php/* for friend in class*/?>
                                       <p><?friend?></p>
                                 </div>
                                 <div class="column">
                                     <h3>Others in class</h3>
-                                    <?php for other in class?>
+                                    <?php/* for other in class */?>
                                       <p><?other?></p>
                                 </div>
                      </div>
