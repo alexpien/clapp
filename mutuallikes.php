@@ -273,7 +273,6 @@ $db = new PDO($dsn);
                         Mutual Likes (MuLi): Search for friends with the most common interests.
                     </p>
                       <?php
-/*
                         $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=me())";
                        
                               $response = $facebook->api(array(
@@ -283,26 +282,21 @@ $db = new PDO($dsn);
                                 foreach ($response as &$like) {
                                 $likeId=$like['page_id'];
                                 $likeName=$like['name'];
-                              
-                            //create the url
-                              $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
-                                echo "<p>";
-                                //echo the image out
-                                echo "<img class='peeps' src=\"" . $profile_pic . "\" />";
                                 echo $likeName;
-                                echo "</p>";
+                                echo "<br>";
                           }
-*/
+
                       $fql = "SELECT uid1 from friend where uid2=me()";
                        $friendids = $facebook->api(array(
                                 'method' => 'fql.query',
                                 'query' =>$fql,
                               ));
                     foreach ($friendids as &$friendid) {
-                    echo $friendid['uid1'];                                
-                      }
+                      $specificUid=$friendid['uid1'];
+                    echo $specificUid;
+                    echo "<br>";
 
-                    $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=658008653";
+                $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid='$specificUid'";
                               $response = $facebook->api(array(
                                 'method' => 'fql.query',
                                 'query' =>$fql,
@@ -310,15 +304,13 @@ $db = new PDO($dsn);
                                 foreach ($response as &$like) {
                                 $likeId=$like['page_id'];
                                 $likeName=$like['name'];
-                              
-                            //create the url
-                              $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
-                                echo "<p>";
-                                //echo the image out
-                                echo "<img class='peeps' src=\"" . $profile_pic . "\" />";
+                      
                                 echo $likeName;
-                                echo "</p>";   
+                                echo "<br>";   
                           }
+                           
+                      }
+
 
 
                       ?>
