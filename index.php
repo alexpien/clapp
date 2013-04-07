@@ -152,17 +152,17 @@ $db = new PDO($dsn);
                               </select>
                               <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
                               <input type="submit" value="+"/>
-                              <input type="hidden" name="fbid" value=<?=$userId?>>
+                              <input type="hidden" name="fbid" value="<?=$userId?>">
                       </form>
 
 
                     </div>                        
                 
                     <div class="column">
-                        c2 your friends
+                        <h3>Friends in this class</h3>
                     </div>
                     <div class="column">
-                        c3 others in class
+                        <h3>Others in class</h3>
                     </div>
                 </div>
             </div>
