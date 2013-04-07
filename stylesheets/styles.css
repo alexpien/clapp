@@ -12,8 +12,8 @@ body{
 	height:70px;
 	margin:0px;
 	border-bottom: 1px solid black;
-	max-width:100%;
-	min-width:60px;
+	max-width:960px;
+	min-width:600px;
 }
 a{
 	text-decoration: none;
@@ -23,7 +23,7 @@ a:selected{
 
 }
 #friends_sec{
-	padding-left:80px;
+	padding-left:120px;
 }
 #wrapper{
 	width:960px;
