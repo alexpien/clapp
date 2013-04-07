@@ -224,9 +224,17 @@ $db = new PDO($dsn);
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
                               	echo "<div class='profile'>";
-                              //echo the image out
-                         	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
-                        	    echo $friendName."<br>";
+                         		echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                         					echo '<form action="getclasses.php" method="post">
+                                             <input type="hidden" name="fbid" value="';
+                                             echo $userId;
+                                             echo '">';
+                                             echo '<input type="hidden" name="class" value="';
+                                             echo $row["class"];
+                                             echo'">';
+                                             echo '<input type="submit" value="';
+                                             echo $friendName;
+                                             echo '"/></form>';
                             	echo "</div>";
                             		}
 
