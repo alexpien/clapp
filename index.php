@@ -162,7 +162,7 @@ $result->closeCursor();
             <div id="friends_sec" style="display:none;">
                 <div class="contentwrapper">
                     <div class="titleblock">
-                        Your <span>Clapp</span> Friends
+                        Your <span>clapp</span> Friends
                     </div>
                     <div style="padding-left:100px">
           	        
