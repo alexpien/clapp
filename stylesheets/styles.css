@@ -27,7 +27,7 @@ a:selected{
 	width:960px;
 	margin:0px auto;
 	min-height:100%;
-	margin: 0 auto -16px;
+	margin: 0 auto -14px;
 }
 .titleblock{
 	font-size:28px;
@@ -136,6 +136,6 @@ html, body {
 	 position:fixed;
    left:0px;
    bottom:0px;
-   height:30px;
+   height:14px;
    width:100%;
 }
