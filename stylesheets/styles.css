@@ -25,6 +25,10 @@ a:selected{
 	width:960px;
 	margin:0px auto;
 }
+.titleblock{
+	display:inline-block;
+	border-bottom:1px solid black;
+}
 #logo h1{
 
 	margin:10px;

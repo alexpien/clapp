@@ -75,15 +75,17 @@ $userId = $facebook->getUser();
     </div>
     <div id="main">
       <div id="home_sec" style="display:none;">
+        <div class="titleblock">
         <h1> 
          <?php if ($userId) { 
+
       $userInfo = $facebook->api('/' . $userId);
       $schoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
       $schoolInfo = $facebook->api('/' . $schoolId);
       $schoolName= $schoolInfo['name'];
       ?>
       Welcome, <?= $userInfo['name'] ?> from <?= $schoolName ?>!
-
+    </div>
       <p>
       You're now on clapp, the best app to connect to your classmates.  To begin, enter your classes below:
 </p>
