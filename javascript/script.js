@@ -30,13 +30,10 @@ $(window).load(function(){
 	});
 
 	$("div.asdf").bind("mousemove",function(event){
-		targ=(this).attr("title");
-		alert(targ);
+		targ=$(this).attr("id");
 		$("#mouseover"+targ).css({	top:event.pageY +5 +"px",left:event.pageX+5+"px"}).show();
 		}).bind("mouseout",function(){$("#mouseover"+targ).hide();
 	});
-
-
 
 
 });
