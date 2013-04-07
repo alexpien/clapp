@@ -17,11 +17,8 @@ $userId = $facebook->getUser();
   <head>
     <title>Clapp</title>
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
     <link rel="Shortcut Icon" href="images/favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:800' rel='stylesheet' type='text/css'>
-
+    <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster|Merriweather+Sans:800'/>
     <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
   </head>
@@ -87,7 +84,7 @@ $userId = $facebook->getUser();
     <div id="main">
       <div id="home_sec" style="display:none;">
         <h1>
-          Welcome to Clapp. Login to facebook to get started. test test test.
+          Welcome to Clapp. Login to facebook to get started.
         </h1>
       </div>
       <div id="classes_sec" style="display:none;">
