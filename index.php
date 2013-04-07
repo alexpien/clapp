@@ -102,7 +102,7 @@ $db = new PDO($dsn);
                               </div>
                     <div style="text-align:center">
                       <p>
-                        Welcome to <span style="font-family:'Lobster';">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
+                        Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
                       </p>
                     </div>
                       <div style="text-align:center">
