@@ -55,7 +55,7 @@ a:selected{
 	font-size: 14px;
 	font-family: Arial;
 	vertical-align:50%;
-	padding:4px;
+	padding:10px;
 }
 #nav a:hover{
 	background-color:#333;
