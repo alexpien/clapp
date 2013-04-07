@@ -141,6 +141,14 @@ $userId = $facebook->getUser();
         	</p>
 
         	<?php
+        	/*
+        	$fql = "SELECT page_id, name from page where name='Coke'";
+ 
+$response = $facebook->api(array(
+     'method' => 'fql.query',
+     'query' =>$fql,
+));
+*/
       $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(20).fields(education)');
       $friendData=$friendData['friends']['data'];
 
@@ -162,9 +170,9 @@ $userId = $facebook->getUser();
  	echo "<img src=\"" . $profile_pic . "\" />"; 
 	    echo $friendName."<br>";
     	echo "</p>";
+      ?><!-- Facebook Badge START --><a href="https://www.facebook.com/kevin.jian.39" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Kevin Jian">Kevin Jian</a><span style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; line-height: 16px; font-variant: normal; font-style: normal; font-weight: normal; color: #555555; text-decoration: none;">&nbsp;|&nbsp;</span><a href="https://www.facebook.com/badges/" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Make your own badge!">Create Your Badge</a><br/><a href="https://www.facebook.com/kevin.jian.39" target="_TOP" title="Kevin Jian"><img src="https://badge.facebook.com/badge/658008653.2074.1347434826.png" style="border: 0px;" /></a><!-- Facebook Badge END -->
+<?}
 
-}
-  
 
 	}
       ?>
@@ -186,6 +194,28 @@ $userId = $facebook->getUser();
          <div class="titleblock">
           Other
         </div>
+
+          <p>
+        Mutual Likes:
+    </p>
+
+       <?php
+      $myLikes= $facebook->api('/' . $userId. '?fields=likes');
+      $myLikesData=$myLikes['likes']['data'];
+
+      foreach ($myLikesData as &$like) {
+      	$likeId=$like['id'];
+      	$likeName=$like['name'];
+//create the url
+  $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
+      	echo "<p>";
+      //echo the image out
+ 	echo "<img src=\"" . $profile_pic . "\" />";
+	    echo $likeName;
+    	echo "</p>";
+}
+      ?>
+      
       </div>
     </div>  
   </div>
