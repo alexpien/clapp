@@ -105,10 +105,10 @@ $db = new PDO($dsn);
                         Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
                       </p>
                     </div>
+                    <br><br>
                     <div id="button" style="text-align:center">
                       <a href="#classes">Begin</a>
                     </div>
-                    <br><br>
                           <!-- list of current classes, if any -->
                     <?php } 
                     else { ?>
