@@ -108,7 +108,11 @@ Classes
       $friendsData= $facebook->api('/' . $userId. '?fields=friends.limit(10).fields(education)');
       $friends=$friendsData['friends']['data'];
       foreach ($friends as &$friend) {
-    echo $friend['id'];
+      	 $friendInfo= $facebook->api('/' . $friend['id']);
+	$friendName=$friendInfo['name'];
+	echo "<p>";
+    echo $friendName;
+    echo "</p>;
 	}
       ?>
           
