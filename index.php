@@ -55,7 +55,7 @@
     <div id="header">
       <div id="logo">
         <a href="#home">
-        <img href="images/icone.png" height="100" /><h1>cla<span style="color:#333;">pp</span></h1>
+        <img src="images/icone.png" height="50" /><h1>cla<span style="color:#333;">pp</span></h1>
         </a>
       </div>
       <div id="nav">
