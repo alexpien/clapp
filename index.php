@@ -134,16 +134,17 @@ Classes
  	//echo the image out
  	echo "<img src=\"" . $profile_pic . "\" />"; 
 	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
-		//$schoolInfo = $facebook->api('/' . $friendSchoolId);
-		var_dump($friendSchoolId);
-      	//$friendSchoolName= $schoolInfo['name'];
-
-
-
-		echo "<p>";
+	
+	if ($friendSchoolId!=NULL){
+		$schoolInfo = $facebook->api('/' . $friendSchoolId);
+      	$friendSchoolName= $schoolInfo['name'];
+      	echo "<p>";
 	    echo $friendName."<br>";
-		//echo $friendSchoolName;
+		echo $friendSchoolName;
     	echo "</p>";
+}
+
+
 	}
       ?>
           
