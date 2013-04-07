@@ -98,7 +98,7 @@ $db = new PDO($dsn);
                   ?>
                   <div class="titleblock">
                     Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
-                    <?echo "<br><br><img style=\"border-radius:5px;\" src=\"" . $profile_pic . "\"/>"; ?>
+                    <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
                   </div>
                   <div style="text-align:center">
                     <p>
@@ -115,7 +115,6 @@ $db = new PDO($dsn);
                     <div id="someelse">
                       <h1>Log in to Facebook to begin:</h1>
                       <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
-                      
                     </div>
                   <?php } ?>
                 </div>
@@ -161,18 +160,25 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
                               </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;margin-left:2px;" required>
+                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
                     </div> 
                     <div id="classwrapper">
                     <?php
-                    for ($i=1; $i<=$number; $i++){
+                                	$query = "SELECT class FROM entries WHERE fbid = '$userId' ORDER BY class ASC;";
+
+                                	$result = $db->query($query);
+                                	$number=0;
+                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                     //for each class
+                                		$number=$number+1;
+
                      echo '<div id="class';
                      echo $number;
                      echo '" style="display:none">';
-                     echo '<p>'.$row['class'].'</p>';
+
                      $className=$row['class'];
                        $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
                           $result2 = $db->query($query2);
@@ -181,7 +187,7 @@ $db = new PDO($dsn);
                                 echo '<div class="profile">';
 
                           $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
-                             	echo "<img style=\"border-radius:5px;\" src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                             	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
 
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
@@ -219,7 +225,7 @@ $db = new PDO($dsn);
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
                               	echo "<div class='profile'>";
                               //echo the image out
-                         	echo "<img style=\"border-radius:5px;\" src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                         	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                         	    echo $friendName."<br>";
                             	echo "</div>";
                             		}
@@ -278,6 +284,7 @@ $db = new PDO($dsn);
                                              echo '<input type="submit" value="';
                                              echo $likeName;
                                              echo '"/></form>';
+
                               echo "</p>";
                           }
                             ?>
