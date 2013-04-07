@@ -146,7 +146,23 @@ $db = new PDO($dsn);
                         Classes
                     </div>
                     <div class="column">
-                        c1 your classes
+                      c1 your classes
+                      <form action="insert.php" method="post">
+                        <label>Add more classes:</label>
+                          <select name="subject">
+                            <?php
+                              $query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
+                              $result = $db->query($query);
+                              while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                        echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
+                            }
+                            $result->closeCursor();
+                            ?>
+                          </select>
+                          <input id="section" name="course" placeholder=" Course #" required>
+                          <input type="submit" value="+"/>
+                      </form>
+                    </div>                        
                     </div>
                     <div class="column">
                         c2 your friends
