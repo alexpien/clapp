@@ -202,8 +202,8 @@ $db = new PDO($dsn);
 
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
-					$result = json_decode($str); 
-					echo $result->name; 
+					$result3 = json_decode($str); 
+					echo $result3->name; 
 
                             	echo "</div>";
                          }
