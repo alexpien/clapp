@@ -117,7 +117,7 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
                               </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
+                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                       </form>
@@ -171,7 +171,7 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
                               </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
+                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
@@ -195,11 +195,16 @@ $db = new PDO($dsn);
                                while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
                           //display people in this class           
                                 echo '<div class="profile">';
-            					echo $row2['fbid'];
-            					echo "<br>";
-            
+
+       
                           $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
                              	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+
+                    $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
+					$str = file_get_contents($facebookUrl); 
+					$result = json_decode($str); 
+					echo $result->name; 
+
                             	echo "</div>";
                          }
                      echo '</div>';
