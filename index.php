@@ -168,10 +168,29 @@ $db = new PDO($dsn);
                     <div class="column">
 
                         <h3>Friends in this class</h3>
+                          <?php
+                                  $query = "SELECT class FROM entries WHERE fbid = '$userId';";
+
+                                  $result = $db->query($query);
+                                  while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                            echo "<p>". $row["class"] . "</p>";
+                                }
+                                $result->closeCursor();
+                                ?>
 
                     </div>
                     <div class="column">
                         <h3>Others in class</h3>
+                          <?php
+                                  $query = "SELECT class FROM entries WHERE fbid = '$userId';";
+
+                                  $result = $db->query($query);
+                                  while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                            echo "<p>". $row["class"] . "</p>";
+                                }
+                                $result->closeCursor();
+                                ?>
+
                     </div>
                 </div>
             </div>
