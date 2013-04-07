@@ -162,8 +162,9 @@ $userId = $facebook->getUser();
 	    echo $friendName."<br>";
 		echo $friendSchoolName;
     	echo "</p>";
+      
 }
-
+  
 
 	}
       ?>
