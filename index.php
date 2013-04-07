@@ -114,7 +114,7 @@ $userId = $facebook->getUser();
                              
                               <input type="number" id="section" name="course" placeholder=" Course #" required>
 
-                              <input type="submit"value="Submit Class"/>
+                              <input type="submit"value="+"/>
                       </form>
                     </div>
                     <p>
