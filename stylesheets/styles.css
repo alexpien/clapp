@@ -26,8 +26,9 @@ a:selected{
 	margin:0px auto;
 }
 .titleblock{
-	display:inline-block;
 	border-bottom:1px solid black;
+	font-size:28px;
+	padding:20px 0px;
 }
 #logo h1{
 
@@ -98,7 +99,7 @@ a:selected{
 
 
 #top{
-	height:14px;
+	height:20px;
 	background-color:#DFFFA5;
 	margin: 0px;
 }

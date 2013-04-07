@@ -75,7 +75,8 @@ $userId = $facebook->getUser();
     </div>
     <div id="main">
       <div id="home_sec" style="display:none;">
-          <h1> 
+        <div class="titleblock">
+          
            <?php if ($userId) { 
 
       $userInfo = $facebook->api('/' . $userId);
@@ -87,13 +88,14 @@ $userId = $facebook->getUser();
   $profile_pic =  "http://graph.facebook.com/".$userId."/picture";
 
  //echo the image out
- echo "<img src=\"" . $profile_pic . "\" />"; 
+ echo "<img src=\"" . $profile_pic . "\" height=48/>"; 
 
       ?>
 
-      Welcome, <?= $userInfo['name'] ?> from <?= $schoolName ?>!
+      <?= $userInfo['name'] ?> - <?= $schoolName ?>
       
-      </h1>
+      
+    </div>
       <p>
         You're now on clapp, the best app to connect with your classmates. To begin, enter your classes below:
       </p>
@@ -116,9 +118,9 @@ $userId = $facebook->getUser();
     <?php } ?>
       </div>
       <div id="classes_sec" style="display:none;">
-        <h1>
+        <div class="titleblock">
           Classes
-        </h1>
+        </div>
         <div>
           c1 your classes
         </div>
@@ -130,9 +132,13 @@ $userId = $facebook->getUser();
         </div>
       </div>
       <div id="friends_sec" style="display:none;">
-        <h1>
+         <div class="titleblock">
+          Friends
+        </div>
         	<p>
+
         		Other clapp users:
+
         	</p>
 
         	<?php/*
@@ -158,8 +164,9 @@ $userId = $facebook->getUser();
 	    echo $friendName."<br>";
 		echo $friendSchoolName;
     	echo "</p>";
-}
-
+      ?><!-- Facebook Badge START --><a href="https://www.facebook.com/kevin.jian.39" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Kevin Jian">Kevin Jian</a><span style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; line-height: 16px; font-variant: normal; font-style: normal; font-weight: normal; color: #555555; text-decoration: none;">&nbsp;|&nbsp;</span><a href="https://www.facebook.com/badges/" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Make your own badge!">Create Your Badge</a><br/><a href="https://www.facebook.com/kevin.jian.39" target="_TOP" title="Kevin Jian"><img src="https://badge.facebook.com/badge/658008653.2074.1347434826.png" style="border: 0px;" /></a><!-- Facebook Badge END -->
+<?}
+  
 
 	}
 	*/
@@ -168,9 +175,9 @@ $userId = $facebook->getUser();
         </h1>
       </div>
       <div id="about_sec" style="display:none;">
-        <h1>
-          About        
-        </h1>
+         <div class="titleblock">
+          About
+        </div>
         <p> 
           Clapp is the best way to connect to your classmates. Enter your schedule and find the other members of that class, as well as the classes that your friends are in.
         </p>
@@ -178,11 +185,11 @@ $userId = $facebook->getUser();
           This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang for the HackBlue 2013 hackathon at Duke University.
         </p>
       </div>  
-      <div id="other_sec" style="display:none;">
-        <h1>
-          Other
-        </h1>
 
+      <div id="other_sec" style="display:none;">
+         <div class="titleblock">
+          Other
+      </div>
         <p>
         Mutual Likes:
     </p>
@@ -194,24 +201,25 @@ $userId = $facebook->getUser();
       foreach ($myLikesData as &$like) {
       	$likeId=$like['id'];
       	$likeName=$like['name'];
-
 //create the url
   $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
-	
       	echo "<p>";
       //echo the image out
  	echo "<img src=\"" . $profile_pic . "\" />";
 	    echo $likeName;
     	echo "</p>";
 }
-
-
-	}
       ?>
-        </p>
-
-      </div>
     </div>  
+  </div>
+  <div style="text-align:center;background-color:#DFFFA5; height:20px">
+    us llol
   </div>
 </body>
 </html>
+$fql = "SELECT page_id, name from page where name='Coke'";
+ 
+$response = $facebook->api(array(
+     'method' => 'fql.query',
+     'query' =>$fql,
+));
