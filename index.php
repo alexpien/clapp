@@ -248,14 +248,14 @@ $db = new PDO($dsn);
                                       $db = new PDO($dsn);
                                   
                                   $query = "SELECT class FROM entries WHERE fbid = $friendId ORDER BY class ASC;";
-                                  $result = $db->query($query);
-                                  while ($row = $result->fetch(PDO::FETCH_ASSOC)) {  
+                                  $result10 = $db->query($query);
+                                  while ($row = $result10->fetch(PDO::FETCH_ASSOC)) {  
                                              
                                              echo '<li>';
                                              echo $row["class"];
                                              echo '</li>';
                                   }
-                                  $result->closeCursor();
+                                  $result10->closeCursor();
                                   echo '</ul>';
                                   echo '</div>';
                             		}
