@@ -138,6 +138,16 @@ $db = new PDO($dsn);
                     </div>
                     <div class="column">
                       <h3>Your Classes</h3>
+
+ 								<?php
+                                	$query = "SELECT class FROM entries ORDER BY class ASC WHERE fbid = '$userId'";
+                                	$result = $db->query($query);
+                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    	    	echo "<p>". $row["class"] . "</p>";
+                                }
+                                $result->closeCursor();
+                                ?>
+
                       <form action="insert.php" method="post">
                               <label>Add more classes:</label>
                               <select name="subject">
