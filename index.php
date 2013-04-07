@@ -208,7 +208,7 @@ $db = new PDO($dsn);
                     <div class="titleblock">
                         Your <span>clapp</span> friends
                     </div>
-                    <div style="padding-left:100px">
+                    <div style="padding-left:120px">
                         	<?php
                         	$fql = "SELECT uid, name FROM user WHERE is_app_user AND uid IN (SELECT uid2 FROM friend WHERE uid1 = me())";
                  
