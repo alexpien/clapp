@@ -102,5 +102,7 @@ div{
 
 .profile{
 	display:inline-block;
+	width:375px;
+	margin:20px;
 
 }
