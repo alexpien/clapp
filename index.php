@@ -143,7 +143,7 @@ $db = new PDO($dsn);
 
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                    	    	echo "<p>". $row["class"] . "</p>";
+                                    	    	echo "<div id='sub'>". $row["class"] . "</div>";
 
                                             echo '<div id="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
