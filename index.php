@@ -115,14 +115,14 @@ Classes
 
       	$friendInfo= $facebook->api('/' . $friend['id']);
 		$friendName=$friendInfo['name'];
-		
+
 		$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
-		$schoolInfo = $facebook->api('/' . $friendschoolId);
-      	$friendschoolName= $schoolInfo['name'];
+		$schoolInfo = $facebook->api('/' . $friendSchoolId);
+      	$friendSchoolName= $schoolInfo['name'];
 
 		echo "<p>";
 	    echo $friendName."<br>";
-		echo $friendSchool;
+		echo $friendSchoolName;
     	echo "</p>";
 	}
       ?>
