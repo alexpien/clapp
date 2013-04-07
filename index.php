@@ -18,7 +18,9 @@ $userId = $facebook->getUser();
     <title>Clapp</title>
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
     <link rel="Shortcut Icon" href="images/favicon.ico">
-    <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster|Merriweather+Sans:800'/>
+    <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster'/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
     <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
   </head>
@@ -51,7 +53,12 @@ $userId = $facebook->getUser();
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
-
+     <?php if ($userId) { 
+      $userInfo = $facebook->api('/' . $userId); ?>
+      Welcome <?= $userInfo['name'] ?>
+    <?php } else { ?>
+    <fb:login-button></fb:login-button>
+    <?php } ?>
   <div id="top">
   </div>
   <div id="wrapper">
@@ -74,7 +81,8 @@ $userId = $facebook->getUser();
     </div>
     <div id="main">
       <div id="home_sec" style="display:none;">
-
+        <h1> 
+          Welcome to Clapp. Login to facebook to get started.
          <?php if ($userId) { 
       $userInfo = $facebook->api('/' . $userId); ?>
       Welcome, <?= $userInfo['name'] ?> from <?= $userInfo['education'][count($userInfo['education'])]['school']['name'] ?>!
@@ -95,7 +103,6 @@ $userId = $facebook->getUser();
     <h1>Log in to Facebook to begin:</h1>
     <fb:login-button></fb:login-button>
     <?php } ?>
-
       </div>
       <div id="classes_sec" style="display:none;">
         <h1>

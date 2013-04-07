@@ -45,14 +45,19 @@ a:selected{
 }
 
 #nav a{	
-	font-family:"Merriweather";
+	font-family:"Open Sans Condensed, sans-serif";
 	display:inline-block;
-	width:140px;
+	width:80px;
 	margin:0px 0px;
 	color:#333;
 	text-align:center;
 	font-size: 14px;
 	font-family: Arial;
+}
+#nav a:hover{
+	background-color:#333;
+	color:#CDC9C9;
+
 }
 
 #top{
