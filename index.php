@@ -220,7 +220,7 @@ $response = $facebook->api(array(
     </div>  
   </div>
   <div style="text-align:center;background-color:#DFFFA5; height:20px">
-    us llol
+    &copy YOYOOYOYOYO
   </div>
 </body>
 </html>
