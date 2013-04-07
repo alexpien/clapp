@@ -103,11 +103,8 @@ div{
 }
 
 .peeps{
-	-webkit-transition:all .3s;
-}
-.peeps:hover{
-	position:relative;
-	left:-10px;
+	border-radius:5px;
+	border:1px solid #DFFFA5;
 }
 
 #someelse{
@@ -143,7 +140,6 @@ div{
 		display:inline-block;
 		float:left;
 		margin-right:3px;
-		background:red;
 		border-radius:5px;
 	}
 

@@ -97,7 +97,7 @@ $db = new PDO($dsn);
                   ?>
                   <div class="titleblock">
                     Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
-                    <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
+                    <?echo "<br><br><img id='peeps' src=\"" . $profile_pic . "\"/>"; ?>
                   </div>
                   <div style="text-align:center">
                     <p>
@@ -141,7 +141,7 @@ $db = new PDO($dsn);
                                              echo '<input type="hidden" name="class" value="';
                                              echo $row["class"];
                                              echo'">';
-                                             echo '<input type="submit" value="x"/></form></div>';
+                                             echo '<input type="submit" value="x" style="background:#ff6666;"/></form></div>';
                                              echo "<div  class='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div><br><br>";
                                 }
                                 $result->closeCursor();
@@ -159,8 +159,8 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
                               </select>
-                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
-                              <input type="submit" value="+"/>
+                              <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;margin-left:3px;" required>
+                              <input type="submit" value="+" style="background:#DFFFA5;"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
                         </form>
                     </div> 
@@ -189,7 +189,7 @@ $db = new PDO($dsn);
                                 echo '<div class="profile">';
 
                           $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
-                             	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                             	echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
 
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
@@ -226,7 +226,7 @@ $db = new PDO($dsn);
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
                               	echo "<div class='profile'>";
-                         		echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                         		echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                          					echo '<form action="getclasses.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
@@ -302,7 +302,7 @@ $db = new PDO($dsn);
                               $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
                                 echo "<p>";
                                 //echo the image out
-                            echo "<img src=\"" . $profile_pic . "\" />";
+                            echo "<img id='peeps' src=\"" . $profile_pic . "\" />";
                                              echo $likeName;
                               echo "</p>";
                           }
