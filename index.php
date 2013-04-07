@@ -225,11 +225,11 @@ $db = new PDO($dsn);
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
-                              	echo "<div id='$friendId' class='prof2'>";
+                              	echo "<div title='$friendId' class='prof2'>";
 
                          		   echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                             	 echo "</div>";
-                               echo '<div id="mouseover'.$friendId.'";style="display:none">';
+                               echo '<div id="mouseover'.$friendId.'" style="display:none;">';
                                echo $friendName;
                                echo '<ul>';
 
