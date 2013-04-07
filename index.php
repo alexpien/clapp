@@ -137,6 +137,16 @@ $db = new PDO($dsn);
                     </div>
                     <div class="column">
                       <h3>Your Classes</h3>
+
+ 								<?php
+                                	$query = "SELECT class FROM entries ORDER BY class ASC WHERE fbid = '$userId'";
+                                	$result = $db->query($query);
+                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    	    	echo "<p>". $row["class"] . "</p>";
+                                }
+                                $result->closeCursor();
+                                ?>
+
                       <form action="insert.php" method="post">
                               <label>Add more classes:</label>
                               <select name="subject">
@@ -151,11 +161,13 @@ $db = new PDO($dsn);
                               </select>
                               <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
                               <input type="submit" value="+"/>
-                              <input type="hidden" name="fbid" value=<?=$userId?>>
+                              <input type="hidden" name="fbid" value="<?=$userId?>">
                       </form>
                     </div>                        
                     <div class="column">
-                        <h3>Friends in class</h3>
+
+                        <h3>Friends in this class</h3>
+
                     </div>
                     <div class="column">
                         <h3>Others in class</h3>
