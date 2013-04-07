@@ -105,10 +105,11 @@ Classes
       <div id="friends_sec" style="display:none;">
         <h1>
         	<?php
-      $friends = $facebook->api('/' . $userId. '?fields=friends.limit(10).fields(education)')['friends']['data'];
+      $friendsData= $facebook->api('/' . $userId. '?fields=friends.limit(10).fields(education)');
+      $friends=$friendsData['friends']['data'];
       foreach ($friends as &$friend) {
     echo $friend['id'];
-}
+	}
       ?>
           
         </h1>
