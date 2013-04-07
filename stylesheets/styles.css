@@ -101,6 +101,10 @@ div{
 	font-color:#006633;
 	margin:0px auto;
 }
+::selection{
+	background-color:#DFFFA5;
+	color:#333;
+}
 
 .peeps{
 	border-radius:5px;
