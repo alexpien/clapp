@@ -126,14 +126,15 @@ Classes
       	$friendId=$friend['id'];
       	$friendName=$friendInfo['name'];
       	$friendInfo= $facebook->api('/' . $friendId);
+      	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
+
 	
 	if ($friendSchoolId!=NULL){
-		        //create the url
+//create the url
   $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
  	//echo the image out
  	echo "<img src=\"" . $profile_pic . "\" />"; 
-	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
 	
 		$schoolInfo = $facebook->api('/' . $friendSchoolId);
       	$friendSchoolName= $schoolInfo['name'];
