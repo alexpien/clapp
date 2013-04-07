@@ -1,3 +1,8 @@
+psql -h ec2-23-21-161-153.compute-1.amazonaws.com -U qqldptzbgskfay dfnau2c20ikt1v
+3aCt96iydyR59_GmRL2ltLaXU3
+
 CREATE TABLE subjects (subject_id SERIAL, abbrev VARCHAR(30), fullname VARCHAR(100));
 
 \copy subjects from 'database.csv' with (format csv, header true);
+
+CREATE TABLE entries (entry_id SERIAL, name VARCHAR(40), class VARCHAR(100));
