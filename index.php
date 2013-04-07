@@ -172,7 +172,7 @@ $db = new PDO($dsn);
                      echo '<div id="class';
                      echo $number;
                      echo '" style="display:none">';
-                     echo $row['class'];
+                     echo '<p>'.$row['class'].'</p>';
                      $className=$row['class'];
                        $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
                           $result2 = $db->query($query2);
