@@ -225,26 +225,9 @@ $db = new PDO($dsn);
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
                             echo "<div class='profile'>";
                          		echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
-<<<<<<< HEAD
-                         		echo '<form action="getclasses.php" method="post">
-                                  <input type="hidden" name="fbid" value="';
-                            echo $friendId;
-                            echo '">';
-                            echo '<input type="submit" value="';
-                            echo $friendName;
-                            echo '"/></form>';
-                            echo "</div>";
-                            	}
-=======
-                         					echo '<form action="getclasses.php" method="post">
-                                             <input type="hidden" name="fbid" value="';
-                                             echo $userId;
-                                             echo '">';
-                                             echo '<input type="submit" value="';
-                                             echo $friendName;
-                                             echo '"/></form>';
                             	 echo "</div>";
-                               echo '<div class="mouseover";display:none>';
+                               echo '<div class="mouseover";display:block>';
+                               echo $friendName;
                                echo '<ul>';
 
                                       
@@ -261,8 +244,6 @@ $db = new PDO($dsn);
                                   echo '</ul>';
                                   echo '</div>';
                             		}
-
->>>>>>> 92f626176b7faaf08867d89c7d3f85448c712e3d
                               ?>
                       </div>
                 </div>
