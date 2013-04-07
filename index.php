@@ -161,7 +161,7 @@ $userId = $facebook->getUser();
                               	echo "<p>";
                               //echo the image out
                          	echo "<img src=\"" . $profile_pic . "\" />"; 
-                        	    echo $friendName."<br>";
+                        	    echo $friendName."&nbsp&nbsp<br>";
                             	echo "</p>";
                             		}
 
@@ -192,55 +192,37 @@ $userId = $facebook->getUser();
                     <p>
                         Likes:
                     </p>
-
-                                         <?php
-                                        $myLikes= $facebook->api('/' . $userId. '?fields=likes');
-                                        $myLikesData=$myLikes['likes']['data'];
-
-                                        foreach ($myLikesData as &$like) {
-                                        	$likeId=$like['id'];
-                                        	$likeName=$like['name'];
-                                  //create the url
-                                    $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
-                                        	echo "<p>";
-                                        //echo the image out
-                                   	echo "<img src=\"" . $profile_pic . "\" />";
-                                  	    echo $likeName;
-                                      	echo "</p>";
-                                  }
-                                        ?>
+                      <?php
+                                      $fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=me())";
+                       
+                              $response = $facebook->api(array(
+                                'method' => 'fql.query',
+                                'query' =>$fql,
+                              ));
+                                foreach ($response as &$like) {
+                                $likeId=$like['page_id'];
+                                $likeName=$like['name'];
+                              
+                            //create the url
+                              $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
+                                echo "<p>";
+                                //echo the image out
+                            echo "<img src=\"" . $profile_pic . "\" />";
+                              echo $likeName;
+                              echo "</p>";
+                          }
+                            ?>
                 </div>
             </div>  
         </div>
 
-          <p>
-        Likes:
-    </p>
 
-       <?php
-               	$fql = "SELECT page_id, name FROM page WHERE page_id IN (SELECT page_id FROM page_fan WHERE uid=me())";
+
+
+       
+
+    </div>
  
-					$response = $facebook->api(array(
-     			'method' => 'fql.query',
-     			'query' =>$fql,
-				));
-      		foreach ($response as &$like) {
-      		$likeId=$like['page_id'];
-      		$likeName=$like['name'];
-      	
-			//create the url
-  			$profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
-      		echo "<p>";
-      	//echo the image out
- 			echo "<img src=\"" . $profile_pic . "\" />";
-	   	 echo $likeName;
-    		echo "</p>";
-				}
-      ?>
-
-      </div>
-    </div>  
-  </div>
   <div style="text-align:center;background-color:#DFFFA5; height:20px;display:block">
     &copy DLnk Industries 2013
   </div>
