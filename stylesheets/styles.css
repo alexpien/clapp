@@ -21,6 +21,9 @@ a{
 a:selected{
 
 }
+#friends_sec{
+	padding-left:40px;
+}
 #wrapper{
 	width:960px;
 	margin:0px auto;
