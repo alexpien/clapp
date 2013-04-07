@@ -12,7 +12,8 @@ body{
 	height:70px;
 	margin:0px;
 	border-bottom: 1px solid black;
-
+	max-width:100%;
+	min-width:60px;
 }
 a{
 	text-decoration: none;
