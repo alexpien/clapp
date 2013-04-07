@@ -22,7 +22,7 @@ a:selected{
 
 }
 #friends_sec{
-	padding-left:60px;
+	padding-left:80px;
 }
 #wrapper{
 	width:960px;
@@ -94,7 +94,7 @@ div{
 
 .column{
 	display:inline-block;
-	width:315px;
+	width:300px;
 	float:left;
 }
 #top{
