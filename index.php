@@ -143,12 +143,10 @@ $userId = $facebook->getUser();
             <div id="friends_sec" style="display:none;">
                 <div class="contentwrapper">
                     <div class="titleblock">
-                        Friends
+                        Your Clap Friends
                     </div>
-                    <div style="padding-left:120px"
-          	        <p>
-          		          Your Clapp Friends:
-          	        </p>
+                    <div style="padding-left:120px">
+          	        
 
                         	<?php
                         	$fql = "SELECT uid, name FROM user WHERE is_app_user AND uid IN (SELECT uid2 FROM friend WHERE uid1 = me())";
