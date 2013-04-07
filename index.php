@@ -97,11 +97,11 @@ $db = new PDO($dsn);
                   ?>
                   <div class="titleblock">
                     Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
-                    <?echo "<br><br><img id='peeps' src=\"" . $profile_pic . "\"/>"; ?>
+                    <?echo "<br><br><img class='peeps' src=\"" . $profile_pic . "\"/>"; ?>
                   </div>
                   <div style="text-align:center">
                     <p>
-                      Welcome to <span style="font-family:'Lobster'; font-size:20px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
+                      Welcome to <span style="font-family:'Lobster'; font-size:18px; font-color:#333;">clapp</span>, the best app to connect with your classmates. To begin, enter your classes on the following page. 
                     </p>
                   </div>
                   <br>
@@ -211,8 +211,6 @@ $db = new PDO($dsn);
                         Your <span>clapp</span> friends
                     </div>
                     <div style="padding-left:100px">
-          	        
-
                         	<?php
                         	$fql = "SELECT uid, name FROM user WHERE is_app_user AND uid IN (SELECT uid2 FROM friend WHERE uid1 = me())";
                  
@@ -225,43 +223,30 @@ $db = new PDO($dsn);
                               	$friendId=$friend['uid'];
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
-                              	echo "<div class='profile'>";
+
+                              	echo "<div id='$friendId'>";
+
                          		echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
-                         					echo '<form action="getclasses.php" method="post">
-                                             <input type="hidden" name="fbid" value="';
-                                             echo $userId;
-                                             echo '">';
-                                             echo '<input type="submit" value="';
-                                             echo $friendName;
-                                             echo '"/></form>';
                             	 echo "</div>";
-                               echo '<div class="mouseover";display:none>';
+                               echo '<div id="mouseover"'.$friendId.';display:none>';
+                               echo $friendName;
                                echo '<ul>';
 
-                                      $dsn = "pgsql:"
-                                          . "host=ec2-23-21-161-153.compute-1.amazonaws.com;"
-                                          . "dbname=dfnau2c20ikt1v;"
-                                          . "user=qqldptzbgskfay;"
-                                          . "port=5432;"
-                                          . "sslmode=require;"
-                                          . "password=3aCt96iydyR59_GmRL2ltLaXU3";
-                                      $db = new PDO($dsn);
+                                      
                                   
-                                  $query = "SELECT class FROM entries WHERE fbid = $friendId ORDER BY class ASC;";
-                                  $result = $db->query($query);
-                                  while ($row = $result->fetch(PDO::FETCH_ASSOC)) {  
+                                  $query = "SELECT class FROM entries WHERE fbid = '$friendId' ORDER BY class ASC;";
+                                  $result10 = $db->query($query);
+                                  while ($row = $result10->fetch(PDO::FETCH_ASSOC)) {  
                                              
                                              echo '<li>';
                                              echo $row["class"];
                                              echo '</li>';
                                   }
-                                  $result->closeCursor();
+                                  $result10->closeCursor();
                                   echo '</ul>';
                                   echo '</div>';
                             		}
-
                               ?>
-            
                       </div>
                 </div>
             </div>
@@ -302,11 +287,11 @@ $db = new PDO($dsn);
                               $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
                                 echo "<p>";
                                 //echo the image out
-                            echo "<img id='peeps' src=\"" . $profile_pic . "\" />";
+                                echo "<img class='peeps' src=\"" . $profile_pic . "\" />";
                                              echo $likeName;
-                              echo "</p>";
+                                echo "</p>";
                           }
-                            ?>
+                      ?>
                 </div>
             </div>  
         </div>
