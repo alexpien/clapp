@@ -23,7 +23,7 @@ $(window).load(function(){
 		
 		$("#classwrapper>div").slideUp();
 		target=$(this).attr("id");
-		alert(target)
+		
 		$(target).slideDown();
 
 
