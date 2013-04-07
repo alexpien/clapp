@@ -148,8 +148,6 @@ $result->closeCursor();
                     <div class="titleblock">
                         Classes
                     </div>
-                    <div style="padding-left:20px">
-                    </div>
                     <div class="column">
                         c1 your classes
                     </div>
