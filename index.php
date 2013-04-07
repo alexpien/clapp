@@ -75,8 +75,8 @@ $userId = $facebook->getUser();
     </div>
     <div id="main">
       <div id="home_sec" style="display:none;">
-        <div class="titleblock">
-        <h1> 
+          <h1> 
+            hihi
          <?php if ($userId) { 
 
       $userInfo = $facebook->api('/' . $userId);
@@ -93,8 +93,8 @@ $userId = $facebook->getUser();
       ?>
 
       Welcome, <?= $userInfo['name'] ?> from <?= $schoolName ?>!
+      
       </h1>
-    </div>
       <p>
         You're now on clapp, the best app to connect to your classmates.  To begin, enter your classes below:
       </p>
@@ -127,15 +127,15 @@ $userId = $facebook->getUser();
       	$friendId=$friend['id'];
       	$friendName=$friendInfo['name'];
       	$friendInfo= $facebook->api('/' . $friendId);
-
-        //create the url
+	
+	if ($friendSchoolId!=NULL){
+		        //create the url
   $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
  	//echo the image out
  	echo "<img src=\"" . $profile_pic . "\" />"; 
 	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
 	
-	if ($friendSchoolId!=NULL){
 		$schoolInfo = $facebook->api('/' . $friendSchoolId);
       	$friendSchoolName= $schoolInfo['name'];
       	echo "<p>";
