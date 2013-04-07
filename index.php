@@ -224,7 +224,7 @@ $db = new PDO($dsn);
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
-                              	echo "<div id='$friendId'>";
+                              	echo "<div id='$friendId' class='profile'>";
 
                          		   echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                             	 echo "</div>";
