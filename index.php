@@ -1,5 +1,15 @@
 <?php
 
+//uses the PHP SDK.  Download from https://github.com/facebook/facebook-php-sdk
+require 'facebookphp/src/facebook.php';
+
+$facebook = new Facebook(array(
+  'appId'  => '358797270908365',
+  'secret' => '8b5ad4ac3c4a166d0717c91f85c99cd6',
+));
+
+$userId = $facebook->getUser();
+
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +25,12 @@
   </head>
   
   <body>
-
-    <div id="fb-root"></div>
+ <?php if ($userId) { 
+      $userInfo = $facebook->api('/' . $userId); ?>
+      Welcome <?= $userInfo['name'] ?>
+    <?php } else { ?>
+    <fb:login-button></fb:login-button>
+    <?php } ?>
     <script>
 
      window.fbAsyncInit = function() {
@@ -27,14 +41,11 @@
             cookie     : true, // enable cookies to allow the server to access the session
             xfbml      : true  // parse XFBML
           });
-          FB.api('/me', function(user) {
-            if (user) {
-              var image = document.getElementById('image');
-              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
-              var name = document.getElementById('name');
-              name.innerHTML = user.name
-            }
-          });
+
+          FB.Event.subscribe('auth.login', function(response) {
+          window.location.reload();
+        });
+
         };
 
    // Load the SDK Asynchronously
@@ -47,9 +58,7 @@
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
- 
-  <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1" >Login with Facebook</div>
-  <div id="top">
+   <div id="top">
   </div>
   <div id="wrapper">
     <div id="header">
@@ -58,9 +67,11 @@
         clapp
         <h1>clapp</h1>
         <a href="#home">
-          <div style="display:inline-block; float:left;"
-        <img src="images/icone.png" height="100" />
-      </div><h1>cla<span style="color:#333;">pp</span></h1>
+          <div style="display:inline-block; float:left;">
+
+            <img src="images/icone.png" height="100" />
+          </div>
+          <h1>cla<span style="color:#333;">pp</span></h1>
         </a>
       </div>
       <div id="nav">
