@@ -104,6 +104,7 @@ $userId = $facebook->getUser();
                         Welcome to <span style="font-family:'Lobster';">clapp</span>, the best app to connect with your classmates. To begin, enter your classes below. 
                       </p>
                     </div>
+                      <div style="text-align:center">
                       <form>
                               <select name="subject">
                                 <option value="nothing">Select Subject</option>
@@ -115,6 +116,7 @@ $userId = $facebook->getUser();
 
                               <input type="submit"value="Submit Class"/>
                       </form>
+                    </div>
                     <p>
                       CLASS NUMBER BOX
                     </p>
