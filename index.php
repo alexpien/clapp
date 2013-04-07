@@ -212,7 +212,7 @@ $userId = $facebook->getUser();
                 </div>
             </div>  
         </div>
-<<<<<<< HEAD
+
 
           <p>
         Likes:
