@@ -4,7 +4,7 @@ body{
 
 }
 #header{
-	
+
 	font-family:'Lobster';
 	margin:20px auto;
 	display:block;
@@ -34,12 +34,12 @@ a:selected{
 	display:inline-block;
 	margin: 0px auto;
 	text-align:center;
-	font-size:40px;
+	font-size:20px;
 }
 #nav{
 	float:right;
 	display:inline-block;
-	margin-top: 55px;
+	margin-top: 25px;
 	height:50px;
 
 }
@@ -51,12 +51,12 @@ a:selected{
 	margin:0px 0px;
 	color:#333;
 	text-align:center;
-	font-size: 24px;
+	font-size: 14px;
 	font-family: Arial;
 }
 
 #top{
-	height:22px;
+	height:14px;
 	background-color:#CDC9C9;
 	margin: 0px;
 }

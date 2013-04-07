@@ -51,14 +51,13 @@ $userId = $facebook->getUser();
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
-
      <?php if ($userId) { 
       $userInfo = $facebook->api('/' . $userId); ?>
       Welcome <?= $userInfo['name'] ?>
     <?php } else { ?>
     <fb:login-button></fb:login-button>
     <?php } ?>
-
+  <div id="top">
   </div>
   <div id="wrapper">
     <div id="header">
