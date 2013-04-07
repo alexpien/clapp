@@ -186,9 +186,7 @@ $db = new PDO($dsn);
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
 					$result3 = json_decode($str); 
-					echo '<button value="';
 					echo $result3->name; 
-					echo'" type="submit" action="getclasses.php" method="post"';
 
                      echo "</div>";
                          }
