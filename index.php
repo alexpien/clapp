@@ -95,7 +95,7 @@ $userId = $facebook->getUser();
       <?= $userInfo['name'] ?> - <?= $schoolName ?>
       
       
-    </div>
+      </div>
       <p>
         Welcome to clapp, the best app to connect with your classmates. To begin, enter your classes below. 
       </p>
@@ -108,6 +108,7 @@ $userId = $facebook->getUser();
       <p>
         SUBMIT BUTTON
       </p>
+
       <!-- list of current classes, if any -->
     <?php } 
     else { ?>
@@ -122,6 +123,7 @@ $userId = $facebook->getUser();
         <div class="titleblock">
           Classes
         </div>
+        <div id = "column_contain">
         <div class="column">
           c1 your classes
         </div>
@@ -132,6 +134,7 @@ $userId = $facebook->getUser();
         <div class="column">
           c3 others in class
         </div>
+      </div>
       </div>
       </div>
       <div id="friends_sec" style="display:none;">
