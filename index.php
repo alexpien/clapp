@@ -97,7 +97,7 @@ $db = new PDO($dsn);
                         $profile_pic =  "http://graph.facebook.com/".$userId."/picture?height=200&width=200";
                               ?>
                               <div class="titleblock">
-                              Hello <?= $userInfo['name'] ?>, from <?= $schoolName ?>
+                              Hello <span style="font-color:#DFFFA5;"><?= $userInfo['name'] ?></span>, from <?= $schoolName ?>
                               <?echo "<br><br><img src=\"" . $profile_pic . "\"/>"; ?>
                               </div>
                     <div style="text-align:center">
@@ -148,7 +148,7 @@ $db = new PDO($dsn);
                                 $result->closeCursor();
                                 ?>
 
-                      <form action="insert.php" method="post">
+                        <form action="insert.php" method="post">
                               <label>Add more classes:</label>
                               <select name="subject">
                                 <?php
@@ -163,7 +163,7 @@ $db = new PDO($dsn);
                               <input id="course" name="course" placeholder=" Course #" style="width:52px;" required>
                               <input type="submit" value="+"/>
                               <input type="hidden" name="fbid" value="<?=$userId?>">
-                      </form>
+                        </form>
                     </div>                        
                     <div class="column">
 
@@ -213,7 +213,7 @@ $db = new PDO($dsn);
                         About
                     </div>
                     <p> 
-                      Clapp is the best way to connect to your classmates. Enter your schedule and find the other members of that class, as well as the classes that your friends are in.
+                      Clapp is the best way to connect to your classmates. Enter your schedule and find the other members of that class, as well as the classes that your friends are in, and get clapping.
                     </p>
                     <p>
                       This website was made by Alex Pien, Howard Chung, Kevin Jian, and Vincent Wang of DLnk Industries for the HackBlue 2013 hackathon at Duke University.
@@ -252,14 +252,7 @@ $db = new PDO($dsn);
                 </div>
             </div>  
         </div>
-
-
-
-
-       
-
     </div>
- 
   <div id="footer">
     &copy DLnk Industries 2013
   </div>
