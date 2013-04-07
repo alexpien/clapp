@@ -145,6 +145,7 @@ $db = new PDO($dsn);
                     </div>
                     <div class="column">
                       c1 your classes
+                 
                       <form action="insert.php" method="post">
                               <select name="subject">
                                 <?php
