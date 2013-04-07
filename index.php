@@ -135,7 +135,7 @@ $db = new PDO($dsn);
                     else { ?>
 
                     <h1>Log in to Facebook to begin:</h1>
-                    <fb:login-button scope="friends_education_history,friends_likes"></fb:login-button>
+                    <fb:login-button scope="friends_education_history,friends_likes" size="xlarge"></fb:login-button>
 
                     <?php } ?>
                </div>
