@@ -132,8 +132,6 @@ $db = new PDO($dsn);
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                             $number=$number+1;
-                                    	    	
-
                                             echo '<div class="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
@@ -186,16 +184,16 @@ $db = new PDO($dsn);
                           $result2 = $db->query($query2);
                           while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
                           //display people in this class           
-                                echo '<div class="profile">';
-
+                      echo '<div class="profile">';
                           $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
-                             	echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                             	//echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp";
+
 
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
-					$str = file_get_contents($facebookUrl); 
-					$result3 = json_decode($str); 
-					echo $result3->name; 
-
+					          $str = file_get_contents($facebookUrl); 
+          					$result3 = json_decode($str); 
+          					//echo $result3->name; 
+                          echo "<a href='http://facebook.com/".$row2['fbid']."'><img class='peeps' src=\"".$profile_pic."\"/>&nbsp&nbsp&nbsp&nbsp<div class='peepname'>".$result3->name."</div></a>";
                      echo "</div>";
                          }
                      echo '</div>';
@@ -224,11 +222,11 @@ $db = new PDO($dsn);
                               	$friendName=$friend['name'];
                           $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 
-                              	echo "<div id='$friendId'>";
+                              	echo "<div title='$friendId' class='prof2'>";
 
-                         		echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+                         		   echo "<img class='peeps' src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                             	 echo "</div>";
-                               echo '<div id="mouseover'.$friendId.'";display:none>';
+                               echo '<div id="mouseover'.$friendId.'" style="display:none;">';
                                echo $friendName;
                                echo '<ul>';
 
