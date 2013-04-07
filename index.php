@@ -118,7 +118,7 @@ $db = new PDO($dsn);
 	$query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
 	$result = $db->query($query);
 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>"
+    	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
 }
 $result->closeCursor();
 ?>
