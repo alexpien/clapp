@@ -8,10 +8,8 @@ $dsn = "pgsql:"
     . "password=3aCt96iydyR59_GmRL2ltLaXU3";
 $db = new PDO($dsn);
 
-//concatenate subject and course
-$subjectAndSection=$_POST[subject]." ".$_POST[course];
 
-$sql="INSERT INTO entries (fbid, class) VALUES ('$_POST[fbid]','$subjectAndSection')";
+$sql="DELETE FROM entries WHERE fbid = '$_POST[fbid]' WHERE class = '$_POST[class]';"
 
 // Performs the $sql query on the server to insert the values
 $db->query($sql);
