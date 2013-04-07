@@ -79,8 +79,8 @@ $userId = $facebook->getUser();
          <?php if ($userId) { 
 
       $userInfo = $facebook->api('/' . $userId);
-      $schoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
-      $schoolInfo = $facebook->api('/' . $schoolId);
+      $mySchoolId = $userInfo['education'][count($userInfo['education'])-1]['school']['id'];
+      $schoolInfo = $facebook->api('/' . $mySchoolId);
       $schoolName= $schoolInfo['name'];
 
         //create the url
@@ -106,7 +106,9 @@ $userId = $facebook->getUser();
       <p>
         SUBMIT BUTTON
       </p>
+
     <?php } else { ?>
+
     <h1>Log in to Facebook to begin:</h1>
     <fb:login-button></fb:login-button>
     <?php } ?>
@@ -128,7 +130,7 @@ $userId = $facebook->getUser();
       <div id="friends_sec" style="display:none;">
         <h1>
         	<?php
-      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(50).fields(education)');
+      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(25).fields(education)');
       $friendData=$friendData['friends']['data'];
 
       foreach ($friendData as &$friend) {
@@ -138,7 +140,7 @@ $userId = $facebook->getUser();
       	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
 
 	
-	if (!is_null($friendSchoolId)){
+	if ($mySchoolId==$friendSchoolId)){
 //create the url
   $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
 	
