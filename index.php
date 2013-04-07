@@ -193,6 +193,28 @@ $response = $facebook->api(array(
          <div class="titleblock">
           Other
         </div>
+
+          <p>
+        Mutual Likes:
+    </p>
+
+       <?php
+      $myLikes= $facebook->api('/' . $userId. '?fields=likes');
+      $myLikesData=$myLikes['likes']['data'];
+
+      foreach ($myLikesData as &$like) {
+      	$likeId=$like['id'];
+      	$likeName=$like['name'];
+//create the url
+  $profile_pic =  "http://graph.facebook.com/".$likeId."/picture";
+      	echo "<p>";
+      //echo the image out
+ 	echo "<img src=\"" . $profile_pic . "\" />";
+	    echo $likeName;
+    	echo "</p>";
+}
+      ?>
+      
       </div>
     </div>  
   </div>
