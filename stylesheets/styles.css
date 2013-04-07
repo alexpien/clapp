@@ -89,17 +89,12 @@ div{
 	padding:10px;
 }
 
-#home_sec span{
-	font-family:'Lobster';
-	font-color:#333;
-	font-size:20px;
-}
-
 .column{
 	display:inline-block;
 	width:295px;
+	height:800px;
 	float:left;
-	border-right:1px #DFFFA5 solid;
+	border-right:3px #DFFFA5 solid;
 	margin-right:15px;
 }
 
