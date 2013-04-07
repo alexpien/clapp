@@ -26,6 +26,7 @@ a:selected{
 #wrapper{
 	width:960px;
 	margin:0px auto;
+	min-height:100%;
 }
 .titleblock{
 	font-size:28px;
