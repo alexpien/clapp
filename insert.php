@@ -17,4 +17,5 @@ $sql="INSERT INTO entries (name, class) VALUES ('$_POST[name]','$subjectAndSecti
 $db->query($sql);
 
 $db->close();
+header( 'Location: https://blooming-reef-3850.herokuapp.com' ) ;
 ?>
