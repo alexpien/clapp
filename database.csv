@@ -1,0 +1,198 @@
+id,Abbr,Subject
+1,AAAS,African and African American Studies
+2,ACCOUNTG,Accounting
+3,AEROSCI,Aerospace Studies
+4,AMES,Asian & Middle Eastern Studies
+5,AMI,Arts of the Moving Image
+6,AMXTIAN,American Christianity
+7,ANESTH,Anesthesiology
+8,ARABIC,Arabic
+9,ARTHIST,Art History
+10,ARTSVIS,Visual Arts
+11,ASEP,"Anesthesiol, Surg & Envtl Phys"
+12,BA,Business Administration
+13,BCS,Black Church Studies
+14,BES,Biomedical Engineering St Prog
+15,BIMP,Biomed Imaging & Med Physics
+16,BIOCHEM,Biochemistry
+17,BIOLOGY,Biology
+18,BIOSTAT,Biostatistics
+19,BME,Biomedical Engineering
+20,BSP,Behavioral Neuro Study Program
+21,CANADIAN,Canadian Studies
+22,CBB,Computational Bio Bioinformatics
+23,CCS,Children in Contemporary Society
+24,CEE,Civil and Envioronmental Engineering
+25,CELLBIO,Cell Biology
+26,CHEM,Chemistry
+27,CHINESE,Chinese
+28,CHURHST,Church History
+29,CHURMIN,Church Ministry
+30,CIF,Colloquia/Interfield/Field Education
+31,CLP,Clinical Leadership Program
+32,CLST,Classical Studies
+33,CMB,Cell and Molecular Biology
+34,COMMFAM,Community and Family Medicine
+35,COMPSCI,Computer Science
+36,CONTDIV,Continuation-Divinity
+37,CONTENV,Continuation-Completion(NSOE)
+38,CONTNUR,Course Continuation-Nursing
+39,CONTPPS,Course Continuation-PPS
+40,CPE,Clinical Pastoral Education
+41,CREOLE,Creole
+42,CRP,Clinical Research Training Program
+43,CRS,Continuation of Enrollment
+44,CRSP,Clinical Research Study Program
+45,CTN,Continuation-Graduate School
+46,CULANTH,Cultural Anthropology
+47,CVS,Cardiovascular Study Program
+48,DANCE,Dance
+49,DECISION,Decision Sciences
+50,DERMATOL,Dermatology
+51,DMINISTRY,Doctor of Ministry
+52,DOCST,Documentary Studies
+53,ECE,Electrical & Computer Engineering
+54,ECON,Economics
+55,EDUC,Education
+56,EGR,Engineering
+57,EGRMGMT,Engineering Management
+58,ENERGY,Energy
+59,ENGLISH,English
+60,ENRGYEGR,Energy Engineering
+61,ENRGYENV,Energy & Environment
+62,ENTREPRN,Entreneurship & Innovation
+63,ENVIRON,Environment
+64,EOS,Earth and Ocean Sciences
+65,EPH,Epidemiology & Public Health
+66,ERS,Education Research Studies
+67,ETHICS,Study of Ethics
+68,EVANTH,Evolutionary Anthropology
+69,FIELDEDU,Field Education
+70,FINANCE,Finance
+71,FREETIME,Free Time
+72,FRENCH,French
+73,FUQINTRD,Interdisciplinary (Fuqua)
+74,GATE,Global Academic Travel Exp
+75,GENOME,Genome Sciences and Policy
+76,GERMAN,German
+77,GHS,Global Health Study Program
+78,GLHLTH,Global Health
+79,GREEK,Greek
+80,GS,Graduate Studies
+81,HEBREW,Hebrew
+82,HGP,Human Genetics Study Program
+83,HINDI,Hindi
+84,HISTORY,History
+85,HISTREL,History of Religion
+86,HISTTHEO,Historical Theology
+87,HLTHMGMT,Health Sector Management
+88,HOUSECS,House Course
+89,HUMANDEV,Human Development
+90,ICS,International Comparative Studies
+91,IMMUNOL,Immunology
+92,INTERDIS,Interdisciplinary
+93,ISIS,Inf Science and Inf Studies
+94,ITALIAN,Italian
+95,JEWISHST,Jewish Studies
+96,JPN,Japanese
+97,KOREAN,Korean
+98,LATAMER,Latin American Studies
+99,LATIN,Latin
+100,LAW,Law
+101,LINGUIST,Linguistics
+102,LIT,Literature
+103,LS,Liberal Studies
+104,LSGS,Latino Studies Global South
+105,LTS,Liturgical Studies
+106,MANAGEMT,Management
+107,MARKETNG,Marketing
+108,MAT,Master of Arts in Teaching
+109,MATH,Mathematics
+110,ME,Mechanical Engr/Materials Sci
+111,MEDHUM,Medical Humanities Study Program
+112,MEDICINE,Medicine
+113,MEDPHY,Medical Physics
+114,MEDREN,Medieval and Renaissance
+115,MENG,Master of Engineering
+116,MFAEDA,MFA in Experimental & Doc Arts
+117,MGM,Molecular Genetics & Microbiology
+118,MGMTCOM,Management Communications
+119,MGRECON,Economics
+120,MIDIP,MIDIP
+121,MILITSCI,Military Science (Army ROTC)
+122,MMCI,Masters in Manage in Cln Info
+123,MMS,Markets and Management Studies
+124,MOLCAN,Molecular Cancer Biology
+125,MOLMED,Molecular Medicine
+126,MSIS,Master of Science of Info Sci Study Pro
+127,MSLS,Master of Science of Lib Sci Study Pro
+128,MUSIC,Music
+129,NAVALSCI,Naval Science (Navy ROTC)
+130,NEUROBIO,Neurobiology
+131,NEUROSCI,Neuroscience
+132,NEWTEST,New Testament
+133,NSS,Neurosciences Study Program
+134,NURSING,Nursing
+135,OBGYN,Obstetrics and Gynecology
+136,OLDTEST,Old Testament
+137,OPERATNS,Operations
+138,OPHTHAL,Ophthalmology
+139,OPTECH,Ophthalmic Medical Technician
+140,OPTRS,Optional Research Studies
+141,ORTHO,Orthapaedics
+142,OVS,Ophthamology/Visual Sci St Pr
+143,PARISH,Care of Parish
+144,PASTCARE,Pastoral Care
+145,PATHASST,Pathologist's Assistant Program
+146,PATHOL,Pathology
+147,PEDS,Pediatrics
+148,PERSIAN,Persian
+149,PHARM,Pharm and Cancer Biology
+150,PHIL,Philosophy
+151,PHYASST,Physician Assistant Program
+152,PHYSEDU,Physical Education
+153,PHYSICS,Physics
+154,PJMS,Policy Jouranlism and Media Studies
+155,PMT,Pharm & Molecular Therapeutics
+156,POLISH,Polish
+157,POLSCI,Political Science
+158,PORTUGUE,Portuguese 
+159,PREACHING ,Preaching
+160,PSP,Pathology Study Program
+161,PSY,Psychology
+162,PSYCHTRY,Psychiatry
+163,PT-D,Physical Therapy-Doctorate
+164,PUBPOL,Public Policty Studies
+165,RADIOL,Radiology
+166,RADONC,Radiation Oncology
+167,REG,Registration
+168,RELIGION,Religion
+169,RESEARCH,Research
+170,ROMST,Romance Studies
+171,RUSSIAN,Russian
+172,SANSKRIT,Sanskrit
+173,SBB,Structural Bio & Biophysics
+174,SES,Slavic and Eurasian Studies
+175,SOCENT,Social Entrepreneurship
+176,SOCIOL,Sociology
+177,SPANISH,Spanish
+178,SPIRIT,Spirituality
+179,STA,Statistical Science
+180,STDAWAY,Study Away
+181,STRATEGY,Strategy
+182,SURGERY,Surgery
+183,SXL,Study of Sexualities
+184,THEATRST,Theater Studies
+185,THESIS,Thesis
+186,TURKISH,Turkish
+187,UPE,University Program in Ecology
+188,UPGEN,University Program in Genetics
+189,VMS,Visual and Media Studies
+190,WOMENST,Women's Studies
+191,WRITING,Writing
+192,WXTIAN,World Christianity
+193,XTIANEDU,Christian Education
+194,XTIANETH,Christian Ethics
+195,XTIANPRC,MA in Christian Practice
+196,XTIANSTU,MA in Christian Studies
+197,XTIANTHE,Christian Theology
