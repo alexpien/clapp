@@ -152,7 +152,7 @@ $db = new PDO($dsn);
                                              echo '<input type="hidden" name="class" value="';
                                              echo $row["class"];
                                              echo'">';
-                                             echo '<input type="submit" value="-"/></form></div>';
+                                             echo '<input type="submit" value="-"/></form></div><br>';
 
                                 }
                                 $result->closeCursor();

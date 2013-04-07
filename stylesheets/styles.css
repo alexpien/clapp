@@ -108,6 +108,7 @@ div{
 #remove{
 	display:inline-block;
 	float:right;
+	padding-right:3px;
 }
 
 #top{
