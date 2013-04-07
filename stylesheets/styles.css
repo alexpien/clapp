@@ -122,10 +122,18 @@ div{
 	float:left;
 	border-right:3px #DFFFA5 solid;
 	margin-right:15px;
+	
+}
+.column a{
 	font-size:13px;
 }
+
 	.column h3{
+<<<<<<< HEAD
 		font-size:20px;
+=======
+		font-size:1.17em px;
+>>>>>>> 1470ab1ea5d50cc21c60414085cdafb256eb573c
 	}
 	.column label{
 		font-size:16px;
@@ -137,12 +145,14 @@ div{
 	}
 	.remove{
 		display:inline-block;
-		float:right;
+		float:left;
 		margin-right:3px;
 		background:red;
 		border-radius:5px;
 	}
-
+form{
+	display:inline-block;
+}
 #top{
 	height:14px;
 	background-color:#DFFFA5;

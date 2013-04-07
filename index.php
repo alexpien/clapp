@@ -133,9 +133,9 @@ $db = new PDO($dsn);
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                             $number=$number+1;
-                                    	    	echo "<div  class='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div>";
+                                    	    	
 
-                                            echo '<div class"remove"><form action="delete.php" method="post">
+                                            echo '<div class="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
                                              echo '">';
@@ -143,7 +143,7 @@ $db = new PDO($dsn);
                                              echo $row["class"];
                                              echo'">';
                                              echo '<input type="submit" value="-"/></form></div><br><br>';
-
+                                             echo "<div  class='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div>";
                                 }
                                 $result->closeCursor();
                                 ?>
@@ -180,7 +180,9 @@ $db = new PDO($dsn);
                      echo '" style="display:none">';
 
                      $className=$row['class'];
+                     echo '<h3>';
                      echo $className;
+                     echo '</h3><br>';
                        $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
                           $result2 = $db->query($query2);
                           while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
@@ -279,18 +281,7 @@ $db = new PDO($dsn);
                                 echo "<p>";
                                 //echo the image out
                             echo "<img src=\"" . $profile_pic . "\" />";
-
-								echo '<form action="getclasses.php" method="post">
-                                             <input type="hidden" name="fbid" value="';
-                                             echo $userId;
-                                             echo '">';
-                                             echo '<input type="hidden" name="class" value="';
-                                             echo $row["class"];
-                                             echo'">';
-                                             echo '<input type="submit" value="';
                                              echo $likeName;
-                                             echo '"/></form>';
-
                               echo "</p>";
                           }
                             ?>
