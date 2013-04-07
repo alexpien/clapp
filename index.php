@@ -97,7 +97,7 @@ $userId = $facebook->getUser();
       
     </div>
       <p>
-        You're now on clapp, the best app to connect with your classmates. To begin, enter your classes below:
+        Welcome to clapp, the best app to connect with your classmates. To begin, enter your classes below. 
       </p>
       <p>
         DROPDOWN
@@ -108,7 +108,7 @@ $userId = $facebook->getUser();
       <p>
         SUBMIT BUTTON
       </p>
-
+      <!-- list of current classes, if any -->
     <?php } 
     else { ?>
 
@@ -139,44 +139,28 @@ $userId = $facebook->getUser();
           Friends
         </div>
         	<p>
-        		At  <?= $schoolName ?>
+        		Other Clapp Users:
         	</p>
 
         	<?php
-        	/*
-        	$fql = "SELECT page_id, name from page where name='Coke'";
+        	$fql = "SELECT uid, name FROM user WHERE is_app_user AND uid IN (SELECT uid2 FROM friend WHERE uid1 = me())";
  
 $response = $facebook->api(array(
      'method' => 'fql.query',
      'query' =>$fql,
 ));
-*/
-      $friendData= $facebook->api('/' . $userId. '?fields=friends.limit(20).fields(education)');
-      $friendData=$friendData['friends']['data'];
 
-      foreach ($friendData as &$friend) {
-      	$friendId=$friend['id'];
-      	$friendInfo= $facebook->api('/' . $friendId);
-      	$friendName=$friendInfo['name'];
-      	$friendSchoolId=$friend['education'][count($friend['education'])-1]['school']['id'];
-
-	
-	if ($mySchoolId==$friendSchoolId){
-//create the url
+      foreach ($response as &$friend) {
+      	$friendId=$friend['uid'];
+      	$friendName=$friend['name'];
   $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
-	
-		$schoolInfo = $facebook->api('/' . $friendSchoolId);
-      	$friendSchoolName= $schoolInfo['name'];
       	echo "<p>";
       //echo the image out
  	echo "<img src=\"" . $profile_pic . "\" />"; 
 	    echo $friendName."<br>";
     	echo "</p>";
-      
-}
+    		}
 
-
-	}
       ?>
           
         </h1>
@@ -198,7 +182,7 @@ $response = $facebook->api(array(
         </div>
 
           <p>
-        Mutual Likes:
+        Likes:
     </p>
 
        <?php
@@ -217,12 +201,12 @@ $response = $facebook->api(array(
     	echo "</p>";
 }
       ?>
-      
+
       </div>
     </div>  
   </div>
   <div style="text-align:center;background-color:#DFFFA5; height:20px;display:block">
-    &copy Alex, Howie, Kevin, Vinny
+    &copy DLnk Industries
   </div>
 </body>
 </html>
