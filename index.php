@@ -188,7 +188,8 @@ $db = new PDO($dsn);
                      echo '<div id="class';
                      echo $number;
                      echo '" style="display:block">';
-                         $query2 = "SELECT fbid FROM entries WHERE class = $row['class'];";
+                     $className=$row['class'];
+                         $query2 = "SELECT fbid FROM entries WHERE class = '$className';";
                           $result2 = $db->query($query2);
                                while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
                           //display people in this class           
