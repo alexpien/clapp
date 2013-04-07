@@ -105,6 +105,12 @@ div{
 	margin: 0px;
 }
 
+#class_sec span{
+	font-family:'Lobster';
+	font-size:16px;
+	font-color:#333;
+}
+
 .profile{
 	display:inline-block;
 	width:225px;
