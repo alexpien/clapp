@@ -124,7 +124,7 @@ $db = new PDO($dsn);
                                 ?>
                               </select>
                             
-                              <input id="section" name="course" placeholder=" Course #" required>
+                              <input id="course" name="course" placeholder=" Course #" required>
 
                               <input type="submit" value="+"/>
                               <input type="hidden" name="name" value=<?=$userInfo['name']?>>
@@ -148,20 +148,24 @@ $db = new PDO($dsn);
                     <div class="column">
                       c1 your classes
                       <form action="insert.php" method="post">
-                        <label>Add more classes:</label>
-                          <select name="subject">
-                            <?php
-                              $query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
-                              $result = $db->query($query);
-                              while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                        echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
-                            }
-                            $result->closeCursor();
-                            ?>
-                          </select>
-                          <input id="section" name="course" placeholder=" Course #" style="width:50px;" required>
-                          <input type="submit" value="+"/>
+                              <select name="subject">
+                                <?php
+                                  $query = "SELECT fullname FROM subjects ORDER BY fullname ASC";
+                                  $result = $db->query($query);
+                                  while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                            echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
+                                }
+                                $result->closeCursor();
+                                ?>
+                              </select>
+                            
+                              <input id="course" name="course" placeholder=" Course #" required>
+
+                              <input type="submit" value="+"/>
+                              <input type="hidden" name="name" value=<?=$userInfo['name']?>>
                       </form>
+
+                      
                     </div>                        
                 
                     <div class="column">
