@@ -115,6 +115,7 @@ $db = new PDO($dsn);
                                     	    	echo "<option value=\"" . $row["fullname"] . "\">" . $row["fullname"] . "</option>";
                                 }
                                 $result->closeCursor();
+
                                 ?>
                               </select>
                               <input id="course" name="course" placeholder=" Course #" style="width:52px;border-radius:3px;" required>
@@ -178,14 +179,7 @@ $db = new PDO($dsn);
                     </div> 
 
                     <?php
-                                	$query = "SELECT class FROM entries WHERE fbid = '$userId' ORDER BY class ASC;";
-
-                                	$result = $db->query($query);
-                                	$number=0;
-                                	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                                     //for each class
-                                		$number=$number+1;
-
+                    for ($i=1; $i<=$number; $i++){
                      echo '<div id="class';
                      echo $number;
                      echo '" style="display:block">';
@@ -203,7 +197,9 @@ $db = new PDO($dsn);
                     $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
 					$str = file_get_contents($facebookUrl); 
 					$result3 = json_decode($str); 
+					echo '<button value="';
 					echo $result3->name; 
+					echo'" type="submit" action="getclasses.php" method="post"';
 
                      echo "</div>";
                          }
