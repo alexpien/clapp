@@ -66,7 +66,7 @@ $userId = $facebook->getUser();
         <a href="#home">
           <div style="display:inline-block; float:left; margin-top:15px">
 
-            <img src="images/icon.png" height="100" />
+            <img src="images/icon.png" height="90" />
          </div>
               <div style="display:inline-block; float:left;">
 
