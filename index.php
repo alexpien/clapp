@@ -187,20 +187,17 @@ $db = new PDO($dsn);
 
                      echo '<div id="class';
                      echo $number;
-                     echo '" style="display:none">';
+                     echo '" style="display:block">';
                          $query2 = "SELECT fbid FROM entries WHERE class = '$row["class"]';";
-                                	$result2 = $db->query($query2);
+                          $result2 = $db->query($query2);
                                while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
                           //display people in this class           
                                 echo '<div class="profile">';
+            					echo $row2['fbid'];
+            					echo "<br>";
             
-                                   $friendId=$friend['uid'];
-                              	$friendName=$friend['name'];
-                          $profile_pic =  "http://graph.facebook.com/".$friendId."/picture";
-                              	echo "<div class='profile'>";
-                              //echo the image out
-                         	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
-                        	    echo $friendName."<br>";
+                          $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
+                             	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
                             	echo "</div>";
                          }
                      echo '</div>';
