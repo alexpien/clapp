@@ -161,12 +161,12 @@ form{
 .profile{
 	display:inline-block;
 	width:225px;
-	margin:20px
-	-webkit-transition:all .3s;
+	margin:20px;
 }
 	.profile a{
-		width:225 px;
-		padding:2px;
+		width:225px;
+		height:20px;
+		padding:4px;
 	}
 	.profile img{
 		float:left;
@@ -178,7 +178,7 @@ form{
 	.profile a:hover{
 		position:relative;
 		left:-7px;
-		text-decoration:none;
+		background:#DFFFA5;
 	}
 
 html, body {
