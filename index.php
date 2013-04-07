@@ -145,14 +145,14 @@ $db = new PDO($dsn);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                     	    	echo "<p>". $row["class"] . "</p>";
 
-                                            echo '<form action="delete.php" method="post">
+                                            echo '<div id="remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
                                              echo '">';
                                              echo '<input type="hidden" name="class" value="';
                                              echo $row["class"];
                                              echo'">';
-                                             echo '<input type="submit" value="-"/></form>';
+                                             echo '<input type="submit" value="-"/></form></div>';
 
                                 }
                                 $result->closeCursor();

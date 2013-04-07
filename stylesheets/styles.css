@@ -98,6 +98,13 @@ div{
 	margin-right:15px;
 	font-size:12px;
 }
+	.column h3{
+		font-size:20px;
+	}
+#remove{
+	display:inline-block;
+	float:right;
+}
 
 #top{
 	height:14px;
