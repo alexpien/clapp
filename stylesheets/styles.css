@@ -4,6 +4,7 @@ body{
 
 }
 #header{
+	position:fixed;
 	font-family:'Lobster';
 	margin:20px auto;
 	display:block;
