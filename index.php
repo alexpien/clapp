@@ -133,9 +133,9 @@ $db = new PDO($dsn);
                                 	$result = $db->query($query);
                                 	while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                             $number=$number+1;
-                                    	    	echo "<div id='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div>";
+                                    	    	echo "<div  class='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div>";
 
-                                            echo '<div id="remove"><form action="delete.php" method="post">
+                                            echo '<div class"remove"><form action="delete.php" method="post">
                                              <input type="hidden" name="fbid" value="';
                                              echo $userId;
                                              echo '">';
