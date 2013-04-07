@@ -163,7 +163,7 @@ $db = new PDO($dsn);
                           <input type="submit" value="+"/>
                       </form>
                     </div>                        
-                    </div>
+                
                     <div class="column">
                         c2 your friends
                     </div>
