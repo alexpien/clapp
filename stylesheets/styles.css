@@ -208,5 +208,5 @@ html, body {
 }
 .asdf{
 
-	width:150px;margin:30px 50px; position: absolute;z-index:1000;display:none;
+	width:150px;margin:30px 50px;display:inline-block;
 }
