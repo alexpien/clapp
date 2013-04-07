@@ -17,9 +17,8 @@ $userId = $facebook->getUser();
   <head>
     <title>Clapp</title>
     <link rel="stylesheet" href="stylesheets/styles.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/fonts.css" type="text/css">
     <link rel="Shortcut Icon" href="images/favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster|Merriweather+Sans:800'/>
     <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
   </head>
@@ -53,8 +52,12 @@ $userId = $facebook->getUser();
          }(document, 'script', 'facebook-jssdk'));
       </script>
 
+<<<<<<< HEAD
    <div id="top" style="color:white;">
 
+=======
+   <div id="top" style="color:#333;">
+>>>>>>> 6bea86335f0dfa9b5e880552ff4d24fba9e62090
      <?php if ($userId) { 
       $userInfo = $facebook->api('/' . $userId); ?>
       Welcome <?= $userInfo['name'] ?>
@@ -67,11 +70,14 @@ $userId = $facebook->getUser();
     <div id="header">
       <div id="logo">
         <a href="#home">
-          <div style="display:inline-block; float:left;">
+          <div style="display:inline-block; float:left; margin-top:15px">
 
-            <img src="images/icon.png" height="100" />
-          </div>
+            <img src="images/icon.png" height="90" />
+         </div>
+              <div style="display:inline-block; float:left;">
+
           <h1>cla<span style="color:#333;">pp</span></h1>
+           </div>
         </a>
       </div>
       <div id="nav">
