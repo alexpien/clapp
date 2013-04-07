@@ -29,7 +29,6 @@ $db = new PDO($dsn);
     <link rel="Shortcut Icon" href="images/favicon.ico">
     <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lobster'/>
     <link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'/>
-    <link type="text/css" href="inputstyle.css" rel="stylesheet"/>
 
     <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
@@ -142,8 +141,8 @@ $db = new PDO($dsn);
                                              echo '<input type="hidden" name="class" value="';
                                              echo $row["class"];
                                              echo'">';
-                                             echo '<input type="submit" value="-"/></form></div><br><br>';
-                                             echo "<div  class='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div>";
+                                             echo '<input type="submit" value="x"/></form></div>';
+                                             echo "<div  class='sub'><a href='#classes' id='#class".$number."'>".$row["class"] . "</a></div><br><br>";
                                 }
                                 $result->closeCursor();
                                 ?>
