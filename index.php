@@ -194,11 +194,16 @@ $db = new PDO($dsn);
                                while ($row2 = $result2->fetch(PDO::FETCH_ASSOC)) {
                           //display people in this class           
                                 echo '<div class="profile">';
-            					echo $row2['fbid'];
-            					echo "<br>";
-            
+
+       
                           $profile_pic =  "http://graph.facebook.com/".$row2['fbid']."/picture";
                              	echo "<img src=\"" . $profile_pic . "\" />&nbsp&nbsp&nbsp&nbsp"; 
+
+                    $facebookUrl = "https://graph.facebook.com/".$row2['fbid']; 
+					$str = file_get_contents($facebookUrl); 
+					$result = json_decode($str); 
+					echo $result->name; 
+
                             	echo "</div>";
                          }
                      echo '</div>';
