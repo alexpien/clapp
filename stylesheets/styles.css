@@ -146,6 +146,10 @@ div{
 		background:red;
 		border-radius:5px;
 	}
+	.remove:hover{
+		color:red;
+	}
+
 form{
 	display:inline-block;
 }
