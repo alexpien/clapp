@@ -62,9 +62,8 @@ $userId = $facebook->getUser();
   </div>
   <div id="wrapper">
     <div id="header">
-      kevin is testingasdfasdf
       <div id="logo">
-        clapp
+        
         <h1>clapp</h1>
         <a href="#home">
           <div style="display:inline-block; float:left;">
@@ -84,7 +83,7 @@ $userId = $facebook->getUser();
     <div id="main">
       <div id="home_sec" style="display:none;">
         <h1>
-          Welcome to Clapp. Login to facebook to get started.
+          Welcome to Clapp. Login to facebook to get started. test test test.
         </h1>
       </div>
       <div id="classes_sec" style="display:none;">
